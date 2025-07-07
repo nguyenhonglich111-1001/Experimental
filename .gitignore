@@ -1,0 +1,65 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+*venv*/
+ENV/
+env/
+.venv/
+.ENV/
+.env/
+
+# Streamlit cache
+.streamlit/
+
+# Environment variables and secrets
+.env
+.env.*
+secrets.toml
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS and Linux junk files
+.DS_Store
+Thumbs.db
+
+# VSCode settings
+.vscode/
+
+# User-specific cursor rules
+.cursor/rules/_*.mdc
+
+# PyInstaller
+*.spec
+dist/
+build/
+
+# Logs
+*.log
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+.cache
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+
+# Test output
+nosetests.xml
+junit.xml
+
+# Profiling data
+*.prof
+
+# Others
+*.sqlite3
+*.db
+*.bak
+*.swp

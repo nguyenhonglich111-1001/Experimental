@@ -1,0 +1,7 @@
+crewai
+streamlit
+crewai_tools
+langchain_openai
+python-dotenv
+langchain-google-genai 
+litellm == 1.74.0

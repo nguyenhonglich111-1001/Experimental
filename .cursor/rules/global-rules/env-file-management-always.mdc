@@ -1,0 +1,34 @@
+# Environment Variable Management
+
+## Critical Rules
+
+- All project configuration, especially API keys and sensitive information, MUST be loaded from a `.env` file using a library like `python-dotenv`.
+- Direct hardcoding of API keys or sensitive data in code is strictly forbidden.
+- Every new project, or any project that uses environment variables, MUST include a `.env_example` file at the root of the project.
+- The `.env_example` file MUST list all required environment variables with placeholder values and brief descriptions if necessary.
+- The `.env` file MUST be included in `.gitignore` to prevent accidental commits to version control.
+- When creating or updating a project, always verify that `.env` and `.env_example` are correctly configured.
+
+## Examples
+
+<example>
+  `project-root/.env` containing:
+  ```
+  OPENAI_API_KEY=sk-your-openai-key
+  SERPER_API_KEY=your-serper-key
+  DATABASE_URL=postgres://user:password@host:port/dbname
+  ```
+  `project-root/.env_example` containing:
+  ```
+  OPENAI_API_KEY=your_openai_api_key_here
+  SERPER_API_KEY=your_serper_api_key_here
+  DATABASE_URL=your_database_connection_string_here
+  ```
+  And Python code using `dotenv.load_dotenv()` and `os.getenv("ENV_VAR_NAME")`.
+</example>
+
+<example type="invalid">
+  Hardcoding `OPENAI_API_KEY = "sk-12345..."` directly in a Python script.
+  Not providing a `.env_example` file for a project that requires environment variables.
+  Committing the actual `.env` file to a Git repository.
+</example> 

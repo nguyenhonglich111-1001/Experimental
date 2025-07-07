@@ -1,0 +1,22 @@
+# Always Use Streamlit as Backbone for Scripts
+
+## Critical Rules
+
+- All new Python scripts or UI applications must use Streamlit as the primary framework for user interfaces and app backbones
+- Do not use other UI frameworks (e.g., Flask, FastAPI, Tkinter, PyQt) for main app logic or user interaction layers
+- If a script requires a UI, it must be implemented with Streamlit
+- When refactoring or updating existing UI scripts, migrate them to Streamlit if feasible
+- Only use other frameworks for backend APIs or non-UI logic, not for the main user-facing app
+
+## Examples
+
+<example>
+  Creating a dashboard: Use Streamlit to build the dashboard UI and handle user input/output
+  Refactoring a CLI tool to have a UI: Implement the UI with Streamlit
+</example>
+
+<example type="invalid">
+  Building a new Python app with Flask for the main user interface
+  Using Tkinter for a desktop UI instead of Streamlit
+  Adding a FastAPI endpoint for direct user interaction instead of a Streamlit page
+</example> 
