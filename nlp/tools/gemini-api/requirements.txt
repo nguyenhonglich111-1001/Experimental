@@ -3,3 +3,4 @@ google-generativeai
 pymongo
 voyageai
 python-dotenv
+langchain-text-splitters
