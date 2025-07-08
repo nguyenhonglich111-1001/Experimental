@@ -33,7 +33,7 @@ user_input = st.text_input("You:", key="user_input")
 # --- Send Button ---
 if st.button("Send") and user_input and api_key:
     st.session_state.chat_history.append(("user", user_input))
-    try:
+    try:    
         client = genai.Client(api_key=api_key)
         response = client.models.generate_content(
             model="gemini-2.5-pro",

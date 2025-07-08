@@ -1,4 +1,4 @@
-from crewai import Agent, Crew, Process, Task
+from crewai import Agent, Crew, Process, Task, LLM
 from crewai_tools import SerperDevTool
 import os
 from dotenv import load_dotenv
@@ -7,28 +7,27 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 # Load environment variables from .env file
 load_dotenv()
 
-# Ensure these are set in your .env file
+# Ensure GOOGLE_API_KEY and SERPER_API_KEY are set in your .env file
 # For example:
-# OPENAI_API_KEY="your_openai_api_key_here"
 # SERPER_API_KEY="your_serper_api_key_here"
 # GOOGLE_API_KEY="your_google_api_key_here"
 
-# It's good practice to set them if they are not already set in the environment
-# but for passing to ChatGoogleGenerativeAI, we will directly use os.getenv
-# os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY") # Keep if other parts rely on it
-# os.environ["SERPER_API_KEY"] = os.getenv("SERPER_API_KEY") # Keep if other parts rely on it
+# Get API Keys directly from environment
+gemini_api_key = os.getenv("GEMINI_API_KEY")
+serper_api_key = os.getenv("SERPER_API_KEY")
 
-# Get Google API Key directly from environment
-google_api_key = os.getenv("GOOGLE_API_KEY")
-
-if not google_api_key:
+if not gemini_api_key:
     raise ValueError(
-        "GOOGLE_API_KEY not found in environment variables. Please set it in your .env file.")
+        "GEMINI_API_KEY not found in environment variables. Please set it in your .env file.")
+if not serper_api_key:
+    raise ValueError(
+        "SERPER_API_KEY not found in environment variables. Please set it in your .env file.")
 
 # Initialize Gemini LLM by explicitly passing the API key
-# Changed model to "google/gemini-pro"
-gemini_llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash", google_api_key=google_api_key)
+gemini_llm = LLM(
+    model="gemini/gemini-2.5-flash", 
+    google_api_key=gemini_api_key
+)
 
 
 def run_genetic_crew(topic: str) -> str:
@@ -36,8 +35,7 @@ def run_genetic_crew(topic: str) -> str:
     Runs a CrewAI workflow for genetic research and analysis.
     """
     # Initialize the search tool
-    # Ensure Serper API key is also passed explicitly if needed
-    search_tool = SerperDevTool(api_key=os.getenv("SERPER_API_KEY"))
+    search_tool = SerperDevTool(api_key=serper_api_key)
 
     # Define specialized agents
     genetic_researcher = Agent(
