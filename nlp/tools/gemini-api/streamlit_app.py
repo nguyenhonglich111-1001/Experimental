@@ -65,7 +65,7 @@ CHUNK_OVERLAP = 200
 st.sidebar.header("Upload Document for Context")
 uploaded_file = st.sidebar.file_uploader("Choose a text file", type=["txt", "md"])
 
-if uploaded_file is not None and collection and voyage_client:
+if (uploaded_file is not None) and (collection is not None) and voyage_client:
     file_content = uploaded_file.read().decode("utf-8")
     file_name = uploaded_file.name
 
@@ -113,7 +113,7 @@ if st.button("Send") and user_input and api_key:
     st.session_state.chat_history.append(("user", user_input))
 
     context = ""
-    if collection and voyage_client:
+    if (collection is not None) and voyage_client:
         try:
             # Generate embedding for the user's query
             query_embedding_result = voyage_client.embed([user_input], model="voyage-lite-02-instruct")
@@ -124,16 +124,16 @@ if st.button("Send") and user_input and api_key:
             # For demonstration, we'll simulate by fetching a few recent chunks
             # In a real application, you'd use $vectorSearch aggregation pipeline
             # Example:
-            # results = collection.aggregate([
-            #     {"$vectorSearch": {
-            #         "queryVector": query_embedding,
-            #         "path": "embedding",
-            #         "numCandidates": 100,
-            #         "limit": 3, # Fetch top 3 relevant chunks
-            #         "index": "vector_index" # Your vector search index name
-            #     }}
-            # ])
-            # relevant_chunks = [doc["content"] for doc in results]
+            results = collection.aggregate([
+                {"$vectorSearch": {
+                    "queryVector": query_embedding,
+                    "path": "embedding",
+                    "numCandidates": 100,
+                    "limit": 3, # Fetch top 3 relevant chunks
+                    "index": "vector_index" # Your vector search index name
+                }}
+            ])
+            relevant_chunks = [doc["content"] for doc in results]
 
             # Placeholder: Fetch a few recent chunks as context
             # In a real scenario, this would be a proper vector search
@@ -153,11 +153,12 @@ if st.button("Send") and user_input and api_key:
     full_prompt = f"{context}User: {user_input}"
 
     try:
-        client = genai.Client(api_key=api_key)
-        response = client.models.generate_content(
-            model="gemini-2.5-pro",
-            contents=full_prompt
-        )
+        # Configure the generative AI model with the API key
+        genai.configure(api_key=api_key)
+        # Initialize the GenerativeModel
+        model = genai.GenerativeModel('gemini-2.0-flash') # Changed model to gemini-2.0-flash
+        # Generate content
+        response = model.generate_content(full_prompt)
         model_reply = getattr(response, "text", "[No response]")
     except Exception as e:
         model_reply = f"[Error: {e}]"
