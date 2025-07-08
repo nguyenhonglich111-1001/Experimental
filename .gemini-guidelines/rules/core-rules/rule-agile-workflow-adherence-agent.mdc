@@ -1,0 +1,31 @@
+---
+description: This rule ensures strict adherence to the established agile workflow and documentation standards within the project. It must be applied whenever: (1) Planning or initiating new work, (2) Responding to user requests related to project progress, (3) Creating or modifying project documentation (PRD, architecture, stories), or (4) Before starting any development tasks. This rule is crucial for maintaining project consistency, ensuring proper documentation, and following the defined approval processes. It emphasizes the importance of the .ai folder as the single source of truth for project memory and status.
+globs: 
+alwaysApply: false
+---
+
+# Agile Workflow Adherence
+
+## Critical Rules
+
+- Always check the .ai folder for prd.md, architecture.md, and the latest story file (*.story.md) to understand the current project status and context.
+- Prioritize getting the prd.md to status: approved before any other major work.
+- Ensure architecture.md is status: approved before drafting or working on stories.
+- Never proceed with coding or significant work on a story until it is status: approved by the user.
+- Update story files (.ai/*.story.md) as subtasks are completed, including chat logs for memory retention.
+- Limit file modifications to the .ai folder for documentation, and specific code files as per the current story's scope.
+- If unsure about the next step or project status, always ask the user for clarification, referencing existing documentation in .ai.
+
+## Examples
+
+<example>
+User: "Start implementing the user login feature."
+
+AI: I will begin by checking the current project status in the .ai folder to ensure the PRD, architecture, and the relevant user story are approved before proceeding with implementation.
+</example>
+
+<example type="invalid">
+User: "Start implementing the user login feature."
+
+AI: Okay, I will start coding the user login feature now.
+</example>

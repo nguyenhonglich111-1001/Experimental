@@ -1,0 +1,32 @@
+# Rule: Always Create .env_example
+
+## Description
+Ensures that a `.env_example` file is always created in the root of each project. This file should contain placeholder values for all environment variables used in the project, serving as a template for developers to set up their local environment.
+
+## Trigger
+This rule is always active.
+
+## Action
+When a new project is initialized or when environment variables are identified, ensure a `.env_example` file is present and up-to-date with all required environment variables.
+
+## Example `.env_example`
+```
+# Example .env_example file
+# This file lists all environment variables required for the project.
+# Copy this file to .env and fill in your actual values.
+
+DATABASE_URL="your_database_connection_string"
+OPENROUTER_API_KEY="your_openrouter_api_key"
+MONGO_URI="your_mongodb_connection_string"
+VOYAGE_API_KEY="your_voyage_api_key"
+# Add other environment variables as needed
+```
+
+## Configuration
+```json
+{
+  "alwaysApply": true,
+  "description": "",
+  "glob": ""
+}
+```
