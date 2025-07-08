@@ -3,4 +3,7 @@ transformers
 torch
 scikit-learn
 pillow
-# Add more as needed 
+pymongo
+voyageai
+python-dotenv
+# Add more as needed

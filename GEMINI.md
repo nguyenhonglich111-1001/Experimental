@@ -1,25 +1,16 @@
 ## Overview
-This project is a boilerplate for developers who want to start building an AI agent cluster faster and more efficient.
+A personal laboratory for rapid experimentation with AI, focusing on Natural Language Processing (NLP), Generative AI, and supporting technologies. The goal is to build a collection of independent, runnable tools and minimal use cases for future development and reference.
 
-## Concept
-* Each AI agent cluster can have multiple AI agent crews (AI Crews)
-* Each AI crew can have multiple AI agent, leaded by a superviser (a default AI agent of an AI crew)
-* Each AI agent can call tools via MCP servers integration
+## Scope
+- Each tool is self-contained and runnable (preferably via Streamlit)
+- Organized by theme (NLP, GenAI, Tech Enhancements)
+- Designed for easy extension and reuse
+- Not intended for production, but for learning, prototyping, and inspiration
 
-## How it works
-* A supervisor agent will receive input (prompt) from a user via API call, then create a detailed plan with its current capabilities (AI agents underneat and their tools)
-* Then request the AI agents to perform tasks via A2A protocol
-* Wait for all AI agents finish given tasks
-* Grab all the results, analyze and respond to user based on the original input prompt.
-
-## Core Features
-* Create & manage AI crews easily (with a default supervisor agent, add/remove AI agents)
-* Create & manage AI agents easily (add/remove MCP tools)
-* Create & manage MCP servers easily (supports Streamable HTTP transport only)
-* Create & manage conversations with AI crews / AI agents easily
-* Able to monitor all the activity logs of AI crews and AI agents easily
-* Expose API for frontend (nextjs) interaction (support streaming request)
-* Expose Swagger API Docs for frontend integration instructions
+## Goals
+- Quickly prototype and test AI ideas
+- Build a reusable library of minimal, runnable AI tools
+- Document experiments and learnings for future reference
 
 ## Technical Requirements
 - Programming language: Python
@@ -36,6 +27,8 @@ This project is a boilerplate for developers who want to start building an AI ag
 ```
 DATABASE_URL=""
 OPENROUTER_API_KEY=""
+MONGO_URI=""
+VOYAGE_API_KEY=""
 ...
 ```
 
@@ -59,7 +52,7 @@ OPENROUTER_API_KEY=""
     * api routes
     * changelog
 * always check `PROJECT_OVERVIEW.md` before starting a new task
-* always create/update `<feature_name>.md` after every feature implementation with task overview and todos
+* always create/update `docs/<feature_name>.md` after every feature implementation with task overview and todos
 * always use `context7` MCP tool to study dependencies/plugins/frameworks' docs carefully while implementing them
 * always implement error catching handler
 * always implement user-friendly flows

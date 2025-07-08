@@ -82,6 +82,12 @@ D:/LichNH/coding/Experimental/
 
 ## Features
 
+*   **Gemini API Chatbot with Context Retrieval:**
+    *   Upload text files (`.txt`, `.md`) for context.
+    *   Embed file content using VoyageAI.
+    *   Store content and embeddings in MongoDB.
+    *   Retrieve relevant context from uploaded documents based on chat queries.
+    *   Enhance Gemini API responses with retrieved context.
 *   Create & manage AI crews easily (with a default supervisor agent, add/remove AI agents)
 *   Create & manage AI agents easily (add/remove MCP tools)
 *   Create & manage MCP servers easily (supports Streamable HTTP transport only)
@@ -94,9 +100,10 @@ D:/LichNH/coding/Experimental/
 
 *   **Programming language:** Python
 *   **AI framework:** LangGraph (with OpenRouter AI API)
-*   **Database:** PostgreSQL
+*   **Database:** PostgreSQL, MongoDB (for document storage and vector embeddings)
 *   **Cloud storage:** Cloudflare R2 bucket
 *   **Protocols:** Agent-to-Agent (A2A) protocol, Model Context Protocol (MCP)
+*   **Embedding Service:** VoyageAI
 
 ## API Routes
 
