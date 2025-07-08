@@ -48,7 +48,9 @@ D:/LichNH/coding/Experimental/
 ├───nlp/
 │   ├───tools/
 │   │   └───gemini-api/
+│   │       ├───.env_example
 │   │       ├───README.md
+│   │       ├───requirements.txt
 │   │       └───streamlit_app.py
 │   ├───.gitkeep
 │   └───README.md
