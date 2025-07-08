@@ -25,9 +25,13 @@ if not serper_api_key:
 
 # Initialize Gemini LLM by explicitly passing the API key
 gemini_llm = LLM(
-    model="gemini/gemini-2.5-flash", 
+    model="gemini/gemini-2.5-flash-preview-04-17", 
     google_api_key=gemini_api_key
 )
+
+def test_llm_response():
+    response = gemini_llm.call("Say hello and tell me your model name.")
+    print("LLM Test Response:\n", response)
 
 
 def run_genetic_crew(topic: str) -> str:
@@ -100,6 +104,7 @@ def run_genetic_crew(topic: str) -> str:
 
 if __name__ == '__main__':
     # Example usage (for testing the crew_logic directly)
+    test_llm_response()
     print("Running genetic research crew for 'CRISPR gene editing'...")
     output = run_genetic_crew(topic="CRISPR gene editing")
     print("\n---" + " Crew Output ---\n")
