@@ -19,7 +19,7 @@ A minimal Streamlit chatbot UI that interacts with the Gemini API.
    ```
 3. Run the Streamlit app:
    ```bash
-   streamlit run streamlit_app.py
+   streamlit run server.py
    ```
 4. Enter your Gemini API key in the UI and start chatting!
 

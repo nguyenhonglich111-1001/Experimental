@@ -32,7 +32,7 @@ D:/LichNH/coding/Experimental/
 │   │       ├───__pycache__/
 │   │       ├───venv_crewai/
 │   │       ├───.env_example
-│   │       ├───app.py
+│   │       ├───server.py
 │   │       ├───crew_logic.py
 │   │       ├───README.md
 │   │       └───requirements.txt
@@ -51,12 +51,12 @@ D:/LichNH/coding/Experimental/
 │   │   │   ├───uploads/
 │   │   │   ├───.env_example
 │   │   │   ├───requirements.txt
-│   │   │   └───streamlit_app.py
+│   │   │   └───server.py
 │   │   └───gemini-api/
 │   │       ├───.env_example
 │   │       ├───README.md
 │   │       ├───requirements.txt
-│   │       └───streamlit_app.py
+│   │       └───server.py
 │   ├───.gitkeep
 │   └───README.md
 ├───tech-enhancements/

@@ -38,7 +38,7 @@ This is a Streamlit-based web application that allows users to upload various do
 
 5.  **Run the Streamlit application:**
     ```bash
-    streamlit run streamlit_app.py
+    streamlit run server.py
     ```
 
     The application will open in your web browser.
