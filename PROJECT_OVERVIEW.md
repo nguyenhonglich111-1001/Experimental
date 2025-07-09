@@ -47,6 +47,11 @@ D:/LichNH/coding/Experimental/
 │   └───techContext.md
 ├───nlp/
 │   ├───tools/
+│   │   ├───docling-file-processor/
+│   │   │   ├───uploads/
+│   │   │   ├───.env_example
+│   │   │   ├───requirements.txt
+│   │   │   └───streamlit_app.py
 │   │   └───gemini-api/
 │   │       ├───.env_example
 │   │       ├───README.md
@@ -77,6 +82,7 @@ D:/LichNH/coding/Experimental/
 - **genai/:** Houses components related to generative AI, including tools for AI agents, specifically a `crewai` integration with its application logic, environment examples, and dependencies.
 - **memory-bank/:** Contains various markdown files for project context, progress tracking, product briefs, system patterns, and technical context.
 - **nlp/:** Contains natural language processing related components, including tools for Gemini API integration.
+- **nlp/tools/docling-file-processor/:** Contains a Streamlit application for uploading and processing files using the Docling library.
 - **tech-enhancements/:** Directory for technical enhancements and related documentation.
 - **utils/:** Contains utility scripts or modules.
 - **venv/:** Python virtual environment for the main project.
@@ -90,6 +96,10 @@ D:/LichNH/coding/Experimental/
     *   Store content and embeddings in MongoDB.
     *   Retrieve relevant context (chunks) from uploaded documents based on chat queries.
     *   Enhance Gemini API responses with retrieved context.
+*   **File Upload and Docling Processing:**
+    *   Allows users to upload various document formats (PDF, DOCX, Images).
+    *   Processes uploaded files using the Docling library for tasks like text extraction and OCR.
+    *   Displays the processed output to the user.
 *   Create & manage AI crews easily (with a default supervisor agent, add/remove AI agents)
 *   Create & manage AI agents easily (add/remove MCP tools)
 *   Create & manage MCP servers easily (supports Streamable HTTP transport only)
@@ -107,6 +117,7 @@ D:/LichNH/coding/Experimental/
 *   **Protocols:** Agent-to-Agent (A2A) protocol, Model Context Protocol (MCP)
 *   **Embedding Service:** VoyageAI
 *   **Text Splitting:** langchain-text-splitters
+*   **Frontend/UI:** Streamlit (for Docling File Processor)
 
 ## API Routes
 
@@ -115,4 +126,5 @@ D:/LichNH/coding/Experimental/
 
 ## Changelog
 
+*   **2025-07-09:** Added Streamlit-based File Upload and Docling Processing project.
 *   **2025-07-08:** Initial creation of `PROJECT_OVERVIEW.md` based on `GEMINI.md` and project structure analysis.
