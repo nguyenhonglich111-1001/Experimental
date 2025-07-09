@@ -126,5 +126,6 @@ D:/LichNH/coding/Experimental/
 
 ## Changelog
 
+*   **2025-07-09:** Enforced `server.py` naming convention for main application files.
 *   **2025-07-09:** Added Streamlit-based File Upload and Docling Processing project.
 *   **2025-07-08:** Initial creation of `PROJECT_OVERVIEW.md` based on `GEMINI.md` and project structure analysis.
