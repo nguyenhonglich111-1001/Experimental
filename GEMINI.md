@@ -58,5 +58,6 @@ VOYAGE_API_KEY=""
 * always implement user-friendly flows
 * always follow security best practices
 * always commit your code after finishing fixing a bug or implementing a feature completely (DO NOT commit `.env` file)
+* always commit your code, but let the user (you) handle the `git push` operation manually
 * always run the development environment in another process and export logs to `./server.log` (view this file to check the logs and debug)
 * always name the main application file of each project `server.py`

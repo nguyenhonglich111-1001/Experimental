@@ -34,7 +34,7 @@ def test_llm_response():
     print("LLM Test Response:\n", response)
 
 
-def run_genetic_crew(topic: str) -> str:
+def run_research_crew(topic: str) -> str:
     """
     Runs a CrewAI workflow for genetic research and analysis.
     """
@@ -110,7 +110,7 @@ def run_genetic_crew(topic: str) -> str:
     )
 
     # Create the crew
-    research_crew = Crew(
+    genetic_crew = Crew(
         agents=[senior_research_specialist, research_analyst, quality_assurance_reviewer],
         tasks=[research_task, analysis_task, review_task],
         process=Process.sequential,
