@@ -42,57 +42,77 @@ def run_genetic_crew(topic: str) -> str:
     search_tool = SerperDevTool(api_key=serper_api_key)
 
     # Define specialized agents
-    genetic_researcher = Agent(
-        role="Genetic Research Specialist",
-        goal=f"Gather comprehensive and up-to-date information on {topic} in genetics",
+    senior_research_specialist = Agent(
+        role="Senior Research Specialist",
+        goal=f"Gather comprehensive and up-to-date information on {topic}",
         backstory=(
-            "You are a leading expert in genetic research, highly skilled in "
-            "finding relevant scientific papers, studies, and breakthroughs "
-            "related to specific genetic topics. You use advanced search techniques "
+            "You are a leading expert in research, highly skilled in "
+            "finding relevant papers, studies, and breakthroughs "
+            "related to any given topic. You use advanced search techniques "
             "to ensure accuracy and completeness."
         ),
         verbose=True,
         allow_delegation=False,
         tools=[search_tool],
-        llm=gemini_llm  # Assign Gemini LLM here
     )
 
-    genetic_analyst = Agent(
-        role="Genetic Data Analyst",
-        goal=f"Analyze and synthesize genetic research data on {topic} into actionable insights",
+    research_analyst = Agent(
+        role="Research Analyst and Report Writer",
+        goal=f"Analyze and synthesize research data on {topic} into actionable insights and comprehensive reports",
         backstory=(
-            "You are a meticulous genetic data analyst, proficient in interpreting "
-            "complex genetic information, identifying key patterns, and summarizing "
+            "You are a meticulous research analyst, proficient in interpreting "
+            "complex information, identifying key patterns, and summarizing "
             "findings into clear, concise reports. You excel at extracting the "
             "most critical information for further study or application."
         ),
         verbose=True,
-        allow_delegation=False,
         llm=gemini_llm  # Assign Gemini LLM here
+    )
+
+    quality_assurance_reviewer = Agent(
+        role="Quality Assurance Reviewer",
+        goal=f"Ensure the research findings and analysis on {topic} are accurate, well-supported, and meet high standards of clarity and completeness",
+        backstory=(
+            "You are an experienced fact-checker and editor, meticulous in reviewing "
+            "research outputs for accuracy, logical flow, and adherence to the "
+            "research objectives. You ensure all information is credible and "
+            "presented clearly."
+        ),
+        verbose=True,
+        llm=gemini_llm # Assign Gemini LLM here
     )
 
     # Define tasks for each agent
     research_task = Task(
-        description=f"Conduct a thorough search and gather all pertinent information about '{topic}' in genetic research. "
+        description=f"Conduct a thorough search and gather all pertinent information about '{topic}'. "
         "Focus on recent discoveries, significant studies, and potential implications. "
         "Compile findings into detailed bullet points.",
-        expected_output="A detailed bulleted list of recent genetic research findings and studies on the given topic.",
-        agent=genetic_researcher
+        expected_output="A detailed bulleted list of recent research findings and studies on the given topic.",
+        agent=senior_research_specialist
     )
 
     analysis_task = Task(
         description=f"Based on the research findings about '{topic}', analyze and synthesize the information. "
         "Identify the most important breakthroughs, potential applications, and any unresolved questions. "
         "Present a concise summary of the key insights and their significance.",
-        expected_output="A concise summary (2-3 paragraphs) highlighting key breakthroughs, applications, and open questions related to the genetic research topic.",
-        agent=genetic_analyst,
+        expected_output="A concise summary (2-3 paragraphs) highlighting key breakthroughs, applications, and open questions related to the research topic.",
+        agent=research_analyst,
         context=[research_task]
     )
 
+    review_task = Task(
+        description=f"Review the research analysis and summary on '{topic}' for accuracy, completeness, and clarity. "
+        "Provide constructive feedback and suggest improvements if necessary. "
+        "Ensure the final output is polished and ready for presentation.",
+        expected_output="A reviewed and refined summary of the research findings, ensuring high quality and accuracy.",
+        agent=quality_assurance_reviewer,
+        context=[analysis_task]
+    )
+
     # Create the crew
-    genetic_crew = Crew(
-        agents=[genetic_researcher, genetic_analyst],
-        tasks=[research_task, analysis_task],
+    research_crew = Crew(
+        agents=[senior_research_specialist, research_analyst, quality_assurance_reviewer],
+        tasks=[research_task, analysis_task, review_task],
         process=Process.sequential,
         verbose=True
     )
@@ -105,7 +125,7 @@ def run_genetic_crew(topic: str) -> str:
 if __name__ == '__main__':
     # Example usage (for testing the crew_logic directly)
     test_llm_response()
-    print("Running genetic research crew for 'CRISPR gene editing'...")
-    output = run_genetic_crew(topic="CRISPR gene editing")
+    print("Running general research crew for 'AI in healthcare'...")
+    output = run_research_crew(topic="AI in healthcare")
     print("\n---" + " Crew Output ---\n")
     print(output)

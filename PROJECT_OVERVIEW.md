@@ -100,6 +100,7 @@ D:/LichNH/coding/Experimental/
     *   Allows users to upload various document formats (PDF, DOCX, Images).
     *   Processes uploaded files using the Docling library for tasks like text extraction and OCR.
     *   Displays the processed output to the user.
+*   **Generalized Research Crew:** A flexible CrewAI setup for comprehensive data research, analysis, and quality assurance across various topics.
 *   Create & manage AI crews easily (with a default supervisor agent, add/remove AI agents)
 *   Create & manage AI agents easily (add/remove MCP tools)
 *   Create & manage MCP servers easily (supports Streamable HTTP transport only)
