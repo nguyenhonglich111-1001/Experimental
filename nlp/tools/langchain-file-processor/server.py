@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
 from langchain.chains import RetrievalQA
 
 # Load environment variables
@@ -56,7 +56,7 @@ def main():
 
             # 1. Load the document
             loader = PyPDFLoader(uploaded_file.name)
-            documents = loader.load()
+            documents = loader.load()[:50]
 
             # 2. Split the document into chunks
             text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200, add_start_index=True)
@@ -90,8 +90,7 @@ def main():
                 llm = ChatGoogleGenerativeAI(
                     model="models/gemini-1.5-flash-latest", 
                     google_api_key=google_api_key, 
-                    temperature=0.7,
-                    convert_system_message_to_human=True
+                    temperature=0.7
                 )
                 
                 retriever = st.session_state.vector_store.as_retriever(search_type="similarity", search_kwargs={"k": 3})
