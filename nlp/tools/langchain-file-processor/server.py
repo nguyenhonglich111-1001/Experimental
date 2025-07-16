@@ -1,7 +1,9 @@
+
 """
 A Streamlit application for processing and chatting with uploaded files using LangChain.
 """
 import os
+import time
 import streamlit as st
 from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
@@ -27,7 +29,7 @@ def get_google_api_key():
 def main():
     """Main function to run the Streamlit application."""
     st.set_page_config(page_title="Chat with your PDF", layout="wide")
-    st.title("📄 Chat with Your PDF using LangChain")
+    st.title("📚 Chat with Your Book")
 
     google_api_key = get_google_api_key()
     if not google_api_key:
@@ -39,35 +41,57 @@ def main():
     # Load existing vector store if it exists, otherwise initialize to None
     if "vector_store" not in st.session_state:
         if os.path.exists(PERSIST_DIRECTORY):
+            st.write("Loading existing vector store...")
             st.session_state.vector_store = Chroma(persist_directory=PERSIST_DIRECTORY, embedding_function=embeddings)
+            st.write("Vector store loaded.")
         else:
             st.session_state.vector_store = None
 
-    # File uploader
-    uploaded_file = st.file_uploader("Upload your PDF file to create or update the vector store", type="pdf")
+    # Initialize session state for processed file ID
+    if "processed_file_id" not in st.session_state:
+        st.session_state.processed_file_id = None
 
-    if uploaded_file:
+    # File uploader
+    uploaded_file = st.file_uploader("Upload your PDF book to create or update the vector store", type="pdf")
+
+    # Only process if a new file is uploaded or a different file is selected
+    if uploaded_file and uploaded_file.file_id != st.session_state.processed_file_id:
         try:
             # Save the uploaded file temporarily
             with open(uploaded_file.name, "wb") as f:
                 f.write(uploaded_file.getbuffer())
 
             st.write(f"Processing `{uploaded_file.name}`...")
+            
+            progress_bar = st.progress(0)
+            status_text = st.empty()
 
             # 1. Load the document
-            loader = PyPDFLoader(uploaded_file.name)
-            documents = loader.load()[:50]
+            status_text.text("Loading PDF...")
+            loader = PyPDFLoader(uploaded_file.name) # Default mode is "page"
+            documents = loader.load()
+            progress_bar.progress(25)
 
             # 2. Split the document into chunks
-            text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200, add_start_index=True)
+            status_text.text(f"Splitting {len(documents)} pages into chunks...")
+            text_splitter = RecursiveCharacterTextSplitter(
+                chunk_size=1000, 
+                chunk_overlap=200, 
+                add_start_index=True,
+                separators=["\n\n", "\n", " ", ""]
+            )
             texts = text_splitter.split_documents(documents)
+            progress_bar.progress(50)
 
             # 3. Create embeddings and vector store
+            status_text.text(f"Creating embeddings for {len(texts)} chunks...")
             st.session_state.vector_store = Chroma.from_documents(
                 texts, 
                 embeddings, 
                 persist_directory=PERSIST_DIRECTORY
             )
+            progress_bar.progress(100)
+            status_text.text("Processing complete!")
 
             st.success("File processed and vector store created/updated successfully! You can now ask questions.")
 
@@ -88,7 +112,7 @@ def main():
             try:
                 # 4. Retrieve and generate answer
                 llm = ChatGoogleGenerativeAI(
-                    model="models/gemini-1.5-flash-latest", 
+                    model="models/gemini-1.5-flash-latest",
                     google_api_key=google_api_key, 
                     temperature=0.7
                 )
@@ -117,3 +141,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

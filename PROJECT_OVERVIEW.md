@@ -57,10 +57,10 @@ This document provides a comprehensive overview of the "Experimental" project, i
 
 ## Features
 
-*   **LangChain-Powered File Q&A:**
+*   **LangChain-Powered Book Q&A:**
     *   **File Type:** PDF
-    *   **Functionality:** Allows users to upload a PDF and ask questions about its content.
-    *   **Technology:** Uses LangChain for document loading, `Chroma` for persistent vector search, and Google's Gemini model for question answering. The interface is built with Streamlit.
+    *   **Functionality:** Allows users to upload a PDF book and ask questions about its content.
+    *   **Technology:** Uses LangChain for document loading with page-level metadata, `RecursiveCharacterTextSplitter` with semantic separators, `Chroma` for persistent vector search, and Google's Gemini model for question answering. The interface is built with Streamlit and includes a progress bar for file processing.
 *   **Generalized Research Crew:**
     *   **Functionality:** A flexible CrewAI setup for comprehensive data research, analysis, and quality assurance.
     *   **Technology:** CrewAI, LangGraph.
@@ -81,6 +81,8 @@ This document provides a comprehensive overview of the "Experimental" project, i
 
 ## Changelog
 
+*   **2025-07-16:** Prevented redundant PDF reprocessing on chat interactions in the `langchain-file-processor` tool.
+*   **2025-07-16:** Implemented smarter chunking with metadata extraction and a progress bar for the book Q&A tool.
 *   **2025-07-16:** Updated `ChatGoogleGenerativeAI` and `RecursiveCharacterTextSplitter` to use best practices.
 *   **2025-07-16:** Replaced FAISS with Chroma in the `langchain-file-processor` tool.
 *   **2025-07-16:** Updated project structure in `PROJECT_OVERVIEW.md`.
