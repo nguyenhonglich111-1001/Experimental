@@ -46,7 +46,6 @@ VOYAGE_API_KEY=""
 ## Instructions
 * always store relevent data, application's states, user's states,... in database (PostgreSQL)
 * always create/update `PROJECT_OVERVIEW.md` after every task with:
-    * project structure (use `tree -L 3 -I 'node_modules|.git|.next'` to generate, then explain the directories briefly)
     * features
     * dependencies
     * api routes
@@ -61,3 +60,4 @@ VOYAGE_API_KEY=""
 * always commit your code, but let the user (you) handle the `git push` operation manually
 * always run the development environment in another process and export logs to `./server.log` (view this file to check the logs and debug)
 * always name the main application file of each project `server.py`
+* always investigate all requirements.txt in smaller project and make the final requirements.txt in main directory contain all of them without duplicate library after creating or updating an inner project.

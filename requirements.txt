@@ -1,6 +1,21 @@
-streamlit
-transformers
-torch
-scikit-learn
+crewai
+crewai_tools
+docling
+easyocr
+faiss-cpu
+google-generativeai
+langchain
+langchain-google-genai
+langchain_openai
+langchain-text-splitters
 pillow
-# Add more as needed
+pypdf
+pymongo
+python-dotenv
+scikit-learn
+streamlit
+torch
+transformers
+voyageai
+chromadb
+langchain-chroma

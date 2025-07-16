@@ -4,3 +4,4 @@
 .cursor/rules/*
 .cursor/modes.json
 .cursor/mcp.json
+/venv/
