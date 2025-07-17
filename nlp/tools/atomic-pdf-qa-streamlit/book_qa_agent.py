@@ -26,6 +26,7 @@ class BookQAAgent(BaseAgent):
 
     def __init__(self, config: BaseAgentConfig, pdf_content: Optional[str] = None):
         super().__init__(config)
+        self.config = config
         self.pdf_content = pdf_content
         self.pdf_reader_tool = PDFReaderTool()
         self.current_pdf_path = None # Initialize current_pdf_path
@@ -66,9 +67,10 @@ class BookQAAgent(BaseAgent):
 
         try:
             # Use the configured client from BaseAgentConfig
+            messages = [{"role": msg.role, "content": msg.content.model_dump_json()} for msg in self.memory.history]
             response = await self.config.client.chat.completions.create(
                 model=self.config.model,
-                messages=self.memory.to_messages(),
+                messages=messages,
                 stream=True # Enable streaming for better UX in Streamlit
             )
             
