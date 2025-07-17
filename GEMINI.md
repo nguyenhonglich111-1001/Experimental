@@ -22,7 +22,7 @@ A personal laboratory for rapid experimentation with AI, focusing on Natural Lan
 - Expose API for frontend (Next.js) interaction (support streaming request)
 - Database: PostgreSQL, MongoDB, ChromaDB (for vector store), In-memory JSON file (for Smart Notes App)
 - Cloud storage: Cloudflare R2 bucket
-- UI Frameworks: Streamlit, Flask (for Smart Notes App)
+- UI Frameworks: Streamlit
 - Other: Text splitting (RecursiveCharacterTextSplitter), PDF processing (PyPDFLoader)
 
 ## Environment Variables (Development Environment / localhost)

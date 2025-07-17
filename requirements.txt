@@ -1,13 +1,18 @@
+atomic-agents
+chromadb
 crewai
 crewai_tools
 docling
 easyocr
-faiss-cpu
-google-generativeai==0.4.0
+Flask==3.0.0
+google-genai
+instructor
 langchain
+langchain-chroma
 langchain-google-genai
 langchain_openai
 langchain-text-splitters
+openai
 pillow
 pypdf
 pymongo
@@ -17,6 +22,3 @@ streamlit
 torch
 transformers
 voyageai
-chromadb
-langchain-chroma
-Flask==3.0.0

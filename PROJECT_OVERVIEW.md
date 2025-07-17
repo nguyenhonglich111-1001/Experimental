@@ -17,7 +17,9 @@ This document provides a comprehensive overview of the "Experimental" project, i
 ├── memory-bank
 │   └── ...
 ├── nlp
-│   └── ...
+│   ├── ...
+│   └── tools/
+│       └── atomic-pdf-qa-streamlit/
 ├── tech-enhancements
 │   └── tools
 │       └── smart-notes-app
@@ -31,6 +33,7 @@ This document provides a comprehensive overview of the "Experimental" project, i
 -   **genai/:** Houses tools and components related to Generative AI.
 -   **memory-bank/:** Stores context and memory files for the AI agent.
 -   **nlp/:** Contains Natural Language Processing tools.
+    -   `nlp/tools/atomic-pdf-qa-streamlit/`: A Streamlit application for PDF book Q&A using Atomic Agents.
 -   **tech-enhancements/:** Contains tools and infrastructure to enhance AI development, such as testing tools.
     -   `tech-enhancements/tools/smart-notes-app/`: A web app for the Octomind testing experiment.
 -   **utils/:** Contains utility scripts and helper modules for the project.
@@ -38,6 +41,9 @@ This document provides a comprehensive overview of the "Experimental" project, i
 
 ## Features
 
+*   **Atomic Agents-Powered PDF Book Q&A (Streamlit):**
+    *   **Functionality:** A Streamlit web application that allows users to upload a PDF book and ask questions about its content, receiving intelligent, streaming answers.
+    *   **Technology:** Streamlit, Atomic Agents, PyPDF2, Google Gemini API (via OpenAI-compatible API with Instructor).
 *   **Smart Notes Web App & Octomind Experiment:**
     *   **Functionality:** A simple web application for creating, managing, and summarizing notes. This app serves as the testbed for experimenting with the Octomind AI-powered testing tool.
     *   **Technology:** Flask, Bootstrap, Google Gemini API.
@@ -55,8 +61,8 @@ This document provides a comprehensive overview of the "Experimental" project, i
 ## Dependencies
 
 *   **Programming Language:** Python
-*   **Primary AI Frameworks:** LangChain, LangGraph, CrewAI
-*   **LLM APIs:** Google Generative AI, OpenRouter
+*   **Primary AI Frameworks:** LangChain, LangGraph, CrewAI, Atomic Agents
+*   **LLM APIs:** Google Generative AI (Gemini API), OpenRouter
 *   **Vector Stores / Search:** Chroma (persistent)
 *   **Web Frameworks:** Flask
 *   **Frontend/UI:** Streamlit, Bootstrap
@@ -65,9 +71,9 @@ This document provides a comprehensive overview of the "Experimental" project, i
 
 ## Changelog
 
-## Changelog
-- **2025-07-17**: Initial project setup and documentation.
-- **2025-07-17**: Reconstructed Technical Requirements in GEMINI.md based on inner project scans.
+*   **2025-07-17:** Implemented the "Atomic Agents-Powered PDF Book Q&A (Streamlit)" feature, including `pdf_tool.py`, `book_qa_agent.py`, and `server.py`. Updated `requirements.txt` and project overview.
+*   **2025-07-17:** Initial project setup and documentation.
+*   **2025-07-17:** Reconstructed Technical Requirements in GEMINI.md based on inner project scans.
 *   **2025-07-16:** Prevented redundant PDF reprocessing on chat interactions in the `langchain-file-processor` tool.
 *   **2025-07-16:** Implemented smarter chunking with metadata extraction and a progress bar for the book Q&A tool.
 *   **2025-07-16:** Updated `ChatGoogleGenerativeAI` and `RecursiveCharacterTextSplitter` to use best practices.
