@@ -10,7 +10,7 @@ import instructor
 from atomic_agents.agents.base_agent import BaseAgentConfig
 from atomic_agents.lib.components.agent_memory import AgentMemory
 
-from .book_qa_agent import BookQAAgent, BookQAAgentInputSchema
+from book_qa_agent import BookQAAgent, BookQAAgentInputSchema
 
 # Load environment variables
 load_dotenv()
@@ -84,7 +84,7 @@ st.write("Upload a PDF and ask questions about its content.")
 
 # Handle new file upload
 if uploaded_file is not None:
-    if uploaded_file.name != os.path.basename(st.session_state.get("current_pdf_path", "")):
+    if uploaded_file.name != os.path.basename(st.session_state.current_pdf_path or ""):
         with st.spinner(f"Processing '{uploaded_file.name}'..."):
             temp_dir = tempfile.mkdtemp()
             temp_pdf_path = os.path.join(temp_dir, uploaded_file.name)
@@ -122,7 +122,7 @@ if prompt := st.chat_input("Ask a question about the book..."):
                 )
                 
                 # Run the agent and stream the response
-                response_generator = st.session_state.agent._run(agent_input)
+                response_generator = st.session_state.agent.run(agent_input)
                 
                 # Use an async function to handle the streaming
                 async def stream_response():
