@@ -1,6 +1,6 @@
 # PROJECT OVERVIEW
 
-This document provides a comprehensive overview of the "Experimental" project, including its structure, features, and technical components, as of 2025-07-16.
+This document provides a comprehensive overview of the "Experimental" project, including its structure, features, and technical components, as of 2025-07-17.
 
 ## Project Structure
 ```
@@ -10,57 +10,41 @@ This document provides a comprehensive overview of the "Experimental" project, i
 ├── README.md
 ├── data.json
 ├── docs
-│   ├── file_upload_docling.md
-│   ├── gemini-api-chatbot.md
-│   ├── generalized_research_crew.md
-│   ├── langchain-file-processor.md
-│   └── workflow-rules.md
+│   ├── ...
+│   └── octomind-testing-experiment.md
 ├── genai
-│   ├── README.md
-│   └── tools
-│       └── crewai
+│   └── ...
 ├── memory-bank
-│   ├── activeContext.md
-│   ├── productContext.md
-│   ├── progress.md
-│   ├── projectbrief.md
-│   ├── systemPatterns.md
-│   └── techContext.md
+│   └── ...
 ├── nlp
-│   ├── README.md
+│   └── ...
+├── tech-enhancements
 │   └── tools
-│       ├── docling-file-processor
-│       ├── gemini-api
-│       └── langchain-file-processor
+│       └── smart-notes-app
 ├── requirements.txt
-├── test.py
-├── utils
-│   └── README.md
-└── xnotes
-    ├── custom-agents.md
-    └── project-idea-prompt.md
-
-12 directories, 22 files
+├── ...
 ```
 
 ### Directory Explanations:
 
 -   **docs/:** Contains detailed documentation for each feature and workflow within the project.
--   **genai/:** Houses tools and components related to Generative AI. Includes a `crewai` integration for multi-agent systems.
+-   **genai/:** Houses tools and components related to Generative AI.
 -   **memory-bank/:** Stores context and memory files for the AI agent.
 -   **nlp/:** Contains Natural Language Processing tools.
-    -   `nlp/tools/docling-file-processor/`: A Streamlit app for general file processing.
-    -   `nlp/tools/gemini-api/`: A tool for interacting with the Gemini API.
-    -   `nlp/tools/langchain-file-processor/`: A Streamlit app for asking questions about an uploaded PDF.
+-   **tech-enhancements/:** Contains tools and infrastructure to enhance AI development, such as testing tools.
+    -   `tech-enhancements/tools/smart-notes-app/`: A web app for the Octomind testing experiment.
 -   **utils/:** Contains utility scripts and helper modules for the project.
 -   **xnotes/:** Stores miscellaneous development notes, prompts, and ideas.
 
 ## Features
 
+*   **Smart Notes Web App & Octomind Experiment:**
+    *   **Functionality:** A simple web application for creating, managing, and summarizing notes. This app serves as the testbed for experimenting with the Octomind AI-powered testing tool.
+    *   **Technology:** Flask, Bootstrap, Google Gemini API.
 *   **LangChain-Powered Book Q&A:**
     *   **File Type:** PDF
     *   **Functionality:** Allows users to upload a PDF book and ask questions about its content.
-    *   **Technology:** Uses LangChain for document loading with page-level metadata, `RecursiveCharacterTextSplitter` with semantic separators, `Chroma` for persistent vector search, and Google's Gemini model for question answering. The interface is built with Streamlit and includes a progress bar for file processing.
+    *   **Technology:** LangChain, Chroma, Streamlit, Google Gemini.
 *   **Generalized Research Crew:**
     *   **Functionality:** A flexible CrewAI setup for comprehensive data research, analysis, and quality assurance.
     *   **Technology:** CrewAI, LangGraph.
@@ -74,13 +58,16 @@ This document provides a comprehensive overview of the "Experimental" project, i
 *   **Primary AI Frameworks:** LangChain, LangGraph, CrewAI
 *   **LLM APIs:** Google Generative AI, OpenRouter
 *   **Vector Stores / Search:** Chroma (persistent)
-*   **PDF/Document Parsing:** PyPDF
-*   **Frontend/UI:** Streamlit
+*   **Web Frameworks:** Flask
+*   **Frontend/UI:** Streamlit, Bootstrap
 *   **Database:** PostgreSQL (planned)
 *   **Cloud Storage:** Cloudflare R2 (planned)
 
 ## Changelog
 
+## Changelog
+- **2025-07-17**: Initial project setup and documentation.
+- **2025-07-17**: Reconstructed Technical Requirements in GEMINI.md based on inner project scans.
 *   **2025-07-16:** Prevented redundant PDF reprocessing on chat interactions in the `langchain-file-processor` tool.
 *   **2025-07-16:** Implemented smarter chunking with metadata extraction and a progress bar for the book Q&A tool.
 *   **2025-07-16:** Updated `ChatGoogleGenerativeAI` and `RecursiveCharacterTextSplitter` to use best practices.

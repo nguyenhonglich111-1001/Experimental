@@ -2,7 +2,7 @@
 A personal laboratory for rapid experimentation with AI, focusing on Natural Language Processing (NLP), Generative AI, and supporting technologies. The goal is to build a collection of independent, runnable tools and minimal use cases for future development and reference.
 
 ## Scope
-- Each tool is self-contained and runnable (preferably via Streamlit)
+- Each tool is self-contained and runnable (Most of the time is Streamlit)
 - Organized by theme (NLP, GenAI, Tech Enhancements)
 - Designed for easy extension and reuse
 - Not intended for production, but for learning, prototyping, and inspiration
@@ -15,12 +15,15 @@ A personal laboratory for rapid experimentation with AI, focusing on Natural Lan
 ## Technical Requirements
 - Programming language: Python
 - Store variables in `.env` file
-- AI framework: LangGraph (with OpenRouter AI API)
+- AI frameworks/libraries: LangGraph, CrewAI, LangChain, Google Generative AI (google-generativeai), Docling, EasyOCR, VoyageAI
+- API Integrations: OpenRouter AI API, Google Gemini API, Serper API
 - Supports Agent-to-Agent (A2A) protocol for AI agents to communicate with each others ("Supervisor" architecture)
 - Supports Model Context Protocol (MCP) servers integration (for AI agents to use tool call)
-- Expose API for frontend (nextjs) interaction (support streaming request)
-- Database: PostgreSQL
+- Expose API for frontend (Next.js) interaction (support streaming request)
+- Database: PostgreSQL, MongoDB, ChromaDB (for vector store), In-memory JSON file (for Smart Notes App)
 - Cloud storage: Cloudflare R2 bucket
+- UI Frameworks: Streamlit, Flask (for Smart Notes App)
+- Other: Text splitting (RecursiveCharacterTextSplitter), PDF processing (PyPDFLoader)
 
 ## Environment Variables (Development Environment / localhost)
 

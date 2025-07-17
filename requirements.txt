@@ -3,7 +3,7 @@ crewai_tools
 docling
 easyocr
 faiss-cpu
-google-generativeai
+google-generativeai==0.4.0
 langchain
 langchain-google-genai
 langchain_openai
@@ -11,7 +11,7 @@ langchain-text-splitters
 pillow
 pypdf
 pymongo
-python-dotenv
+python-dotenv==1.0.0
 scikit-learn
 streamlit
 torch
@@ -19,3 +19,4 @@ transformers
 voyageai
 chromadb
 langchain-chroma
+Flask==3.0.0

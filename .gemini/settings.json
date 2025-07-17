@@ -1,3 +1,7 @@
 {
-    "contextFileName": "GEMINI.md"
+    "contextFileName": "GEMINI.md",
+    "tool_authorization": {
+        "resolve-library-id": "auto_approve",
+        "get-library-docs": "auto_approve"
+    }
 }

@@ -63,3 +63,6 @@ junit.xml
 *.db
 *.bak
 *.swp
+
+# ChromaDB
+**/.chroma_db/
