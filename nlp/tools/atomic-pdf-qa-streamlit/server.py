@@ -113,7 +113,6 @@ if prompt := st.chat_input("Ask a question about the book..."):
 
         with st.chat_message("assistant"):
             response_placeholder = st.empty()
-            full_response = ""
             
             try:
                 # Define the input for the agent
@@ -127,14 +126,15 @@ if prompt := st.chat_input("Ask a question about the book..."):
                 
                 # Use an async function to handle the streaming
                 async def stream_response():
-                    nonlocal full_response
+                    full_response_content = ""
                     async for chunk in response_generator:
-                        full_response += chunk
-                        response_placeholder.markdown(full_response + "▌")
-                    response_placeholder.markdown(full_response)
+                        full_response_content += chunk
+                        response_placeholder.markdown(full_response_content + "▌")
+                    response_placeholder.markdown(full_response_content)
+                    return full_response_content
 
-                # Run the async function
-                asyncio.run(stream_response())
+                # Run the async function and get the final response
+                full_response = asyncio.run(stream_response())
                 
                 st.session_state.messages.append({"role": "assistant", "content": full_response})
                 st.session_state.pdf_processed = True # Mark PDF as processed after first question
