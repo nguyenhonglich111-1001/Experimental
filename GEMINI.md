@@ -60,6 +60,10 @@ VOYAGE_API_KEY=""
 * always implement user-friendly flows
 * always follow security best practices
 * always commit your code after finishing fixing a bug or implementing a feature completely (DO NOT commit `.env` file)
+* **Commit Workflow:**
+    1.  **Write to File:** Always first write the complete, multi-line commit message to a temporary file named `.git_commit_message.txt` in the project root.
+    2.  **Commit from File:** Always execute the commit using the command `git commit -F .git_commit_message.txt`.
+    3.  **Cleanup:** Immediately after a successful commit, delete the temporary file using `rm .git_commit_message.txt`.
 * always commit your code, but let the user (you) handle the `git push` operation manually
 * always run the development environment in another process and export logs to `./server.log` (view this file to check the logs and debug)
 * always name the main application file of each project `server.py`
