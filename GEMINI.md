@@ -58,7 +58,7 @@ VOYAGE_API_KEY=""
 * **Commit Workflow:**
     1.  **Write to File:** Always first write the complete, multi-line commit message to a temporary file named `.git_commit_message.txt` in the project root.
     2.  **Commit from File:** Always execute the commit using the command `git commit -F .git_commit_message.txt`.
-    3.  **Cleanup:** Immediately after a successful commit, delete the temporary file using `rm .git_commit_message.txt`.
+    3.  **Do Not Delete:** The `.git_commit_message.txt` file should not be deleted after the commit to allow for reuse.
 * always commit your code, but let the user (you) handle the `git push` operation manually
 * always run the development environment in another process and export logs to `./server.log` (view this file to check the logs and debug)
 * always name the main application file of each project `server.py`
