@@ -9,7 +9,7 @@ from atomic_agents.agents.base_agent import BaseAgent, BaseAgentConfig, BaseAgen
 from atomic_agents.lib.components.agent_memory import AgentMemory
 from atomic_agents.lib.base.base_tool import BaseTool
 
-from .pdf_tool import PDFReaderTool, FilePathInputSchema
+from nlp.tools.atomic_pdf_qa_streamlit.pdf_tool import PDFReaderTool, FilePathInputSchema
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -24,7 +24,7 @@ class BookQAAgentOutputSchema(BaseAgentOutputSchema):
 
 class BookQAAgent(BaseAgent):
     def __init__(self, config: BaseAgentConfig):
-        super().__init__(config=config, input_schema=BookQAAgentInputSchema, output_schema=BookQAAgentOutputSchema)
+        super().__init__(config=config)
         self.pdf_content: Optional[str] = None
         self.current_pdf_path: Optional[str] = None
         self.pdf_reader_tool = PDFReaderTool()

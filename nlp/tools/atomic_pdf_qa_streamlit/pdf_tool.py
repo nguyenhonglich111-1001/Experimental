@@ -20,6 +20,10 @@ class PDFReaderTool(BaseTool):
     input_schema: Type[BaseModel] = FilePathInputSchema
     output_schema: Type[BaseModel] = PDFContentOutputSchema
 
+    def run(self, params: FilePathInputSchema) -> PDFContentOutputSchema:
+        """Executes the tool with the provided parameters."""
+        return self._run(params.file_path)
+
     def _run(self, file_path: str) -> PDFContentOutputSchema:
         """The internal method to run the tool's logic."""
         try:

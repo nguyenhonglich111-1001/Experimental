@@ -3,8 +3,9 @@ import pytest_asyncio
 from unittest.mock import MagicMock, AsyncMock
 from pydantic import BaseModel
 from typing import AsyncGenerator
+import instructor
 
-from nlp.tools.atomic-pdf-qa-streamlit.book_qa_agent import BookQAAgent, BookQAAgentInputSchema
+from nlp.tools.atomic_pdf_qa_streamlit.book_qa_agent import BookQAAgent, BookQAAgentInputSchema
 from atomic_agents.agents.base_agent import BaseAgentConfig
 from atomic_agents.lib.components.agent_memory import AgentMemory
 
@@ -25,11 +26,13 @@ async def mock_streaming_response():
 
 @pytest.fixture
 def mock_llm_client():
-    """Fixture to create a mock LLM client."""
-    client = MagicMock()
-    # The create method needs to be an async mock
-    client.chat.completions.create = AsyncMock(return_value=mock_streaming_response())
-    return client
+    """Fixture to create a mock LLM client that behaves like an Instructor instance."""
+    mock_instructor = MagicMock(spec=instructor.Instructor)
+    async def mock_create_side_effect(*args, **kwargs):
+        async for chunk in mock_streaming_response():
+            yield chunk
+    mock_instructor.chat.completions.create = AsyncMock(side_effect=mock_create_side_effect)
+    return mock_instructor
 
 @pytest.fixture
 def agent_config(mock_llm_client):

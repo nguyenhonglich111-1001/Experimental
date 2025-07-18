@@ -4,7 +4,7 @@ import tempfile
 from dotenv import load_dotenv
 import asyncio
 
-from openai import OpenAI
+from openai import OpenAI, AsyncOpenAI
 import instructor
 
 from atomic_agents.agents.base_agent import BaseAgentConfig
@@ -43,7 +43,7 @@ def get_gemini_client():
         st.error("GEMINI_API_KEY not found. Please set it in your .env file.")
         st.stop()
     return instructor.from_openai(
-        OpenAI(
+        AsyncOpenAI(
             api_key=api_key,
             base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
         )
