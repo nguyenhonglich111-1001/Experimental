@@ -54,7 +54,7 @@ VOYAGE_API_KEY=""
 * always implement error catching handler
 * always implement user-friendly flows
 * always follow security best practices
-* always use the model "gemini-2.5-flash-lite-preview-06-17" when using the Gemini API
+* always use the model `gemini-2.5-flash-lite-preview-06-17` when using the Gemini API
 * always commit your code after finishing fixing a bug or implementing a feature completely (DO NOT commit `.env` file)
 * **Commit Workflow:**
     1.  **Write to File:** Always first write the complete, multi-line commit message to a temporary file named `.git_commit_message.txt` in the project root.

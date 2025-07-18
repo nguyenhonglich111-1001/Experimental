@@ -66,3 +66,6 @@ junit.xml
 
 # ChromaDB
 **/.chroma_db/
+
+# Python build artifacts
+*.egg-info/
