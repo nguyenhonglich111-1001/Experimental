@@ -17,9 +17,11 @@ pillow
 pypdf
 pymongo
 python-dotenv==1.0.0
+pytest
+pytest-asyncio
+pytest-mock
 scikit-learn
 streamlit
 torch
 transformers
 voyageai
-PyPDF2
