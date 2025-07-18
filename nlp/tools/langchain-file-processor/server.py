@@ -1,124 +1,124 @@
 """
 A Streamlit application for processing and chatting with uploaded files using LangChain.
+This version incorporates best practices for Streamlit apps, including:
+- Caching for expensive resources (@st.cache_resource) and data processing (@st.cache_data).
+- Modularity and separation of concerns for better readability and maintenance.
+- Advanced RAG techniques: ParentDocumentRetriever and LLM-based re-ranking.
 """
 import os
 import tempfile
 from pathlib import Path
-from typing import Optional
+from typing import List, Optional
 
 import streamlit as st
 from dotenv import load_dotenv
 from langchain.chains import RetrievalQA
+from langchain.retrievers import (ContextualCompressionRetriever,
+                                  ParentDocumentRetriever)
+from langchain.retrievers.document_compressors import LLMChainExtractor
+from langchain.storage import InMemoryStore
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_core.documents import Document
-from langchain_core.vectorstores import VectorStore
 from langchain_google_genai import (ChatGoogleGenerativeAI,
                                     GoogleGenerativeAIEmbeddings)
 
-# Define the path for the persistent Chroma database relative to the script file
+# --- Configuration ---
 PERSIST_DIRECTORY = Path(__file__).parent / ".chroma_db"
+PARENT_CHUNK_SIZE = 2000
+CHILD_CHUNK_SIZE = 400
 
+# --- Helper Functions ---
 
 def get_google_api_key() -> Optional[str]:
     """
     Fetches the Google API key from environment variables.
-
     Checks for GOOGLE_API_KEY first, then falls back to OPENROUTER_API_KEY.
-
-    Returns:
-        Optional[str]: The API key if found, otherwise None.
     """
     return os.getenv("GOOGLE_API_KEY") or os.getenv("OPENROUTER_API_KEY")
 
+# --- Caching Functions for Expensive Resources ---
 
-def initialize_session_state(embeddings: GoogleGenerativeAIEmbeddings):
-    """Initializes the Streamlit session state."""
-    if "vector_store" not in st.session_state:
-        if PERSIST_DIRECTORY.exists():
-            st.write("Loading existing vector store...")
-            st.session_state.vector_store = Chroma(
-                persist_directory=str(PERSIST_DIRECTORY),
-                embedding_function=embeddings,
-            )
-            st.write("Vector store loaded.")
-        else:
-            st.session_state.vector_store = None
-    if "processed_file_id" not in st.session_state:
-        st.session_state.processed_file_id = None
+@st.cache_resource
+def get_llm(api_key: str) -> ChatGoogleGenerativeAI:
+    """Initializes and caches the LLM."""
+    return ChatGoogleGenerativeAI(
+        model="gemini-2.5-flash-lite-preview-06-17",
+        google_api_key=api_key,
+        temperature=0.7,
+    )
 
+@st.cache_resource
+def get_embeddings(api_key: str) -> GoogleGenerativeAIEmbeddings:
+    """Initializes and caches the embeddings model."""
+    return GoogleGenerativeAIEmbeddings(
+        model="models/embedding-001", google_api_key=api_key
+    )
 
-def process_uploaded_file(uploaded_file, embeddings: GoogleGenerativeAIEmbeddings):
+@st.cache_data
+def load_and_split_docs(file_path: str) -> List[Document]:
     """
-    Processes the uploaded PDF file, creates a vector store, and updates the session state.
+    Loads a PDF and splits it into documents.
+    Caches the result based on the file path.
     """
-    try:
-        with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
-            tmp_file.write(uploaded_file.getbuffer())
-            tmp_file_path = tmp_file.name
+    loader = PyPDFLoader(file_path)
+    return loader.load()
 
-        st.write(f"Processing `{uploaded_file.name}`...")
-        progress_bar = st.progress(0)
-        status_text = st.empty()
+@st.cache_resource
+def build_retriever(
+    _docs: List[Document], embeddings: GoogleGenerativeAIEmbeddings
+) -> ParentDocumentRetriever:
+    """
+    Builds and caches the advanced ParentDocumentRetriever.
+    The '_docs' argument is used for caching purposes but the function
+    relies on the documents being passed to retriever.add_documents.
+    """
+    parent_splitter = RecursiveCharacterTextSplitter(chunk_size=PARENT_CHUNK_SIZE)
+    child_splitter = RecursiveCharacterTextSplitter(chunk_size=CHILD_CHUNK_SIZE)
+    
+    vectorstore = Chroma(
+        collection_name="split_parents",
+        embedding_function=embeddings,
+        persist_directory=str(PERSIST_DIRECTORY),
+    )
+    store = InMemoryStore()
 
-        # 1. Load the document
-        status_text.text("Loading PDF...")
-        loader = PyPDFLoader(tmp_file_path)
-        documents = loader.load()
-        progress_bar.progress(25)
+    retriever = ParentDocumentRetriever(
+        vectorstore=vectorstore,
+        docstore=store,
+        child_splitter=child_splitter,
+        parent_splitter=parent_splitter,
+    )
+    # This part is crucial and will run only when the documents change
+    retriever.add_documents(_docs, ids=None)
+    return retriever
 
-        # 2. Split the document into chunks
-        status_text.text(f"Splitting {len(documents)} pages into chunks...")
-        text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=1000,
-            chunk_overlap=200,
-            add_start_index=True,
-            separators=["\n\n", "\n", " ", ""],
-        )
-        texts: list[Document] = text_splitter.split_documents(documents)
-        progress_bar.progress(50)
+# --- Main Application Logic ---
 
-        # 3. Create embeddings and vector store
-        status_text.text(f"Creating embeddings for {len(texts)} chunks...")
-        st.session_state.vector_store = Chroma.from_documents(
-            texts, embeddings, persist_directory=str(PERSIST_DIRECTORY)
-        )
-        progress_bar.progress(100)
-        status_text.text("Processing complete!")
-        st.success("File processed and vector store created/updated successfully!")
-        st.session_state.processed_file_id = uploaded_file.file_id
-
-    except Exception as e:
-        st.error(f"An error occurred during file processing: {e}")
-    finally:
-        if 'tmp_file_path' in locals() and os.path.exists(tmp_file_path):
-            os.remove(tmp_file_path)
-
-
-def handle_question_answering(google_api_key: str, vector_store: VectorStore):
-    """Handles the user input and the QA process."""
+def handle_question_answering(llm: ChatGoogleGenerativeAI, retriever):
+    """Handles the user input and the QA process with re-ranking."""
     st.header("Ask a question about the document")
     user_question = st.text_input("Your question:")
 
     if user_question:
-        try:
-            llm = ChatGoogleGenerativeAI(
-                model="models/gemini-1.5-flash-latest",
-                google_api_key=google_api_key,
-                temperature=0.7,
-            )
-            retriever = vector_store.as_retriever(
-                search_type="similarity", search_kwargs={"k": 3}
-            )
-            qa_chain = RetrievalQA.from_chain_type(
-                llm=llm,
-                chain_type="stuff",
-                retriever=retriever,
-                return_source_documents=True,
-            )
+        with st.spinner("Retrieving, re-ranking, and finding the answer..."):
+            try:
+                # 1. Set up the re-ranking compressor
+                compressor = LLMChainExtractor.from_llm(llm)
+                compression_retriever = ContextualCompressionRetriever(
+                    base_compressor=compressor, base_retriever=retriever
+                )
 
-            with st.spinner("Finding the answer..."):
+                # 2. Set up the QA chain
+                qa_chain = RetrievalQA.from_chain_type(
+                    llm=llm,
+                    chain_type="stuff",
+                    retriever=compression_retriever,
+                    return_source_documents=True,
+                )
+
+                # 3. Invoke the chain and display the response
                 response = qa_chain.invoke({"query": user_question})
                 st.write("### Answer")
                 st.write(response["result"])
@@ -126,14 +126,18 @@ def handle_question_answering(google_api_key: str, vector_store: VectorStore):
                 with st.expander("Show source documents"):
                     st.write(response["source_documents"])
 
-        except Exception as e:
-            st.error(f"An error occurred while answering the question: {e}")
-
+            except Exception as e:
+                st.error(f"An error occurred: {e}")
+                st.exception(e)
 
 def main():
     """Main function to run the Streamlit application."""
     st.set_page_config(page_title="Chat with your PDF", layout="wide")
-    st.title("📚 Chat with Your Book")
+    st.title("📚 Advanced Chat with Your Book")
+    st.markdown(
+        "This app uses advanced RAG techniques for more accurate answers. "
+        "Upload a PDF to get started."
+    )
 
     load_dotenv()
     google_api_key = get_google_api_key()
@@ -144,23 +148,41 @@ def main():
         )
         return
 
-    embeddings = GoogleGenerativeAIEmbeddings(
-        model="models/embedding-001", google_api_key=google_api_key
-    )
+    # Initialize LLM and Embeddings using cached functions
+    llm = get_llm(google_api_key)
+    embeddings = get_embeddings(google_api_key)
 
-    initialize_session_state(embeddings)
-
+    # File uploader
     uploaded_file = st.file_uploader(
-        "Upload your PDF book to create or update the vector store", type="pdf"
+        "Upload your PDF book to create the retriever", type="pdf"
     )
 
-    if uploaded_file and uploaded_file.file_id != st.session_state.get(
-        "processed_file_id"
-    ):
-        process_uploaded_file(uploaded_file, embeddings)
+    if uploaded_file:
+        try:
+            # Use a temporary file to get a stable path for caching
+            with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
+                tmp_file.write(uploaded_file.getbuffer())
+                tmp_file_path = tmp_file.name
+            
+            # Load, split, and build the retriever using cached functions
+            with st.spinner("Processing your document... This may take a moment."):
+                docs = load_and_split_docs(tmp_file_path)
+                retriever = build_retriever(docs, embeddings)
 
-    if st.session_state.get("vector_store"):
-        handle_question_answering(google_api_key, st.session_state.vector_store)
+            st.success("Document processed successfully! You can now ask questions.")
+            
+            # Handle the QA logic
+            handle_question_answering(llm, retriever)
+
+        except Exception as e:
+            st.error(f"An error occurred during file processing: {e}")
+            st.exception(e)
+        finally:
+            # Clean up the temporary file
+            if "tmp_file_path" in locals() and os.path.exists(tmp_file_path):
+                os.remove(tmp_file_path)
+    else:
+        st.info("Please upload a PDF file to begin.")
 
 
 if __name__ == "__main__":
