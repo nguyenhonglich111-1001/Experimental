@@ -1,0 +1,5 @@
+refactor(nlp): Rename atomic-pdf-qa-streamlit to atomic_pdf_qa_streamlit
+
+- Renamed the directory to follow Python's snake_case naming convention for packages.
+- This change improves consistency across the project's codebase.
+- No functional changes were made.

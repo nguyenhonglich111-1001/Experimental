@@ -37,16 +37,11 @@ VOYAGE_API_KEY=""
 
 ## Documentations & References
 * https://docs.crewai.com/en
-* https://langchain-ai.github.io/langgraph/concepts/multi_agent/
-* https://github.com/langchain-ai/langgraph
-* https://github.com/a2aproject/A2A/tree/main
-* https://openrouter.ai/docs/quickstart
-* https://www.relari.ai/blog/ai-agent-framework-comparison-langgraph-crewai-openai-swarm
-* https://langchain-ai.github.io/langgraph/agents/mcp/
-* https://modelcontextprotocol.io/introduction
-* https://github.com/modelcontextprotocol/python-sdk
+* https://github.com/BrainBlend-AI/atomic-agents
 
 ## Instructions
+* always follow the `python_rules.md` for Python coding standards overall
+* always use `instruction_rules.md` in each inner project as a reference for coding and project management
 * always store relevent data, application's states, user's states,... in database (PostgreSQL)
 * always create/update `PROJECT_OVERVIEW.md` after every task with:
     * features
