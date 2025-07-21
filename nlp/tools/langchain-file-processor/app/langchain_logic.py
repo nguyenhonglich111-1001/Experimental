@@ -121,17 +121,25 @@ def classify_intent(_llm: ChatGoogleGenerativeAI, query: str) -> str:
     return result.strip()
 
 @st.cache_data
-def generate_sub_queries(_llm: ChatGoogleGenerativeAI, query: str, chat_history: List[dict]) -> List[str]:
+def generate_sub_queries(_llm: ChatGoogleGenerativeAI, query: str, _chat_history: List[dict]) -> List[str]:
     """
     Uses an LLM to break down a complex or conversational query into simpler, self-contained sub-queries.
     """
     # Format the chat history into a string
     history_str = ""
-    for message in chat_history:
-        if message["role"] == "user":
-            history_str += f"Human: {message['content']}\n"
-        elif message["role"] == "assistant":
-            history_str += f"AI: {message['content']}\n"
+    for message in _chat_history:
+        if isinstance(message, HumanMessage):
+            history_str += f"Human: {message.content}\n"
+        elif isinstance(message, AIMessage):
+            # Skip file list messages from history context
+            if not (isinstance(message.additional_kwargs, dict) and message.additional_kwargs.get("type") == "file_list"):
+                history_str += f"AI: {message.content}\n"
+        elif isinstance(message, dict): # For backward compatibility
+            role = message.get("role")
+            if role == "user":
+                history_str += f"Human: {message.get('content')}\n"
+            elif role == "assistant":
+                history_str += f"AI: {message.get('content')}\n"
 
     system_message = f"""
     You are an expert at query rewriting and decomposition. Your goal is to reformulate the user's latest question into a set of simple, self-contained sub-queries that a semantic search system can effectively answer.
