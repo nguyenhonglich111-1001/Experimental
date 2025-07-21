@@ -47,7 +47,7 @@ def display_deletable_file_list(vectorstore: Chroma):
             with col2:
                 if st.button("Delete", key=f"delete_{file_path}"):
                     st.session_state.file_to_delete = file_path
-                    st.experimental_rerun()
+                    st.rerun()
     else:
         st.markdown("I do not have any files in my knowledge base yet. Please upload a PDF in the sidebar.")
 
@@ -86,13 +86,13 @@ def display_chat_interface(
             if st.button("Yes, Delete", key=f"confirm_delete_{file_path}"):
                 if delete_file(vectorstore, file_path):
                     st.session_state.file_to_delete = None
-                    st.experimental_rerun()
+                    st.rerun()
                 else:
                     st.session_state.file_to_delete = None
         with col2:
             if st.button("Cancel", key=f"cancel_delete_{file_path}"):
                 st.session_state.file_to_delete = None
-                st.experimental_rerun()
+                st.rerun()
 
     # Handle new user input
     if prompt := st.chat_input("What would you like to ask?"):
