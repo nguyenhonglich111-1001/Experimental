@@ -46,6 +46,7 @@ def get_embeddings(api_key: str) -> GoogleGenerativeAIEmbeddings:
         model=EMBEDDINGS_MODEL, google_api_key=api_key
     )
 
+@st.cache_resource
 def build_vector_store(
     embeddings: GoogleGenerativeAIEmbeddings,
 ) -> Chroma:
