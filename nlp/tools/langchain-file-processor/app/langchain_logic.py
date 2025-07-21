@@ -48,13 +48,13 @@ def get_embeddings(api_key: str) -> GoogleGenerativeAIEmbeddings:
 
 @st.cache_resource
 def build_vector_store(
-    embeddings: GoogleGenerativeAIEmbeddings,
+    _embeddings: GoogleGenerativeAIEmbeddings,
 ) -> Chroma:
     """Builds and caches the Chroma vector store."""
     client = chromadb.PersistentClient(path=str(PERSIST_DIRECTORY))
     return Chroma(
         collection_name="split_parents",
-        embedding_function=embeddings,
+        embedding_function=_embeddings,
         client=client,
         persist_directory=str(PERSIST_DIRECTORY),
     )
