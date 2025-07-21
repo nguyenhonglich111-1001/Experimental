@@ -10,7 +10,8 @@ from langchain_google_genai import (ChatGoogleGenerativeAI,
 from langchain.retrievers import ParentDocumentRetriever
 from typing import List, Optional
 
-from .langchain_logic import classify_intent, generate_sub_queries, get_indexed_files, rerank_documents
+from .langchain_logic import (classify_intent, delete_file, generate_sub_queries,
+                               get_indexed_files, rerank_documents)
 
 # --- Prompt Templates ---
 
@@ -64,20 +65,46 @@ def display_chat_interface(
             if intent == "list_files":
                 files = get_indexed_files(vectorstore)
                 if files:
-                    formatted_files = "\n".join(f"- `{os.path.basename(f)}`" for f in files)
-                    response = f"I have the following files in my knowledge base:\n\n{formatted_files}"
+                    response = "I have the following files in my knowledge base:"
+                    st.markdown(response)
+                    for file_path in files:
+                        col1, col2 = st.columns([4, 1])
+                        with col1:
+                            st.markdown(f"- `{os.path.basename(file_path)}`")
+                        with col2:
+                            if st.button(f"Delete", key=f"delete_{file_path}"):
+                                st.session_state.file_to_delete = file_path
                 else:
                     response = "I do not have any files in my knowledge base yet. Please upload a PDF in the sidebar."
+                    st.markdown(response)
             
             elif intent == "question_about_document" and retriever:
                 response = handle_rag_query(prompt, llm, retriever, embeddings)
-            
+                st.markdown(response)
+
             else: # Handles "conversational" intent or questions when no doc is loaded
                 response = handle_direct_llm_query(prompt, llm)
+                st.markdown(response)
             
-            st.markdown(response)
-        
-        st.session_state.messages.append({"role": "assistant", "content": response})
+            if 'file_to_delete' in st.session_state and st.session_state.file_to_delete:
+                file_path = st.session_state.file_to_delete
+                st.warning(f"Are you sure you want to delete `{os.path.basename(file_path)}`? This action cannot be undone.")
+                col1, col2, _ = st.columns([1, 1, 4])
+                with col1:
+                    if st.button("Yes, Delete", key=f"confirm_delete_{file_path}"):
+                        if delete_file(vectorstore, file_path):
+                            st.session_state.file_to_delete = None
+                            st.experimental_rerun()
+                        else:
+                            # Error messages are handled within delete_file
+                            st.session_state.file_to_delete = None
+                with col2:
+                    if st.button("Cancel", key=f"cancel_delete_{file_path}"):
+                        st.session_state.file_to_delete = None
+                        st.experimental_rerun()
+
+        if response: # Avoid adding empty responses to history
+            st.session_state.messages.append({"role": "assistant", "content": response})
 
 
 def handle_direct_llm_query(prompt: str, llm: ChatGoogleGenerativeAI) -> str:
