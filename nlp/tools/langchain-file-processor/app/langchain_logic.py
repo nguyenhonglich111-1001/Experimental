@@ -2,16 +2,17 @@ from typing import List, Tuple
 import os
 import chromadb
 import streamlit as st
-from langchain.chains import ConversationChain, RetrievalQA
-from langchain.memory import ConversationBufferMemory
+from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 from langchain.retrievers import ParentDocumentRetriever
 from langchain.storage import InMemoryStore
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
+from langchain_community.chat_message_histories import StreamlitChatMessageHistory
 from langchain_core.documents import Document
 from langchain_core.output_parsers import StrOutputParser
-from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_google_genai import (ChatGoogleGenerativeAI,
                                     GoogleGenerativeAIEmbeddings)
 from typing import List, Optional
@@ -234,10 +235,30 @@ Answer with Citations:""",
 )
 
 def handle_direct_llm_query(prompt: str, llm: ChatGoogleGenerativeAI) -> str:
-    """Handles a direct query to the LLM without retrieval."""
+    """Handles a direct query to the LLM without retrieval, maintaining conversation history."""
+    
+    prompt_template = ChatPromptTemplate.from_messages(
+        [
+            ("system", "You are a helpful assistant."),
+            MessagesPlaceholder(variable_name="history"),
+            ("human", "{input}"),
+        ]
+    )
+
+    chain = prompt_template | llm | StrOutputParser()
+
+    conversational_chain = RunnableWithMessageHistory(
+        chain,
+        lambda session_id: StreamlitChatMessageHistory(key="messages"),
+        input_messages_key="input",
+        history_messages_key="history",
+    )
+    
     with st.spinner("Thinking..."):
-        conversation = ConversationChain(llm=llm, memory=ConversationBufferMemory())
-        response = conversation.predict(input=prompt)
+        response = conversational_chain.invoke(
+            {"input": prompt},
+            config={"configurable": {"session_id": "any"}},
+        )
         return response
 
 
