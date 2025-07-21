@@ -64,3 +64,6 @@ VOYAGE_API_KEY=""
 * always run the development environment in another process and export logs to `./server.log` (view this file to check the logs and debug)
 * always name the main application file of each project `server.py`
 * always investigate all requirements.txt in smaller project and make the final requirements.txt in main directory contain all of them without duplicate library after creating or updating an inner project.
+* **Shell Output Handling:** Always process raw shell command output to provide a clean, "beautiful" display. This involves:
+    1.  Removing ANSI escape codes used for colors and text formatting.
+    2.  Correctly interpreting control characters like carriage returns (`\r`) to simulate how a real terminal would overwrite lines, ensuring only the final, intended output is shown.
