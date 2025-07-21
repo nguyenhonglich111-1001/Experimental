@@ -17,16 +17,16 @@ from app.utils import get_google_api_key, load_and_split_by_chapter
 
 def reset_knowledge_base():
     """Deletes the vector store and resets the session state."""
-    if os.path.exists(PERSIST_DIRECTORY):
-        shutil.rmtree(PERSIST_DIRECTORY)
-    
-    # Reset session state
+    # First, release the resources by setting them to None
     st.session_state.retriever = None
     st.session_state.vectorstore = None
     st.session_state.messages = []
     st.session_state.file_to_delete = None
+
+    # Now, delete the physical storage
+    if os.path.exists(PERSIST_DIRECTORY):
+        shutil.rmtree(PERSIST_DIRECTORY)
     
-    # Also delete uploaded files
     upload_dir = os.path.join(os.path.dirname(__file__), "uploads")
     if os.path.exists(upload_dir):
         shutil.rmtree(upload_dir)
