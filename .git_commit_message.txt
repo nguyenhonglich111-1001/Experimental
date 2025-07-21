@@ -1,9 +1,9 @@
-feat(optimization): Implement two-model strategy for efficiency
+fix(ui): Handle LangChain message objects in chat history
 
-This commit introduces a two-model strategy to optimize the application for both cost and performance. A faster, more cost-effective model (`gemini-1.0-flash-lite`) is now used for simple, deterministic tasks, while the more powerful model is reserved for complex generation.
+This commit fixes a `TypeError` that occurred when displaying the chat history after the conversational memory was upgraded to use `RunnableWithMessageHistory`.
+
+The root cause was that the UI component expected a list of dictionaries, but the new memory manager was populating the session state with LangChain's `HumanMessage` and `AIMessage` objects.
 
 Key changes:
-- **`app/config.py`**: A new `FAST_LLM_MODEL` variable has been added.
-- **`app/langchain_logic.py`**: A new `get_fast_llm` function has been created to instantiate the faster model. The `handle_rag_query` function has been updated to accept this new model for use in the chapter extraction step.
-- **`server.py`**: The main application now instantiates both the standard and fast LLMs. The `classify_intent` and `extract_chapter_from_query` functions are now correctly called with the faster model.
-- **`GEMINI.md`**: The project documentation has been updated to reflect this new two-model strategy as a best practice.
+- **`app/components.py`**: The `display_chat_history` function has been updated to be type-aware. It can now correctly render both the old dictionary format and the new LangChain message objects by checking the type of each message and accessing its attributes accordingly.
+- **`server.py`**: New messages added to the chat history are now explicitly converted to `HumanMessage` or `AIMessage` objects to ensure a consistent format going forward.

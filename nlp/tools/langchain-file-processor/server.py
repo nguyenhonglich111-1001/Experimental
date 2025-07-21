@@ -12,6 +12,7 @@ from app.langchain_logic import (build_retriever, build_vector_store,
                                  get_embeddings, get_fast_llm, get_llm,
                                  handle_direct_llm_query, handle_rag_query,
                                  rerank_documents)
+from langchain_core.messages import AIMessage, HumanMessage
 from app.state import (cancel_file_deletion, confirm_file_deletion,
                        initialize_session_state)
 from app.utils import get_google_api_key, load_and_split_by_chapter
@@ -113,7 +114,7 @@ def main():
 
     # --- Handle new user input ---
     if prompt := st.chat_input("What would you like to ask?"):
-        st.session_state.messages.append({"role": "user", "content": prompt})
+        st.session_state.messages.append(HumanMessage(content=prompt))
         with st.chat_message("user"):
             st.markdown(prompt)
 
@@ -121,7 +122,7 @@ def main():
             intent = classify_intent(fast_llm, prompt)
 
             if intent == "list_files":
-                st.session_state.messages.append({"role": "assistant", "type": "file_list"})
+                st.session_state.messages.append(AIMessage(content="", additional_kwargs={"type": "file_list"}))
                 st.rerun()
 
             elif intent == "question_about_document" and st.session_state.retriever:
@@ -135,12 +136,12 @@ def main():
                     st.session_state.messages[-4:]
                 )
                 st.markdown(response)
-                st.session_state.messages.append({"role": "assistant", "content": response})
+                st.session_state.messages.append(AIMessage(content=response))
 
             else:
                 response = handle_direct_llm_query(prompt, llm)
                 st.markdown(response)
-                st.session_state.messages.append({"role": "assistant", "content": response})
+                # The conversational chain automatically adds the AIMessage to history
 
 
 if __name__ == "__main__":

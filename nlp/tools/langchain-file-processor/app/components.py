@@ -3,6 +3,8 @@ Contains reusable Streamlit UI components for the application.
 """
 import os
 import streamlit as st
+from langchain_core.messages import AIMessage, HumanMessage
+
 from .langchain_logic import get_indexed_files
 from .state import handle_file_deletion_request
 
@@ -28,8 +30,22 @@ def display_deletable_file_list(vectorstore):
 def display_chat_history(vectorstore):
     """Displays the chat history and the file list UI when appropriate."""
     for message in st.session_state.messages:
-        with st.chat_message(message["role"]):
-            if message.get("type") == "file_list":
+        # Determine the role and content based on the message type
+        if isinstance(message, HumanMessage):
+            role = "user"
+            content = message.content
+        elif isinstance(message, AIMessage):
+            role = "assistant"
+            content = message.content
+        elif isinstance(message, dict): # For backward compatibility
+            role = message.get("role")
+            content = message.get("content")
+        else:
+            continue # Skip unknown message types
+
+        with st.chat_message(role):
+            # Handle special message types like the file list
+            if isinstance(message, dict) and message.get("type") == "file_list":
                 display_deletable_file_list(vectorstore)
             else:
-                st.markdown(message["content"])
+                st.markdown(content)
