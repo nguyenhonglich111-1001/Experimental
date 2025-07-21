@@ -1,17 +1,37 @@
 import os
+import shutil
 import tempfile
 
 import streamlit as st
 from dotenv import load_dotenv
 
 from app.components import display_chat_history
+from app.config import PERSIST_DIRECTORY
 from app.langchain_logic import (build_retriever, build_vector_store,
                                  classify_intent, generate_sub_queries,
                                  get_embeddings, get_llm, handle_direct_llm_query,
                                  handle_rag_query, rerank_documents)
 from app.state import (cancel_file_deletion, confirm_file_deletion,
                        initialize_session_state)
-from app.utils import get_google_api_key, load_and_split_docs
+from app.utils import get_google_api_key, load_and_split_by_chapter
+
+def reset_knowledge_base():
+    """Deletes the vector store and resets the session state."""
+    if os.path.exists(PERSIST_DIRECTORY):
+        shutil.rmtree(PERSIST_DIRECTORY)
+    
+    # Reset session state
+    st.session_state.retriever = None
+    st.session_state.vectorstore = None
+    st.session_state.messages = []
+    st.session_state.file_to_delete = None
+    
+    # Also delete uploaded files
+    upload_dir = os.path.join(os.path.dirname(__file__), "uploads")
+    if os.path.exists(upload_dir):
+        shutil.rmtree(upload_dir)
+    
+    st.success("Knowledge base has been reset.")
 
 
 def main():
@@ -57,9 +77,10 @@ def main():
                     with open(permanent_path, "wb") as f:
                         f.write(uploaded_file.getbuffer())
 
-                    docs = load_and_split_docs(permanent_path)
+                    docs = load_and_split_by_chapter(permanent_path)
                     for doc in docs:
-                        doc.metadata["source"] = permanent_path # Store the permanent path
+                        # The source in metadata is now the permanent path
+                        doc.metadata["source"] = permanent_path
 
                     st.session_state.vectorstore = build_vector_store(embeddings)
                     st.session_state.retriever = build_retriever(st.session_state.vectorstore, docs)
@@ -70,6 +91,11 @@ def main():
         
         if st.session_state.retriever:
             st.success("A document is loaded and ready.")
+
+        st.divider()
+        if st.button("Reset Knowledge Base"):
+            reset_knowledge_base()
+            st.rerun()
 
     # --- Main Chat and Deletion Confirmation UI ---
     display_chat_history(st.session_state.vectorstore)
