@@ -187,31 +187,19 @@ def delete_file(vectorstore: Chroma, file_path: str) -> bool:
         st.error(f"File not found: {file_path}")
         return False
 
-    try:
-        # 1. Get all document IDs associated with the file path
-        all_docs = vectorstore.get(where={"source": file_path})
-        doc_ids = all_docs.get("ids", [])
+    all_docs = vectorstore.get(where={"source": file_path})
+    doc_ids = all_docs.get("ids", [])
 
-        if not doc_ids:
-            st.warning(f"No documents found in vector store for: {os.path.basename(file_path)}")
-        else:
-            # 2. Delete the documents from Chroma
-            vectorstore.delete(ids=doc_ids)
-            st.success(f"Removed {len(doc_ids)} document chunks from the vector store.")
+    if doc_ids:
+        vectorstore.delete(ids=doc_ids)
+        st.success(f"Removed {len(doc_ids)} document chunks from the vector store.")
+    else:
+        st.warning(f"No documents found in vector store for: {os.path.basename(file_path)}")
 
-        # 3. Delete the file from the filesystem
-        os.remove(file_path)
-        st.success(f"Successfully deleted file: {os.path.basename(file_path)}")
-        
-        # Clear caches to reflect the change
-        st.cache_data.clear()
-        st.cache_resource.clear()
-        
-        return True
-
-    except Exception as e:
-        st.error(f"An error occurred while deleting the file: {e}")
-        return False
+    os.remove(file_path)
+    st.success(f"Successfully deleted file: {os.path.basename(file_path)}")
+    
+    return True
 
 # --- Prompt Templates ---
 
