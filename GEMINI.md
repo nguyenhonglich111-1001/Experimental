@@ -55,6 +55,7 @@ VOYAGE_API_KEY=""
 * always implement user-friendly flows
 * always follow security best practices
 * always use the model `gemini-2.5-flash-lite-preview-06-17` when using the Gemini API
+* **Two-Model Strategy:** For efficiency and cost-effectiveness, always use a faster, cheaper model (e.g., `gemini-1.0-flash-lite`) for simple, well-defined tasks like classification, extraction, and routing. Reserve more powerful and expensive models for complex reasoning, synthesis, and final answer generation.
 * always commit your code after finishing fixing a bug or implementing a feature completely (DO NOT commit `.env` file)
 * **Commit Workflow:**
     1.  **Write to File:** Always first write the complete, multi-line commit message to a temporary file named `.git_commit_message.txt` in the project root.

@@ -18,16 +18,25 @@ from langchain_google_genai import (ChatGoogleGenerativeAI,
                                     GoogleGenerativeAIEmbeddings)
 from typing import List, Optional
 
-from .config import (CHILD_CHUNK_SIZE, EMBEDDINGS_MODEL, LLM_MODEL,
-                    PARENT_CHUNK_SIZE, PERSIST_DIRECTORY)
+from .config import (CHILD_CHUNK_SIZE, EMBEDDINGS_MODEL, FAST_LLM_MODEL,
+                    LLM_MODEL, PARENT_CHUNK_SIZE, PERSIST_DIRECTORY)
 
 @st.cache_resource
 def get_llm(api_key: str) -> ChatGoogleGenerativeAI:
-    """Initializes and caches the LLM."""
+    """Initializes and caches the main LLM."""
     return ChatGoogleGenerativeAI(
         model=LLM_MODEL,
         google_api_key=api_key,
         temperature=0.7,
+    )
+
+@st.cache_resource
+def get_fast_llm(api_key: str) -> ChatGoogleGenerativeAI:
+    """Initializes and caches the fast LLM for simple tasks."""
+    return ChatGoogleGenerativeAI(
+        model=FAST_LLM_MODEL,
+        google_api_key=api_key,
+        temperature=0.0, # Simple tasks should be deterministic
     )
 
 @st.cache_resource
@@ -300,6 +309,7 @@ def handle_direct_llm_query(prompt: str, llm: ChatGoogleGenerativeAI) -> str:
 def handle_rag_query(
     prompt: str,
     llm: ChatGoogleGenerativeAI,
+    fast_llm: ChatGoogleGenerativeAI,
     retriever: ParentDocumentRetriever,
     embeddings: GoogleGenerativeAIEmbeddings,
     chat_history: List[dict],
@@ -313,7 +323,7 @@ def handle_rag_query(
 
         all_retrieved_docs: List[Document] = []
         for q in sub_queries:
-            chapter_num = extract_chapter_from_query(llm, q)
+            chapter_num = extract_chapter_from_query(fast_llm, q)
             
             search_kwargs = {}
             if chapter_num is not None:

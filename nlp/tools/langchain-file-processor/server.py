@@ -9,8 +9,9 @@ from app.components import display_chat_history
 from app.config import PERSIST_DIRECTORY
 from app.langchain_logic import (build_retriever, build_vector_store,
                                  classify_intent, generate_sub_queries,
-                                 get_embeddings, get_llm, handle_direct_llm_query,
-                                 handle_rag_query, rerank_documents)
+                                 get_embeddings, get_fast_llm, get_llm,
+                                 handle_direct_llm_query, handle_rag_query,
+                                 rerank_documents)
 from app.state import (cancel_file_deletion, confirm_file_deletion,
                        initialize_session_state)
 from app.utils import get_google_api_key, load_and_split_by_chapter
@@ -49,6 +50,7 @@ def main():
         return
 
     llm = get_llm(google_api_key)
+    fast_llm = get_fast_llm(google_api_key)
     embeddings = get_embeddings(google_api_key)
 
     # Build or load the vector store and retriever from session state
@@ -116,7 +118,7 @@ def main():
             st.markdown(prompt)
 
         with st.chat_message("assistant"):
-            intent = classify_intent(llm, prompt)
+            intent = classify_intent(fast_llm, prompt)
 
             if intent == "list_files":
                 st.session_state.messages.append({"role": "assistant", "type": "file_list"})
@@ -126,7 +128,8 @@ def main():
                 # Pass the last 4 messages for conversational context
                 response = handle_rag_query(
                     prompt, 
-                    llm, 
+                    llm,
+                    fast_llm, 
                     st.session_state.retriever, 
                     embeddings, 
                     st.session_state.messages[-4:]
