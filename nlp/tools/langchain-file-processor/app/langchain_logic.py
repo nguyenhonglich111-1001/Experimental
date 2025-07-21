@@ -1,5 +1,6 @@
 from typing import List, Tuple
 import os
+import re
 import chromadb
 import streamlit as st
 from langchain.chains import RetrievalQA
@@ -109,16 +110,33 @@ def classify_intent(_llm: ChatGoogleGenerativeAI, query: str) -> str:
     return result.strip()
 
 @st.cache_data
-def generate_sub_queries(_llm: ChatGoogleGenerativeAI, query: str) -> List[str]:
-    """Uses an LLM to break down a complex query into simpler sub-queries."""
-    system_message = """
-    You are an expert at converting user questions into a set of simple, self-contained sub-queries.
-    Your goal is to break down the user's query into a series of questions that a semantic search system can effectively answer.
+def generate_sub_queries(_llm: ChatGoogleGenerativeAI, query: str, chat_history: List[dict]) -> List[str]:
+    """
+    Uses an LLM to break down a complex or conversational query into simpler, self-contained sub-queries.
+    """
+    # Format the chat history into a string
+    history_str = ""
+    for message in chat_history:
+        if message["role"] == "user":
+            history_str += f"Human: {message['content']}\n"
+        elif message["role"] == "assistant":
+            history_str += f"AI: {message['content']}\n"
+
+    system_message = f"""
+    You are an expert at query rewriting and decomposition. Your goal is to reformulate the user's latest question into a set of simple, self-contained sub-queries that a semantic search system can effectively answer.
+
+    Use the provided conversation history to understand the full context of the user's request.
+    Resolve pronouns (e.g., "it", "that", "they") and ambiguous references based on the preceding conversation.
+    The rewritten queries must be explicit and stand on their own.
 
     - For broad requests (e.g., "list all...", "summarize..."), first generate a query to find the general context, then generate queries to extract the specific details.
     - Each sub-query should be on a new line.
     - Do not number the sub-queries.
+
+    Conversation History:
+    {history_str}
     """
+    
     prompt = ChatPromptTemplate.from_messages(
         [
             ("system", system_message),
@@ -129,6 +147,35 @@ def generate_sub_queries(_llm: ChatGoogleGenerativeAI, query: str) -> List[str]:
     chain = prompt | _llm | StrOutputParser()
     result = chain.invoke({"question": query})
     return [q.strip() for q in result.split("\n") if q.strip()]
+
+@st.cache_data
+def extract_chapter_from_query(_llm: ChatGoogleGenerativeAI, query: str) -> Optional[int]:
+    """
+    Uses an LLM to extract a chapter number from a user query.
+    """
+    system_message = """
+    You are an expert at extracting specific information. Your only job is to find a chapter number in the user's query.
+    
+    - If you find a chapter number, respond with ONLY the integer number (e.g., "4", "12").
+    - If you do not find any reference to a chapter, respond with the word "None".
+    - Do not add any explanation or conversational text.
+    """
+    
+    prompt = ChatPromptTemplate.from_messages(
+        [
+            ("system", system_message),
+            ("human", "{question}"),
+        ]
+    )
+    
+    chain = prompt | _llm | StrOutputParser()
+    result = chain.invoke({"question": query}).strip()
+    
+    # Find the first number in the LLM's response
+    match = re.search(r'\d+', result)
+    if match:
+        return int(match.group(0))
+    return None
 
 def rerank_documents(
     _llm: ChatGoogleGenerativeAI, query: str, documents: List[Document]
@@ -255,17 +302,26 @@ def handle_rag_query(
     llm: ChatGoogleGenerativeAI,
     retriever: ParentDocumentRetriever,
     embeddings: GoogleGenerativeAIEmbeddings,
+    chat_history: List[dict],
 ) -> str:
     """Handles a query using the RAG workflow with query decomposition and citations."""
-    with st.spinner("Breaking down question and searching document..."):
-        sub_queries = generate_sub_queries(llm, prompt)
+    with st.spinner("Analyzing conversation and breaking down question..."):
+        sub_queries = generate_sub_queries(llm, prompt, chat_history)
         
         with st.expander("Generated Sub-Queries"):
             st.write(sub_queries)
 
         all_retrieved_docs: List[Document] = []
         for q in sub_queries:
-            all_retrieved_docs.extend(retriever.get_relevant_documents(q))
+            chapter_num = extract_chapter_from_query(llm, q)
+            
+            search_kwargs = {}
+            if chapter_num is not None:
+                st.info(f"Filtering search to Chapter {chapter_num}...")
+                search_kwargs = {"filter": {"chapter": chapter_num}}
+
+            retrieved = retriever.get_relevant_documents(q, search_kwargs=search_kwargs)
+            all_retrieved_docs.extend(retrieved)
         
         unique_docs = list({doc.page_content: doc for doc in all_retrieved_docs}.values())
         
