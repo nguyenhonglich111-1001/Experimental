@@ -16,6 +16,7 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_google_genai import (ChatGoogleGenerativeAI,
                                     GoogleGenerativeAIEmbeddings)
+from langchain_core.messages import AIMessage, HumanMessage
 from typing import List, Optional
 
 from .config import (CHILD_CHUNK_SIZE, EMBEDDINGS_MODEL, FAST_LLM_MODEL,

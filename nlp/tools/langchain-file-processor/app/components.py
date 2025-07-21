@@ -45,7 +45,9 @@ def display_chat_history(vectorstore):
 
         with st.chat_message(role):
             # Handle special message types like the file list
-            if isinstance(message, dict) and message.get("type") == "file_list":
+            if isinstance(message, AIMessage) and \
+                hasattr(message, 'additional_kwargs') and \
+                message.additional_kwargs.get("type", "") == "file_list":
                 display_deletable_file_list(vectorstore)
             else:
                 st.markdown(content)
