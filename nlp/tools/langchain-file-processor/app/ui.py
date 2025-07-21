@@ -10,7 +10,7 @@ from langchain_google_genai import (ChatGoogleGenerativeAI,
 from langchain.retrievers import ParentDocumentRetriever
 from typing import List, Optional
 
-from .langchain_logic import classify_intent, generate_sub_queries, get_indexed_files
+from .langchain_logic import classify_intent, generate_sub_queries, get_indexed_files, rerank_documents
 
 # --- Prompt Templates ---
 
@@ -112,9 +112,14 @@ def handle_rag_query(
 
         st.success(f"Retrieved {len(unique_docs)} unique document sections.")
 
+    with st.spinner("Re-ranking retrieved documents for relevance..."):
+        reranked_docs = rerank_documents(llm, prompt, unique_docs)
+        top_docs = reranked_docs[:4] # Select top 4 documents
+        st.success(f"Re-ranked and selected top {len(top_docs)} documents.")
+
     with st.spinner("Synthesizing the final answer with citations..."):
         try:
-            contextual_vectorstore = Chroma.from_documents(unique_docs, embeddings)
+            contextual_vectorstore = Chroma.from_documents(top_docs, embeddings)
 
             qa_chain = RetrievalQA.from_chain_type(
                 llm=llm,

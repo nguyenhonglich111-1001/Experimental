@@ -124,3 +124,53 @@ def generate_sub_queries(_llm: ChatGoogleGenerativeAI, query: str) -> List[str]:
     chain = prompt | _llm | StrOutputParser()
     result = chain.invoke({"question": query})
     return [q.strip() for q in result.split("\n") if q.strip()]
+
+@st.cache_data
+def rerank_documents(
+    _llm: ChatGoogleGenerativeAI, query: str, documents: List[Document]
+) -> List[Document]:
+    """Uses an LLM to re-rank a list of documents based on their relevance to the query."""
+    if not documents:
+        return []
+
+    prompt = ChatPromptTemplate.from_template(
+        """
+    You are a document re-ranking expert.
+    Given a query and a list of documents, your task is to assign a relevance score to each document.
+    The score should be an integer between 1 and 10, where 10 is the most relevant.
+
+    Respond with a list of scores, one for each document, in the same order.
+    The output should be a comma-separated string of numbers, e.g., "8,5,9,3".
+
+    Query: {query}
+
+    Documents:
+    {docs}
+    """
+    )
+
+    chain = prompt | _llm | StrOutputParser()
+
+    doc_strings = [
+        f"ID: {i}\nContent: {doc.page_content}"
+        for i, doc in enumerate(documents)
+    ]
+    
+    result = chain.invoke({"query": query, "docs": "\n---\n".join(doc_strings)})
+    
+    try:
+        scores = [float(s.strip()) for s in result.split(",")]
+        
+        if len(scores) != len(documents):
+            st.error("Re-ranking returned a different number of scores than documents.")
+            return documents
+
+        scored_docs = sorted(
+            zip(scores, documents), key=lambda x: x[0], reverse=True
+        )
+        
+        return [doc for score, doc in scored_docs]
+
+    except ValueError:
+        st.error(f"Error parsing re-ranking scores: {result}")
+        return documents
