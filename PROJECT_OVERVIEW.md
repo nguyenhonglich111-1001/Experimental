@@ -71,6 +71,7 @@ This document provides a comprehensive overview of the "Experimental" project, i
 
 ## Changelog
 
+*   **2025-07-21:** Implemented file deletion from the UI in the `langchain-file-processor` tool, including a two-step confirmation process for safety.
 *   **2025-07-21:** Implemented a re-ranking step in the RAG pipeline for the `langchain-file-processor` tool to improve the relevance of retrieved documents.
 *   **2025-07-17:** Implemented the "Atomic Agents-Powered PDF Book Q&A (Streamlit)" feature, including `pdf_tool.py`, `book_qa_agent.py`, and `server.py`. Updated `requirements.txt` and project overview.
 *   **2025-07-17:** Initial project setup and documentation.
