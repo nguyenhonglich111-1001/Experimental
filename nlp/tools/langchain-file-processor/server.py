@@ -123,7 +123,14 @@ def main():
                 st.rerun()
 
             elif intent == "question_about_document" and st.session_state.retriever:
-                response = handle_rag_query(prompt, llm, st.session_state.retriever, embeddings)
+                # Pass the last 4 messages for conversational context
+                response = handle_rag_query(
+                    prompt, 
+                    llm, 
+                    st.session_state.retriever, 
+                    embeddings, 
+                    st.session_state.messages[-4:]
+                )
                 st.markdown(response)
                 st.session_state.messages.append({"role": "assistant", "content": response})
 
