@@ -35,6 +35,23 @@ Answer with Citations:""",
 )
 
 
+def display_deletable_file_list(vectorstore: Chroma):
+    """Gets and displays the list of indexed files with delete buttons."""
+    files = get_indexed_files(vectorstore)
+    if files:
+        st.markdown("I have the following files in my knowledge base:")
+        for file_path in files:
+            col1, col2 = st.columns([4, 1])
+            with col1:
+                st.markdown(f"- `{os.path.basename(file_path)}`")
+            with col2:
+                if st.button("Delete", key=f"delete_{file_path}"):
+                    st.session_state.file_to_delete = file_path
+                    st.experimental_rerun()
+    else:
+        st.markdown("I do not have any files in my knowledge base yet. Please upload a PDF in the sidebar.")
+
+
 def display_chat_interface(
     llm: ChatGoogleGenerativeAI,
     retriever: Optional[ParentDocumentRetriever],
@@ -45,66 +62,67 @@ def display_chat_interface(
     Handles the main chat interface, switching between direct LLM chat and RAG chat.
     """
     st.header("Chat with Gemini")
-    
+
+    # Initialize session state
     if "messages" not in st.session_state:
         st.session_state.messages = []
+    if "file_to_delete" not in st.session_state:
+        st.session_state.file_to_delete = None
 
+    # Display chat history
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
-            st.markdown(message["content"])
+            if message.get("type") == "file_list":
+                display_deletable_file_list(vectorstore)
+            else:
+                st.markdown(message["content"])
 
+    # Handle the confirmation dialog for file deletion
+    if st.session_state.file_to_delete:
+        file_path = st.session_state.file_to_delete
+        st.warning(f"Are you sure you want to delete `{os.path.basename(file_path)}`? This action cannot be undone.")
+        col1, col2, _ = st.columns([1, 1, 4])
+        with col1:
+            if st.button("Yes, Delete", key=f"confirm_delete_{file_path}"):
+                if delete_file(vectorstore, file_path):
+                    st.session_state.file_to_delete = None
+                    st.experimental_rerun()
+                else:
+                    st.session_state.file_to_delete = None
+        with col2:
+            if st.button("Cancel", key=f"cancel_delete_{file_path}"):
+                st.session_state.file_to_delete = None
+                st.experimental_rerun()
+
+    # Handle new user input
     if prompt := st.chat_input("What would you like to ask?"):
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
             st.markdown(prompt)
 
         with st.chat_message("assistant"):
-            response = ""
+            response_content = ""
+            response_type = "content"
+
             intent = classify_intent(llm, prompt)
 
             if intent == "list_files":
-                files = get_indexed_files(vectorstore)
-                if files:
-                    response = "I have the following files in my knowledge base:"
-                    st.markdown(response)
-                    for file_path in files:
-                        col1, col2 = st.columns([4, 1])
-                        with col1:
-                            st.markdown(f"- `{os.path.basename(file_path)}`")
-                        with col2:
-                            if st.button(f"Delete", key=f"delete_{file_path}"):
-                                st.session_state.file_to_delete = file_path
-                else:
-                    response = "I do not have any files in my knowledge base yet. Please upload a PDF in the sidebar."
-                    st.markdown(response)
-            
+                response_type = "file_list"
+                display_deletable_file_list(vectorstore)
+
             elif intent == "question_about_document" and retriever:
-                response = handle_rag_query(prompt, llm, retriever, embeddings)
-                st.markdown(response)
+                response_content = handle_rag_query(prompt, llm, retriever, embeddings)
+                st.markdown(response_content)
 
-            else: # Handles "conversational" intent or questions when no doc is loaded
-                response = handle_direct_llm_query(prompt, llm)
-                st.markdown(response)
+            else:  # Handles "conversational" intent or questions when no doc is loaded
+                response_content = handle_direct_llm_query(prompt, llm)
+                st.markdown(response_content)
             
-            if 'file_to_delete' in st.session_state and st.session_state.file_to_delete:
-                file_path = st.session_state.file_to_delete
-                st.warning(f"Are you sure you want to delete `{os.path.basename(file_path)}`? This action cannot be undone.")
-                col1, col2, _ = st.columns([1, 1, 4])
-                with col1:
-                    if st.button("Yes, Delete", key=f"confirm_delete_{file_path}"):
-                        if delete_file(vectorstore, file_path):
-                            st.session_state.file_to_delete = None
-                            st.experimental_rerun()
-                        else:
-                            # Error messages are handled within delete_file
-                            st.session_state.file_to_delete = None
-                with col2:
-                    if st.button("Cancel", key=f"cancel_delete_{file_path}"):
-                        st.session_state.file_to_delete = None
-                        st.experimental_rerun()
-
-        if response: # Avoid adding empty responses to history
-            st.session_state.messages.append({"role": "assistant", "content": response})
+            # Add assistant's response to history, handling the special file list case
+            if response_type == "file_list":
+                st.session_state.messages.append({"role": "assistant", "type": "file_list"})
+            elif response_content:
+                st.session_state.messages.append({"role": "assistant", "content": response_content})
 
 
 def handle_direct_llm_query(prompt: str, llm: ChatGoogleGenerativeAI) -> str:
