@@ -46,13 +46,20 @@ def main():
         if uploaded_file:
             with st.spinner("Processing your document..."):
                 try:
-                    with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
-                        tmp_file.write(uploaded_file.getbuffer())
-                        tmp_file_path = tmp_file.name
+                    # Define the permanent path for the uploaded file
+                    upload_dir = os.path.join(os.path.dirname(__file__), "uploads")
+                    if not os.path.exists(upload_dir):
+                        os.makedirs(upload_dir)
                     
-                    docs = load_and_split_docs(tmp_file_path)
+                    permanent_path = os.path.join(upload_dir, uploaded_file.name)
+                    
+                    # Save the file to the permanent location
+                    with open(permanent_path, "wb") as f:
+                        f.write(uploaded_file.getbuffer())
+
+                    docs = load_and_split_docs(permanent_path)
                     for doc in docs:
-                        doc.metadata["source"] = uploaded_file.name
+                        doc.metadata["source"] = permanent_path # Store the permanent path
 
                     st.session_state.vectorstore = build_vector_store(embeddings)
                     st.session_state.retriever = build_retriever(st.session_state.vectorstore, docs)
@@ -60,9 +67,6 @@ def main():
                 
                 except Exception as e:
                     st.error(f"An error occurred: {e}")
-                finally:
-                    if "tmp_file_path" in locals() and os.path.exists(tmp_file_path):
-                        os.remove(tmp_file_path)
         
         if st.session_state.retriever:
             st.success("A document is loaded and ready.")
