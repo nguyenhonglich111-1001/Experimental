@@ -1,10 +1,11 @@
-feat(rag): Add FullContextRAG implementation
+feat(rag): Add EnrichedContextRAG with ingestion-time expansion
 
-This commit adds a new RAG strategy, `FullContextRAG`, to the implementation library. This approach is based on the logic from the `atomic_pdf_qa_streamlit` tool.
+This commit introduces a new, advanced RAG strategy, `EnrichedContextRAG`, based on the concept of ingestion-time document expansion.
 
-The `FullContextRAG` class implements the `BaseRAG` interface and follows a "full context stuffing" methodology:
-1.  During `ingest`, it loads the entire text of a document.
-2.  It stuffs this full text into a large system prompt.
-3.  During `query`, it sends the user's question along with the entire document context and chat history to the LLM, relying on the model's large context window to find the answer without an explicit retrieval step.
+This implementation uses a `fast_llm` during the `ingest` phase to enrich each document chunk. For each chunk, it generates:
+1.  A concise summary to capture the high-level topic.
+2.  A hypothetical question that the chunk directly answers.
 
-This new class is automatically available in the generic Streamlit UI and the evaluation harness, showcasing the extensibility of the new modular framework.
+This enriched text (question + summary + original content) is then embedded and indexed in the vector store, creating a much more semantically rich target for retrieval. The `query` method retrieves these enriched documents but intelligently passes the *original* text to the final generator LLM, ensuring clean and accurate answers.
+
+This strategy is designed to significantly improve retrieval precision by creating better representations of the source documents. It is now available as a selectable option in the generic UI and evaluation harness.
