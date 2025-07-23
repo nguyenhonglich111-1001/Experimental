@@ -41,6 +41,9 @@ This document provides a comprehensive overview of the "Experimental" project, i
 
 ## Features
 
+*   **Standalone RAG Evaluation Harness:**
+    *   **Functionality:** A generic, reusable framework for benchmarking RAG systems. It calculates retrieval and generation metrics (Precision, Recall, MRR, ROUGE, BERTScore) against a ground-truth dataset.
+    *   **Technology:** Hugging Face `datasets`, `rouge_score`, `bert-score`, PyYAML.
 *   **Atomic Agents-Powered PDF Book Q&A (Streamlit):**
     *   **Functionality:** A Streamlit web application that allows users to upload a PDF book and ask questions about its content, receiving intelligent, streaming answers.
     *   **Technology:** Streamlit, Atomic Agents, PyPDF2, Google Gemini API (via OpenAI-compatible API with Instructor).
@@ -66,11 +69,13 @@ This document provides a comprehensive overview of the "Experimental" project, i
 *   **Vector Stores / Search:** Chroma (persistent)
 *   **Web Frameworks:** Flask
 *   **Frontend/UI:** Streamlit, Bootstrap
+*   **Evaluation:** Hugging Face `datasets`, `rouge_score`, `bert-score`
 *   **Database:** PostgreSQL (planned)
 *   **Cloud Storage:** Cloudflare R2 (planned)
 
 ## Changelog
 
+*   **2025-07-23:** Created a standalone, reusable RAG Evaluation Harness to benchmark retriever and generator performance using standard IR and NLP metrics.
 *   **2025-07-21:** Implemented file deletion from the UI in the `langchain-file-processor` tool, including a two-step confirmation process for safety.
 *   **2025-07-21:** Implemented a re-ranking step in the RAG pipeline for the `langchain-file-processor` tool to improve the relevance of retrieved documents.
 *   **2025-07-17:** Implemented the "Atomic Agents-Powered PDF Book Q&A (Streamlit)" feature, including `pdf_tool.py`, `book_qa_agent.py`, and `server.py`. Updated `requirements.txt` and project overview.
