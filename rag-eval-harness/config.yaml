@@ -1,0 +1,16 @@
+# Configuration for the RAG Evaluation Harness
+
+retriever_to_test: "langchain_pdf_retriever"
+
+dataset:
+  name: "narrativeqa"
+  # Path to the canonical document to be indexed and queried
+  document_path: "path/to/your/document.pdf" 
+  # Path to the ground truth file (will be created by the download script)
+  ground_truth_file: "datasets/ground_truth/narrativeqa_test.json"
+
+evaluation_params:
+  top_k: 10
+
+results:
+  output_dir: "results/"

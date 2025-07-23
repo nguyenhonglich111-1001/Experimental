@@ -1,0 +1,21 @@
+# Core ML and NLP
+torch
+transformers
+datasets
+
+# RAG & LLM Frameworks
+langchain
+langchain-google-genai
+langchain-chroma
+chromadb
+pypdf
+
+# Evaluation Metrics
+rouge_score
+bert-score
+scikit-learn
+
+# Utilities
+pyyaml
+tqdm
+ipywidgets

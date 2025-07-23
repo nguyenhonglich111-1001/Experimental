@@ -1,12 +1,15 @@
 atomic-agents
+bert-score
 chromadb
 crewai
 crewai_tools
+datasets
 docling
 easyocr
 Flask==3.0.0
 google-genai
 instructor
+ipywidgets
 langchain
 langchain-chroma
 langchain-google-genai
@@ -20,8 +23,11 @@ python-dotenv==1.0.0
 pytest
 pytest-asyncio
 pytest-mock
+pyyaml
+rouge_score
 scikit-learn
 streamlit
 torch
+tqdm
 transformers
 voyageai

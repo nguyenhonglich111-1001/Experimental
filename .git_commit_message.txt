@@ -1,9 +1,11 @@
-fix(ui): Handle LangChain message objects in chat history
+feat(evaluation): Create standalone RAG evaluation harness
 
-This commit fixes a `TypeError` that occurred when displaying the chat history after the conversational memory was upgraded to use `RunnableWithMessageHistory`.
+This commit introduces a new, standalone RAG (Retrieval-Augmented Generation) evaluation harness. This framework is designed to be generic and reusable for benchmarking any RAG system.
 
-The root cause was that the UI component expected a list of dictionaries, but the new memory manager was populating the session state with LangChain's `HumanMessage` and `AIMessage` objects.
+The harness is located in the `rag-eval-harness/` directory and includes:
+- A configurable main runner (`main.py`, `config.yaml`).
+- A dataset downloader and processor (`datasets/download.py`) configured for the NarrativeQA benchmark.
+- A metrics module (`evaluators/metrics.py`) for calculating standard IR and generation scores (Precision, Recall, MRR, ROUGE, BERTScore).
+- An extensible retriever interface (`retrievers/base.py`) with a concrete implementation for the existing `langchain-file-processor` (`retrievers/langchain_pdf_retriever.py`).
 
-Key changes:
-- **`app/components.py`**: The `display_chat_history` function has been updated to be type-aware. It can now correctly render both the old dictionary format and the new LangChain message objects by checking the type of each message and accessing its attributes accordingly.
-- **`server.py`**: New messages added to the chat history are now explicitly converted to `HumanMessage` or `AIMessage` objects to ensure a consistent format going forward.
+This provides a robust system for measuring both the effectiveness and efficiency of our RAG pipelines, enabling data-driven development and regression testing.
