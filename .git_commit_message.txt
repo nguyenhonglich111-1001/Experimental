@@ -1,11 +1,7 @@
-feat(evaluation): Create standalone RAG evaluation harness
+fix(harness): Correct invalid import path for retriever
 
-This commit introduces a new, standalone RAG (Retrieval-Augmented Generation) evaluation harness. This framework is designed to be generic and reusable for benchmarking any RAG system.
+This commit fixes an `ImportError` in the RAG evaluation harness. The error was caused by an invalid character (`-`) in the import path for the `langchain_pdf_retriever`.
 
-The harness is located in the `rag-eval-harness/` directory and includes:
-- A configurable main runner (`main.py`, `config.yaml`).
-- A dataset downloader and processor (`datasets/download.py`) configured for the NarrativeQA benchmark.
-- A metrics module (`evaluators/metrics.py`) for calculating standard IR and generation scores (Precision, Recall, MRR, ROUGE, BERTScore).
-- An extensible retriever interface (`retrievers/base.py`) with a concrete implementation for the existing `langchain-file-processor` (`retrievers/langchain_pdf_retriever.py`).
+The directory `nlp/tools/langchain-file-processor` has been renamed to `nlp/tools/langchain_file_processor` to make it a valid Python package.
 
-This provides a robust system for measuring both the effectiveness and efficiency of our RAG pipelines, enabling data-driven development and regression testing.
+The corresponding import statement in `rag-eval-harness/retrievers/langchain_pdf_retriever.py` has been updated to use the new, correct path with an underscore. This resolves the module resolution error.

@@ -7,11 +7,11 @@ import time
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
 from .base import BaseRetriever
-from nlp.tools.langchain-file-processor.app.langchain_logic import (
+from nlp.tools.langchain_file_processor.app.langchain_logic import (
     get_llm, get_fast_llm, get_embeddings, build_vector_store, build_retriever,
     generate_sub_queries, extract_chapter_from_query, handle_rag_query
 )
-from nlp.tools.langchain-file-processor.app.utils import load_and_split_by_chapter
+from nlp.tools.langchain_file_processor.app.utils import load_and_split_by_chapter
 
 # This is a bit of a hack to make sure we can get the API key.
 # In a real app, this would be handled by a more robust config system.
