@@ -1,13 +1,10 @@
-refactor(project): Implement modular RAG framework
+feat(rag): Add FullContextRAG implementation
 
-This commit introduces a major architectural refactoring, moving the project from a monolithic structure to a modular and extensible RAG (Retrieval-Augmented Generation) framework.
+This commit adds a new RAG strategy, `FullContextRAG`, to the implementation library. This approach is based on the logic from the `atomic_pdf_qa_streamlit` tool.
 
-The new architecture is organized under the `nlp/rag/` directory and consists of three core, decoupled components:
+The `FullContextRAG` class implements the `BaseRAG` interface and follows a "full context stuffing" methodology:
+1.  During `ingest`, it loads the entire text of a document.
+2.  It stuffs this full text into a large system prompt.
+3.  During `query`, it sends the user's question along with the entire document context and chat history to the LLM, relying on the model's large context window to find the answer without an explicit retrieval step.
 
-1.  **`rag_core`**: Defines a `BaseRAG` abstract class, which acts as a standard interface or "contract" for all RAG implementations.
-2.  **`rag_implementations`**: A library of concrete RAG strategies. The first implementation is the `MMRSummaryRAG`, which is optimized for summarization tasks.
-3.  **`streamlit_ui`**: A new, generic Streamlit application that can dynamically load and interact with any RAG implementation that conforms to the `BaseRAG` interface.
-
-Additionally, the `rag-eval-harness` has been updated to be a universal evaluator, capable of benchmarking any implementation from the new library. Old, monolithic files like the original `langchain_file_processor/server.py` and retriever-specific scripts in the harness have been removed.
-
-This new structure makes the project significantly more organized, scalable, and easier to maintain, test, and extend with new RAG strategies in the future.
+This new class is automatically available in the generic Streamlit UI and the evaluation harness, showcasing the extensibility of the new modular framework.
