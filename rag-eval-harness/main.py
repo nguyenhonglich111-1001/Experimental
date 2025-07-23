@@ -5,8 +5,12 @@ import time
 import importlib
 from tqdm import tqdm
 import numpy as np
+from dotenv import load_dotenv
 
-from datasets.download import create_ground_truth
+# Load environment variables from .env file at the very beginning
+load_dotenv()
+
+from benchmark_datasets.download import create_ground_truth
 from evaluators.metrics import (
     calculate_precision_at_k,
     calculate_recall_at_k,
@@ -55,27 +59,17 @@ def main():
         print(f"Error: Could not load retriever '{retriever_name}'. Please check the name and implementation. Details: {e}")
         return
 
-    # 4. Run Setup Phase
-    document_path = dataset_config['document_path']
-    if not document_path or not os.path.exists(document_path):
-        print(f"Error: Document path '{document_path}' in config.yaml is invalid or file does not exist.")
-        print("Please download the canonical document and update the path.")
-        return
-        
-    retriever.setup(document_path)
-
-    # 5. Execute Benchmark Loop
+    # 4. Execute Benchmark Loop
     print(f"\nExecuting benchmark for {len(ground_truth)} queries...")
     results = []
     for item in tqdm(ground_truth, desc="Running queries"):
         query_id = item['query_id']
         query_text = item['query_text']
-        
-        # For now, we'll use an empty chat history for each query
-        chat_history = []
+        source_docs = item['source_documents']
+        doc_ids = item['relevant_docs'] # These are the unique IDs for the source docs
 
-        retrieval_result = retriever.retrieve(query_text, chat_history)
-        generation_result = retriever.retrieve_and_generate(query_text, chat_history)
+        retrieval_result = retriever.retrieve(query_text, source_docs, doc_ids)
+        generation_result = retriever.retrieve_and_generate(query_text, source_docs, doc_ids)
 
         results.append({
             "query_id": query_id,
@@ -85,31 +79,28 @@ def main():
             "generated_answer": generation_result['generated_answer'],
             "generation_latency_ms": generation_result['full_latency_ms'],
             "ground_truth_docs": item['relevant_docs'],
-            "ground_truth_answers": item['gold_answer_summary']
+            "ground_truth_answers": [item['gold_answer']] # Keep it in a list for the metric functions
         })
 
-    # 6. Calculate and Print Metrics
+    # 5. Calculate and Print Metrics
     print("\n--- Benchmark Complete. Calculating metrics... ---")
     
-    # Retriever Metrics
     k = eval_params['top_k']
     precisions = [calculate_precision_at_k(r['retrieved_docs'], r['ground_truth_docs'], k) for r in results]
     recalls = [calculate_recall_at_k(r['retrieved_docs'], r['ground_truth_docs'], k) for r in results]
     mrrs = [calculate_mean_reciprocal_rank(r['retrieved_docs'], r['ground_truth_docs']) for r in results]
     avg_retrieval_latency = np.mean([r['retrieval_latency_ms'] for r in results])
 
-    # Generator Metrics
     predictions = [r['generated_answer'] for r in results]
     references = [r['ground_truth_answers'] for r in results]
     
-    # Note: ROUGE and BERTScore can be slow, especially BERTScore without a GPU.
     print("Calculating ROUGE scores...")
-    rouge_scores = calculate_rouge(predictions, [ref[0] for ref in references]) # Using first reference answer
+    rouge_scores = calculate_rouge(predictions, [ref[0] for ref in references])
     print("Calculating BERT scores (this may take a while)...")
     bert_scores = calculate_bert_score(predictions, [ref[0] for ref in references])
     avg_generation_latency = np.mean([r['generation_latency_ms'] for r in results])
 
-    # 7. Display Final Report
+    # 6. Display Final Report
     run_id = time.strftime("%Y%m%d-%H%M%S")
     print("\n--- RAG System Benchmark Results ---")
     print(f"Run ID: {run_id}")
@@ -130,7 +121,7 @@ def main():
     print(f"- Average Full Pipeline Latency: {avg_generation_latency:.2f} ms")
     print("-----------------------------------")
 
-    # 8. Save Detailed Results
+    # 7. Save Detailed Results
     output_dir = results_config['output_dir']
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)

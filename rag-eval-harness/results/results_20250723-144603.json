@@ -1,0 +1,714 @@
+[
+  {
+    "query_id": "cnn_f001ec5c4704938247d27a44948eebb37ae98d01",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_0_0"
+    ],
+    "retrieval_latency_ms": 3073.063700001512,
+    "generated_answer": "The International Criminal Court (ICC) has opened a preliminary examination into the situation in Palestinian territories, which could lead to war crimes investigations against Israelis [source_3, source_4]. The ICC asserts jurisdiction over alleged crimes committed in the occupied Palestinian territory, including East Jerusalem, since June 13, 2014 [source_3, source_4]. While a preliminary examination is not a formal investigation, it enables the court to review evidence and decide whether to investigate suspects from both sides [source_1, source_2]. The ICC considers these territories as \"Palestine,\" differing from certain definitions of a state [source_1, source_2]. It has been suggested that the ICC's involvement might be counterproductive to peace [source_1, source_2]. Additionally, as members of the court, Palestinians could potentially face counter-charges [source_3, source_4]. Prosecutor Fatou Bensouda stated that her office would conduct the examination [source_1, source_2].",
+    "generation_latency_ms": 4875.572699998884,
+    "ground_truth_docs": [
+      "doc_0_0"
+    ],
+    "ground_truth_answers": [
+      "Membership gives the ICC jurisdiction over alleged crimes committed in Palestinian territories since last June .\nIsrael and the United States opposed the move, which could open the door to war crimes investigations against Israelis ."
+    ]
+  },
+  {
+    "query_id": "cnn_230c522854991d053fe98a718b1defa077a8efef",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1915.8239999997022,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 2100.9769000011147,
+    "ground_truth_docs": [
+      "doc_1_0"
+    ],
+    "ground_truth_answers": [
+      "Theia, a bully breed mix, was apparently hit by a car, whacked with a hammer and buried in a field .\n\"She's a true miracle dog and she deserves a good life,\" says Sara Mellado, who is looking for a home for Theia ."
+    ]
+  },
+  {
+    "query_id": "cnn_4495ba8f3a340d97a9df1476f8a35502bcce1f69",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_2_0"
+    ],
+    "retrieval_latency_ms": 2133.7321999999403,
+    "generated_answer": "Mohammad Javad Zarif received a hero's welcome upon his arrival in Iran on a sunny Friday morning, with crowds chanting \"Long live Zarif\" [source_1, source_2, source_3, source_4]. He is described as \"polished\" and \"jovial,\" with an internet search for his name and \"jovial\" yielding thousands of results [source_1, source_2, source_3, source_4]. Zarif has significantly worked to improve Iran's international standing and reintegrate it into the global community [source_1, source_2, source_3, source_4]. One less well-known fact about Zarif is that he tweeted \"Happy Rosh Hashanah\" in September 2013 [source_3, source_4].",
+    "generation_latency_ms": 4724.820499999623,
+    "ground_truth_docs": [
+      "doc_2_0"
+    ],
+    "ground_truth_answers": [
+      "Mohammad Javad Zarif has spent more time with John Kerry than any other foreign minister .\nHe once participated in a takeover of the Iranian Consulate in San Francisco .\nThe Iranian foreign minister tweets in English ."
+    ]
+  },
+  {
+    "query_id": "cnn_a38e72fed88684ec8d60dd5856282e999dc8c0ca",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1705.8720000022731,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 2125.7652000022063,
+    "ground_truth_docs": [
+      "doc_3_0"
+    ],
+    "ground_truth_answers": [
+      "17 Americans were exposed to the Ebola virus while in Sierra Leone in March .\nAnother person was diagnosed with the disease and taken to hospital in Maryland .\nNational Institutes of Health says the patient is in fair condition after weeks of treatment ."
+    ]
+  },
+  {
+    "query_id": "cnn_c27cf1b136cc270023de959e7ab24638021bc43f",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1974.7997000013129,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 2080.9215000008408,
+    "ground_truth_docs": [
+      "doc_4_0"
+    ],
+    "ground_truth_answers": [
+      "Student is no longer on Duke University campus and will face disciplinary review .\nSchool officials identified student during investigation and the person admitted to hanging the noose, Duke says .\nThe noose, made of rope, was discovered on campus about 2 a.m."
+    ]
+  },
+  {
+    "query_id": "cnn_1b2cc634e2bfc6f2595260e7ed9b42f77ecbb0ce",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 2016.8981999995594,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 2001.2760999998136,
+    "ground_truth_docs": [
+      "doc_5_0"
+    ],
+    "ground_truth_answers": [
+      "College-bound basketball star asks girl with Down syndrome to high school prom .\nPictures of the two during the \"prom-posal\" have gone viral ."
+    ]
+  },
+  {
+    "query_id": "cnn_e2706dce6cf26bc61b082438188fdb6e130d9e40",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_6_0"
+    ],
+    "retrieval_latency_ms": 2202.7631999990263,
+    "generated_answer": "In 2014, there was a global increase in the number of people sentenced to death, with at least 2,466 individuals confirmed to have received the sentence, marking a 28% rise compared to 2013 [source_3, source_4]. This surge in sentencing is attributed to mass-sentencing in countries such as Egypt and Nigeria, where scores of people were sentenced in some instances [source_3, source_4]. Despite these negative developments, there were also positive trends, with fewer reports of executions in every region except for Europe and Central Asia [source_1, source_2]. Specifically, executions recorded in the Middle East and North Africa decreased by 23% compared to 2013 [source_1, source_2].",
+    "generation_latency_ms": 4544.70670000228,
+    "ground_truth_docs": [
+      "doc_6_0"
+    ],
+    "ground_truth_answers": [
+      "Amnesty's annual death penalty report catalogs encouraging signs, but setbacks in numbers of those sentenced to death .\nOrganization claims that governments around the world are using the threat of terrorism to advance executions .\nThe number of executions worldwide has gone down by almost 22% compared with 2013, but death sentences up by 28% ."
+    ]
+  },
+  {
+    "query_id": "cnn_0d3c8c276d079c4c225f034c69aa024cdab7869d",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1891.9988999987254,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 2119.9506999982987,
+    "ground_truth_docs": [
+      "doc_7_0"
+    ],
+    "ground_truth_answers": [
+      "Andrew Getty's death appears to be from natural causes, police say, citing coroner's early assessment .\nIn a petition for a restraining order, Getty had written he had a serious medical condition.\nPolice say this is not a criminal matter at this time ."
+    ]
+  },
+  {
+    "query_id": "cnn_6222f33c2c79b80be437335eeb3f488509e92cf5",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1860.3327000018908,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 2108.3688999970036,
+    "ground_truth_docs": [
+      "doc_8_0"
+    ],
+    "ground_truth_answers": [
+      "Once a super typhoon, Maysak is now a tropical storm with 70 mph winds .\nIt could still cause flooding, landslides and other problems in the Philippines ."
+    ]
+  },
+  {
+    "query_id": "cnn_2bd8ada1de6a7b02f59430cc82045eb8d29cf033",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 2066.9697000012093,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1805.6878999996115,
+    "ground_truth_docs": [
+      "doc_9_0"
+    ],
+    "ground_truth_answers": [
+      "Bob Barker returned to host \"The Price Is Right\" on Wednesday .\nBarker, 91, had retired as host in 2007 ."
+    ]
+  },
+  {
+    "query_id": "cnn_ee17dfb574feca82ccac5689595e47483bd23f12",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 2136.0805000003893,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1750.848199997563,
+    "ground_truth_docs": [
+      "doc_10_0"
+    ],
+    "ground_truth_answers": [
+      "London's Metropolitan Police say the man was arrested at Luton airport after landing on a flight from Istanbul .\nHe's been charged with terror offenses allegedly committed since the start of November ."
+    ]
+  },
+  {
+    "query_id": "cnn_384175be1c8d41610fbeddbd9d9cb46e716e2529",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 2143.1388999990304,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 2055.954899999051,
+    "ground_truth_docs": [
+      "doc_11_0"
+    ],
+    "ground_truth_answers": [
+      "\"Furious 7\" pays tribute to star Paul Walker, who died during filming .\nVin Diesel: \"This movie is more than a movie\"\n\"Furious 7\" opens Friday ."
+    ]
+  },
+  {
+    "query_id": "cnn_203886369feea77bbc35715e6d7e518b751f57de",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 2057.789099999354,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 2138.974800000142,
+    "ground_truth_docs": [
+      "doc_12_0"
+    ],
+    "ground_truth_answers": [
+      "Museum: Anne Frank died earlier than previously believed .\nResearchers re-examined archives and testimonies of survivors .\nAnne and older sister Margot Frank are believed to have died in February 1945 ."
+    ]
+  },
+  {
+    "query_id": "cnn_1dd00c89d71a5611797bb34da8a6eada8f058405",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 2399.4901000005484,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 2285.7850000000326,
+    "ground_truth_docs": [
+      "doc_13_0"
+    ],
+    "ground_truth_answers": [
+      "LZ: Indiana law pushing back LGBT rights, and other states' anti-LGBT moves, bow to far right wing that GOP candidates need for 2016 .\nCruz, Huckabee, Jindal, Carson, Walker are reviving culture wars, he says.  Equality for LGBT has not yet \"won\" in America ."
+    ]
+  },
+  {
+    "query_id": "cnn_eeafdc8b2d8130cabda5aafe352eab1198d0b9f8",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1265.1751000012155,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1279.9516999984917,
+    "ground_truth_docs": [
+      "doc_14_0"
+    ],
+    "ground_truth_answers": [
+      "Singing the national anthem is a risky proposition .\nWhitney Houston nailed it; Roseanne Barr destroyed it ."
+    ]
+  },
+  {
+    "query_id": "cnn_dc833f8b55e381011ce23f89ea909b9a141b5a66",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 2537.6025999976264,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1989.2395000024408,
+    "ground_truth_docs": [
+      "doc_15_0"
+    ],
+    "ground_truth_answers": [
+      "While Republican Gov. Asa Hutchinson was weighing an Arkansas religious freedom bill, Walmart voiced its opposition .\nWalmart and other high-profile businesses are showing their support for gay and lesbian rights .\nTheir stance puts them in conflict with socially conservative Republicans, traditionally seen as allies ."
+    ]
+  },
+  {
+    "query_id": "cnn_c222979bd1cfbc7d3ff821e9c738e3dbd29b14f4",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_16_0"
+    ],
+    "retrieval_latency_ms": 1689.7081999995862,
+    "generated_answer": "Governments that use the death penalty to address crime and security threats are mistaken, as there is no evidence that execution is a greater deterrent than imprisonment [source_1]. In the past year, executions were recorded in 22 countries, which is a decrease of nearly half compared to 20 years ago [source_2]. The number of recorded executions globally fell significantly in 2014, from 778 to 607, excluding China [source_2].",
+    "generation_latency_ms": 3459.1698000003817,
+    "ground_truth_docs": [
+      "doc_16_0"
+    ],
+    "ground_truth_answers": [
+      "Amnesty International releases its annual review of the death penalty worldwide; much of it makes for grim reading .\nSalil Shetty: Countries that use executions to deal with problems are on the wrong side of history ."
+    ]
+  },
+  {
+    "query_id": "cnn_469c6ac05092ca5997728c9dfc19f9ab6b936e40",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 2194.2487000014808,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 2285.3469000001496,
+    "ground_truth_docs": [
+      "doc_17_0"
+    ],
+    "ground_truth_answers": [
+      "Marseille prosecutor says \"so far no videos were used in the crash investigation\" despite media reports .\nJournalists at Bild and Paris Match are \"very confident\" the video clip is real, an editor says .\nAndreas Lubitz had informed his Lufthansa training school of an episode of severe depression, airline says ."
+    ]
+  },
+  {
+    "query_id": "cnn_88e7dac40f3e6c159e4edc0747d0cc0f50886fbb",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 2002.6822999971046,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1838.981099997909,
+    "ground_truth_docs": [
+      "doc_18_0"
+    ],
+    "ground_truth_answers": [
+      "The Rev. Robert Schuller, 88, had been diagnosed with esophageal cancer in 2013 .\nHis TV show, \"Hour of Power,\" was enormously popular in the 1970s and 1980s ."
+    ]
+  },
+  {
+    "query_id": "cnn_ec4b5fef725b4cc81545689603ff84c8e19bd6dc",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1445.435699999507,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1547.583299998223,
+    "ground_truth_docs": [
+      "doc_19_0"
+    ],
+    "ground_truth_answers": [
+      "Former GOP representative compares President Obama to Andreas Lubitz .\nBachmann said with possible Iran deal, Obama will fly \"entire nation into the rocks\"\nReaction on social media? She was blasted by Facebook commenters ."
+    ]
+  },
+  {
+    "query_id": "cnn_ffff11a2f44d731cd80c86819a89b7e227581415",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1624.3291000027966,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1632.330299999012,
+    "ground_truth_docs": [
+      "doc_20_0"
+    ],
+    "ground_truth_answers": [
+      "Father: \"I know he went through what he went through\"\nLouis Jordan was found on his sailboat, which was listing and in bad shape, rescuer says .\nHe appears to be in good shape, physically and mentally ."
+    ]
+  },
+  {
+    "query_id": "cnn_c7caf9181c2e94a79d9102da6e11cde48c880aa5",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_21_0"
+    ],
+    "retrieval_latency_ms": 1691.4212999981828,
+    "generated_answer": "The negotiations' objective was not the total elimination of Iran's nuclear program [source_3, source_4]. The P5+1 are obligated to ease and eventually remove most, but not all, economic sanctions that were imposed as leverage for the deal [source_1, source_2]. Some parties insist that any agreement must also address Iranian missile programs, human rights violations, or support for Hamas or Hezbollah, though these issues are considered unrelated to the nuclear deal [source_1, source_2].",
+    "generation_latency_ms": 3820.998299997882,
+    "ground_truth_docs": [
+      "doc_21_0"
+    ],
+    "ground_truth_answers": [
+      "Richard Klass: Iran framework agreement on nukes is strong, but opponents will cast doubts on this and try to obscure its facts .\nHe says the deal would cut uranium stockpile, centrifuges, implement rigorous inspections; it should be judged on merits, not disinformation ."
+    ]
+  },
+  {
+    "query_id": "cnn_b21cd549314996de79ba0ca2636c8ced66468267",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1769.7162000004028,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1806.0866000014357,
+    "ground_truth_docs": [
+      "doc_22_0"
+    ],
+    "ground_truth_answers": [
+      "Americans paid more for some fruits and vegetables last year because of the drought .\nTourists will now have to ask for a glass of water at a California restaurant .\nPerhaps the only good thing is another \"great\" wine grape harvest last year ."
+    ]
+  },
+  {
+    "query_id": "cnn_17412737648b2cad59669560765fcb5169fc8116",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1233.5390000007465,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1350.009500001761,
+    "ground_truth_docs": [
+      "doc_23_0"
+    ],
+    "ground_truth_answers": [
+      "The FBI cites social media messages sent by Keonna Thomas, 30 .\nShe's accused of trying to travel overseas to join ISIS .\nThomas is one of three women facing federal terror charges this week ."
+    ]
+  },
+  {
+    "query_id": "cnn_970f75d6e5b23e11c15b05c59a109ccbb160b289",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1392.6967999977933,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1379.3517999984033,
+    "ground_truth_docs": [
+      "doc_24_0"
+    ],
+    "ground_truth_answers": [
+      "Iranian sports official: The ban will be lifted for some events in the coming year .\nBut he says \"families are not interested in attending\" some sports matches ."
+    ]
+  },
+  {
+    "query_id": "cnn_9f051fe922a8f45b315a366a5af1aab58d93f050",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1853.7681999987399,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1905.646600000182,
+    "ground_truth_docs": [
+      "doc_25_0"
+    ],
+    "ground_truth_answers": [
+      "Going online has become the path of least resistance if you want to make yourself heard .\nBut where there is the restrictive rule of law, journalists are vulnerable to the anger of officialdom .\nFrom China to Malaysia, journalists and bloggers have been jailed -- even killed ."
+    ]
+  },
+  {
+    "query_id": "cnn_202a51397a4de6483e6a7427d1952c46fca69d81",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1254.0865000009944,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1278.8135999981023,
+    "ground_truth_docs": [
+      "doc_26_0"
+    ],
+    "ground_truth_answers": [
+      "The singer had been off the scene for a while .\nShe says she was bedridden for months .\nLavigne was sometimes too weak to shower ."
+    ]
+  },
+  {
+    "query_id": "cnn_2f6106809de41d59f422d527900a6b344174c5b2",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1372.9236999970453,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1384.7032000012405,
+    "ground_truth_docs": [
+      "doc_27_0"
+    ],
+    "ground_truth_answers": [
+      "Here are six of CNN's best videos of the week .\nClips include a look at Mike Tyson's abandoned mansion ."
+    ]
+  },
+  {
+    "query_id": "cnn_9a2ffa6ad643d52e6b99b0b08e497f41ba23b2b2",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1372.6353000020026,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1416.640899999038,
+    "ground_truth_docs": [
+      "doc_28_0"
+    ],
+    "ground_truth_answers": [
+      "Netanyahu says third option is \"standing firm\" to get a better deal .\nPolitical sparring continues in U.S. over the deal with Iran ."
+    ]
+  },
+  {
+    "query_id": "cnn_f78024d271fd21f0667f5da6843516314af71f8f",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1520.9411999967415,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1366.498399998818,
+    "ground_truth_docs": [
+      "doc_29_0"
+    ],
+    "ground_truth_answers": [
+      "Indiana town's Memories Pizza is shut down after online threat .\nIts owners say they'd refuse to cater a same-sex couple's wedding ."
+    ]
+  },
+  {
+    "query_id": "cnn_63e19d477469e39e3fc4143919e6a5acb58dbc23",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1820.8253999982844,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1969.8611999992863,
+    "ground_truth_docs": [
+      "doc_30_0"
+    ],
+    "ground_truth_answers": [
+      "Authorities in the Indian city of Malegaon have asked residents to take a 'mugshot' of their cattle .\nCows are revered by the majority Hindu population, and many parts of the country have laws banning the slaughter of cattle .\nOfficials in Malegaon believe this is the best way to solve cow slaughter cases and enforce the law ."
+    ]
+  },
+  {
+    "query_id": "cnn_cf7094270cbb4c8fad5029bd2c2da694f1411870",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 2531.5059999993537,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 2113.688800000091,
+    "ground_truth_docs": [
+      "doc_31_0"
+    ],
+    "ground_truth_answers": [
+      "A South Carolina man says he spent 66 days alone at sea before being rescued .\nOther sole survivor stories include a Japanese man washed away by a tsunami .\nAn El Salvador man says he drifted from Mexico to Marshall Islands over a year ."
+    ]
+  },
+  {
+    "query_id": "cnn_934a2d9235022c9e8a6aeec5e7e941b127569b76",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1438.9391000004252,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1491.5892999997595,
+    "ground_truth_docs": [
+      "doc_32_0"
+    ],
+    "ground_truth_answers": [
+      "The Large Hadron Collider (LHC) begins again after a two-year shutdown .\nThe restart was delayed in March ."
+    ]
+  },
+  {
+    "query_id": "cnn_82461522ee90f8f5be2ec226e2016ad40588866d",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1687.6024999983201,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1806.087099997967,
+    "ground_truth_docs": [
+      "doc_33_0"
+    ],
+    "ground_truth_answers": [
+      "FBI agents and a suspected serial robber exchange gunfire in an FBI stakeout .\nTwo FBI agents are injured and the suspect is shot during the gunfight ."
+    ]
+  },
+  {
+    "query_id": "cnn_37477ed1fc065f438021ee3b6d3e2b827e270353",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1342.054000000644,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1346.3800999998057,
+    "ground_truth_docs": [
+      "doc_34_0"
+    ],
+    "ground_truth_answers": [
+      "The total eclipse will only last 4 minutes and 43 seconds .\nPeople west of the Mississippi River will have the best view .\nParts of South America, India, China and Russia also will see the eclipse ."
+    ]
+  },
+  {
+    "query_id": "cnn_4fbf675fb79046440d1cf01dd4fc2e505f2b5169",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_35_0"
+    ],
+    "retrieval_latency_ms": 1780.9715000003052,
+    "generated_answer": "The provided text does not contain enough information to summarize the key points of an article. The snippets mention Al-Shabaab's attack in Garissa within a regional context of instability [source_1, source_2], and also discuss economic sanctions related to Iran and the P5+1, including issues like missile programs and human rights [source_3, source_4]. However, these are fragmented pieces and do not form a coherent article to summarize.",
+    "generation_latency_ms": 4184.69449999975,
+    "ground_truth_docs": [
+      "doc_35_0"
+    ],
+    "ground_truth_answers": [
+      "Terrorist group Al-Shabaab has attacked a Kenyan college, killing and taking hostages .\nIt is a clear indicator the security situation in East Africa is deteriorating, says Stefan Wolff .\nMore than military action aloe is needed to combat terrorism in the region, he says ."
+    ]
+  },
+  {
+    "query_id": "cnn_c5390093fa60d62c4dc9013977ca09a8edf7c32b",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 2041.7788000013388,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1891.7017999992822,
+    "ground_truth_docs": [
+      "doc_36_0"
+    ],
+    "ground_truth_answers": [
+      "Easter is a key event in the Christian faith, but where did the Easter Bunny come from?\nWhy is the date different every year, and what does it have to do with the moon?"
+    ]
+  },
+  {
+    "query_id": "cnn_58b9fcb9a3537d014d3499b0ad4d4123cfd3eac0",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 2100.42120000071,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 2213.929099998495,
+    "ground_truth_docs": [
+      "doc_37_0"
+    ],
+    "ground_truth_answers": [
+      "In response to lawsuit, NCAA says it doesn't control quality of education for student-athletes .\nBut its website emphasizes importance of education, \"opportunities to learn\"\nLawsuit claims students didn't get an education because of academic fraud at UNC ."
+    ]
+  },
+  {
+    "query_id": "cnn_44d681105bcab063dfa0c80ce9cf96393677f9cc",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1365.110899998399,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1455.2010000006703,
+    "ground_truth_docs": [
+      "doc_38_0"
+    ],
+    "ground_truth_answers": [
+      "Judge won't allow teen leave hospital before her last chemotherapy treatment .\nAttorneys for the teen are deciding whether to appeal .\nCassandra C. is now in remission and is no longer opposed to the chemotherapy treatments ."
+    ]
+  },
+  {
+    "query_id": "cnn_a43893ac704663476a285673392de84c0c17d4e5",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 2231.568999999581,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 2073.91799999823,
+    "ground_truth_docs": [
+      "doc_39_0"
+    ],
+    "ground_truth_answers": [
+      "The song rules the chart for 13th week .\nIt passes Robin Thicke's \"Blurred Lines\"\nSong three weeks from potentially tying \"One Sweet Day\" for record ."
+    ]
+  },
+  {
+    "query_id": "cnn_f7c2eb465479b965669b81535234e24735915ebf",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1535.2776999970956,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1331.6297999990638,
+    "ground_truth_docs": [
+      "doc_40_0"
+    ],
+    "ground_truth_answers": [
+      "High temperatures are recorded on the northern tip of the Antarctica Peninsula .\nThe World Meteorological Organization will make the final determination ."
+    ]
+  },
+  {
+    "query_id": "cnn_e8c90d557031700caa1afb66dfc85358ef719108",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 2327.177400002256,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 2231.298999999126,
+    "ground_truth_docs": [
+      "doc_41_0"
+    ],
+    "ground_truth_answers": [
+      "A Native American from a tribe not recognized by the feds wins the return of his eagle feathers .\nAn IRS accountant is fired for insisting on carrying a symbolic Sikh knife to work .\nA group of Chicago pastors takes on City Hall over its permits for new churches and loses ."
+    ]
+  },
+  {
+    "query_id": "cnn_c71b08cede3b6edb662a2f2c95f8b543fa65e405",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1248.7603000008676,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1386.0113999980967,
+    "ground_truth_docs": [
+      "doc_42_0"
+    ],
+    "ground_truth_answers": [
+      "Robert Lewis Burns Jr. was part of Lynyrd Skynyrd's original lineup .\nHis car hit a mailbox and a tree just before midnight ."
+    ]
+  },
+  {
+    "query_id": "cnn_f9f5d81bc74d6cf6d713d6fa6be4a30427b46e68",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1587.6564999998664,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1406.6196000021591,
+    "ground_truth_docs": [
+      "doc_43_0"
+    ],
+    "ground_truth_answers": [
+      "Kim Ki-Jong is charged with attempted murder and assaulting a foreign envoy .\nHe's accused of stabbing U.S. Ambassador Mark Lippert in the face and arm .\nPolice said Kim opposed the joint U.S.-South Korean military drills ."
+    ]
+  },
+  {
+    "query_id": "cnn_32a7125a655a052b3ea62350a8e02f0245cc220e",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1641.9811000014306,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1640.4419999998936,
+    "ground_truth_docs": [
+      "doc_44_0"
+    ],
+    "ground_truth_answers": [
+      "Hong Kong banker alleged murder case adjourned until May .\nThe 29-year-old Rurik Jutting is accused of killing two Indonesian domestic workers ."
+    ]
+  },
+  {
+    "query_id": "cnn_38a207accfb31afc694f16531d23d2cda79ac85d",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1371.474899999157,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1467.786499997601,
+    "ground_truth_docs": [
+      "doc_45_0"
+    ],
+    "ground_truth_answers": [
+      "Thai Airways subsidiary Thai Smile features Cartoon Network paint job on A320 jet .\nOverhead bins, head rests and air sick bags feature characters from Cartoon Network ."
+    ]
+  },
+  {
+    "query_id": "cnn_9bea5cbe9a0184eec4086a08452066dead185173",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1454.8561000010523,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1335.1075000027777,
+    "ground_truth_docs": [
+      "doc_46_0"
+    ],
+    "ground_truth_answers": [
+      "Manning is serving a 35-year sentence for leaking thousands of classified documents .\nShe says she will be using a voice phone to dictate her tweets ."
+    ]
+  },
+  {
+    "query_id": "cnn_a2ee2faeb2dc4e5eab43b1d14233c4ac658f0a8f",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1972.3563000006834,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 2004.9064999984694,
+    "ground_truth_docs": [
+      "doc_47_0"
+    ],
+    "ground_truth_answers": [
+      "Frida Ghitis: President Barack Obama is right to want a deal, but this one gives Iran too much .\nShe says the framework agreement starts lifting Iran sanctions much too soon ."
+    ]
+  },
+  {
+    "query_id": "cnn_fd0e8622b9ee38d1d6fff2fff59f0566f1a2f8f7",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1443.7747000010859,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1493.2751999986067,
+    "ground_truth_docs": [
+      "doc_48_0"
+    ],
+    "ground_truth_answers": [
+      "The final film featuring the late Paul Walker, \"Furious 7\" is opening around the globe this weekend .\nIt's worldwide debut may approach or cross $300 million by the end of Easter Sunday ."
+    ]
+  },
+  {
+    "query_id": "cnn_6302a6cf8564e4bb4753e2dc3dae328f13edae50",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [],
+    "retrieval_latency_ms": 1451.9749999999476,
+    "generated_answer": "I couldn't find any relevant information in the document to answer your question.",
+    "generation_latency_ms": 1376.5880999999354,
+    "ground_truth_docs": [
+      "doc_49_0"
+    ],
+    "ground_truth_answers": [
+      "Deion Sanders calls out son for \"hood doughnuts\" comments .\n\"You're a Huxtable with a million $ trust fund. Stop the hood stuff!\""
+    ]
+  }
+]

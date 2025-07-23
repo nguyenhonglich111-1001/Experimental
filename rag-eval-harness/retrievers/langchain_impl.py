@@ -65,13 +65,14 @@ class LangchainImpl(BaseRetriever):
         unique_docs = list({doc.page_content: doc for doc in all_retrieved_docs}.values())
         
         retrieved_doc_ids = [doc.metadata.get('source') for doc in unique_docs]
-        retrieved_doc_ids = [doc_id for doc_id in retrieved_doc_ids if doc_id is not None]
+        # Use set to get unique doc IDs, then convert back to a list
+        unique_retrieved_ids = list(set(doc_id for doc_id in retrieved_doc_ids if doc_id is not None))
 
         end_time = time.perf_counter()
         latency_ms = (end_time - start_time) * 1000
 
         return {
-            "retrieved_docs": retrieved_doc_ids,
+            "retrieved_docs": unique_retrieved_ids,
             "latency_ms": latency_ms
         }
 

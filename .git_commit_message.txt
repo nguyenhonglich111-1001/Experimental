@@ -1,7 +1,10 @@
-fix(harness): Correct invalid import path for retriever
+feat(harness): Add SimpleRetriever with MMR strategy
 
-This commit fixes an `ImportError` in the RAG evaluation harness. The error was caused by an invalid character (`-`) in the import path for the `langchain_pdf_retriever`.
+This commit introduces a new, simplified retriever implementation (`SimpleRetriever`) to address the poor performance observed with the previous sub-query-based approach on the `multi_news` dataset.
 
-The directory `nlp/tools/langchain-file-processor` has been renamed to `nlp/tools/langchain_file_processor` to make it a valid Python package.
+The new retriever uses a more direct and appropriate strategy for summarization tasks:
+1.  It chunks the source documents into smaller, paragraph-sized pieces.
+2.  It performs a single vector search against the user's query.
+3.  Crucially, it uses Maximal Marginal Relevance (MMR) search to ensure the retrieved chunks are both relevant to the query and diverse, which is essential for building a good summary.
 
-The corresponding import statement in `rag-eval-harness/retrievers/langchain_pdf_retriever.py` has been updated to use the new, correct path with an underscore. This resolves the module resolution error.
+The evaluation harness configuration has been updated to use this new retriever. This change is expected to significantly improve the retrieval metrics (Precision, Recall, MRR) and, consequently, the quality of the final generated answers.

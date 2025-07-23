@@ -1,16 +1,16 @@
 # Configuration for the RAG Evaluation Harness
 
-retriever_to_test: "langchain_pdf_retriever"
+retriever_to_test: "simple_retriever"
 
 dataset:
-  name: "narrativeqa"
-  # Path to the canonical document to be indexed and queried
-  document_path: "path/to/your/document.pdf" 
+  name: "cnn_dailymail"
   # Path to the ground truth file (will be created by the download script)
-  ground_truth_file: "datasets/ground_truth/narrativeqa_test.json"
+  ground_truth_file: "benchmark_datasets/ground_truth/cnn_dailymail_test.json"
+  # Number of samples to use from the dataset for the benchmark
+  num_samples: 50
 
 evaluation_params:
-  top_k: 10
+  top_k: 3 # We expect fewer, more relevant docs from a smaller set
 
 results:
   output_dir: "results/"
