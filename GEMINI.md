@@ -40,7 +40,7 @@ VOYAGE_API_KEY=""
 * https://github.com/BrainBlend-AI/atomic-agents
 
 ## Instructions
-* always follow the `python_rules.md` for Python coding standards overall
+* always follow the `PYTHON_RULES.md` for Python coding standards overall
 * always use `instruction_rules.md` in each inner project as a reference for coding and project management
 * always store relevent data, application's states, user's states,... in database (PostgreSQL)
 * always create/update `PROJECT_OVERVIEW.md` after every task with:

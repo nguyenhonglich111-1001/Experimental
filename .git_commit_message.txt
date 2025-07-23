@@ -1,10 +1,13 @@
-feat(harness): Add SimpleRetriever with MMR strategy
+refactor(project): Implement modular RAG framework
 
-This commit introduces a new, simplified retriever implementation (`SimpleRetriever`) to address the poor performance observed with the previous sub-query-based approach on the `multi_news` dataset.
+This commit introduces a major architectural refactoring, moving the project from a monolithic structure to a modular and extensible RAG (Retrieval-Augmented Generation) framework.
 
-The new retriever uses a more direct and appropriate strategy for summarization tasks:
-1.  It chunks the source documents into smaller, paragraph-sized pieces.
-2.  It performs a single vector search against the user's query.
-3.  Crucially, it uses Maximal Marginal Relevance (MMR) search to ensure the retrieved chunks are both relevant to the query and diverse, which is essential for building a good summary.
+The new architecture is organized under the `nlp/rag/` directory and consists of three core, decoupled components:
 
-The evaluation harness configuration has been updated to use this new retriever. This change is expected to significantly improve the retrieval metrics (Precision, Recall, MRR) and, consequently, the quality of the final generated answers.
+1.  **`rag_core`**: Defines a `BaseRAG` abstract class, which acts as a standard interface or "contract" for all RAG implementations.
+2.  **`rag_implementations`**: A library of concrete RAG strategies. The first implementation is the `MMRSummaryRAG`, which is optimized for summarization tasks.
+3.  **`streamlit_ui`**: A new, generic Streamlit application that can dynamically load and interact with any RAG implementation that conforms to the `BaseRAG` interface.
+
+Additionally, the `rag-eval-harness` has been updated to be a universal evaluator, capable of benchmarking any implementation from the new library. Old, monolithic files like the original `langchain_file_processor/server.py` and retriever-specific scripts in the harness have been removed.
+
+This new structure makes the project significantly more organized, scalable, and easier to maintain, test, and extend with new RAG strategies in the future.

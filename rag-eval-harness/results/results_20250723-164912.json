@@ -1,0 +1,918 @@
+[
+  {
+    "query_id": "cnn_f001ec5c4704938247d27a44948eebb37ae98d01",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_0_0"
+    ],
+    "retrieval_latency_ms": 1618.355700000393,
+    "generated_answer": "The Palestinian Authority officially became the 123rd member of the International Criminal Court (ICC) on Wednesday, granting the court jurisdiction over alleged crimes in Palestinian territories [source_4]. This accession was formalized at a ceremony in The Hague, Netherlands [source_4]. Palestinians signed the ICC's founding Rome Statute in January, accepting the court's jurisdiction over alleged crimes in the occupied Palestinian territory, including East Jerusalem, since June 13, 2014 [source_4]. Subsequently, the ICC opened a preliminary examination into the situation in Palestinian territories, which could lead to war crimes investigations against Israelis [source_4]. As members, Palestinians could also face counter-charges [source_4].\n\nIsrael and the United States, neither of which are ICC members, opposed the Palestinians' move to join the court [source_4]. The United States stated it \"strongly\" disagreed with the court's decision, arguing that Palestine is not a state and therefore not eligible to join the ICC [source_5]. The US urged both sides to resolve differences through direct negotiations and believes actions against Israel at the ICC are counterproductive to peace [source_5]. However, the ICC considers the territories as \"Palestine\" for its purposes [source_5].\n\nHuman Rights Watch welcomed the development, urging governments not to penalize Palestine and for countries supporting the court's treaty to welcome its membership [source_3]. They find attempts to undermine international justice objectionable, not Palestine's decision to join a treaty with over 100 member countries [source_3]. Palestinian Foreign Minister Riad al-Malki stated that this move brings the world closer to ending impunity and injustice, and to shared goals of justice and peace [source_4].\n\nThe preliminary examination allows the court to review evidence and determine whether to investigate suspects on both sides [source_5]. Prosecutor Fatou Bensouda assured that her office would conduct its analysis with full independence and impartiality [source_5]. The inquiry will cover alleged war crimes committed since June, following the war between Israel and Hamas militants in Gaza last summer, which resulted in over 2,000 deaths [source_5]. The ICC was established in 2002 to prosecute genocide, crimes against humanity, and war crimes [source_5]. Judge Kuniko Ozaki noted that acceding to the treaty is only the first step for Palestinians, as they will acquire all the rights and responsibilities of a State Party to the Statute, which are significant commitments [source_3]. Israeli Prime Minister Benjamin Netanyahu had previously called the preliminary ICC examination an outrage, claiming the court was overstepping its boundaries [source_2].",
+    "generation_latency_ms": 3152.5451999987126,
+    "ground_truth_docs": [
+      "doc_0_0"
+    ],
+    "ground_truth_answers": [
+      "Membership gives the ICC jurisdiction over alleged crimes committed in Palestinian territories since last June .\nIsrael and the United States opposed the move, which could open the door to war crimes investigations against Israelis ."
+    ]
+  },
+  {
+    "query_id": "cnn_230c522854991d053fe98a718b1defa077a8efef",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_0_0",
+      "doc_1_0"
+    ],
+    "retrieval_latency_ms": 1281.542900000204,
+    "generated_answer": "The Palestinian Authority officially became the 123rd member of the International Criminal Court (ICC) on Wednesday, granting the court jurisdiction over alleged crimes in Palestinian territories [source_1]. This accession was formalized at a ceremony in The Hague, Netherlands [source_1]. The Palestinians had signed the ICC's founding Rome Statute in January, accepting the court's jurisdiction over alleged crimes in occupied Palestinian territory, including East Jerusalem, since June 13, 2014 [source_1]. Following this, the ICC launched a preliminary examination into the situation in Palestinian territories, which could lead to war crimes investigations against Israelis [source_1]. As members of the court, Palestinians could also face counter-charges [source_1]. Israel and the United States, neither of whom are ICC members, opposed Palestine's membership [source_1]. Israeli Prime Minister Benjamin Netanyahu called the ICC's preliminary examination an outrage, stating the court was overstepping its boundaries [source_1]. The United States also expressed strong disagreement, believing Palestine is not a state and therefore ineligible for ICC membership [source_1]. Human Rights Watch welcomed the development, urging governments to end pressure against Palestine's ICC membership and for countries supporting the court's treaty to welcome its membership [source_1]. They stated that attempts to undermine international justice are objectionable, not Palestine's decision to join a treaty with over 100 member countries [source_1]. The ICC was established in 2002 to prosecute genocide, crimes against humanity, and war crimes [source_1]. The current war between Israel and Hamas militants in Gaza has resulted in over 2,000 deaths, and the inquiry will cover alleged war crimes committed since June [source_1].",
+    "generation_latency_ms": 2667.929899998853,
+    "ground_truth_docs": [
+      "doc_1_0"
+    ],
+    "ground_truth_answers": [
+      "Theia, a bully breed mix, was apparently hit by a car, whacked with a hammer and buried in a field .\n\"She's a true miracle dog and she deserves a good life,\" says Sara Mellado, who is looking for a home for Theia ."
+    ]
+  },
+  {
+    "query_id": "cnn_4495ba8f3a340d97a9df1476f8a35502bcce1f69",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_0_0",
+      "doc_2_0",
+      "doc_1_0"
+    ],
+    "retrieval_latency_ms": 1252.6252000025124,
+    "generated_answer": "Mohammad Javad Zarif is the Iranian foreign minister who has been instrumental in nuclear discussions with U.S. Secretary of State John Kerry [source_3]. These discussions aim to end sanctions against Iran if the details of the agreement are finalized [source_3]. Zarif received a hero's welcome upon his return to Iran, with crowds chanting his name [source_3]. He has been described as \"polished\" and \"jovial\" [source_3]. Zarif has worked to reintegrate Iran into the international community [source_3]. He also tweeted \"Happy Rosh Hashanah\" in September 2013, and in response to a comment about Iran's Holocaust denial, he tweeted that Iran never denied it and that the person perceived to be denying it was no longer in office [source_2, source_3]. Zarif was nominated for foreign minister by Hassan Rouhami, Rouhani's successor [source_2]. Zarif's decision to continue his education in the United States was due to the political and security conditions at the time [source_2]. Earlier in the Iranian Revolution, Zarif was involved in the takeover of the Iranian Consulate in San Francisco with the aim of expelling those not sufficiently Islamic [source_1]. He later participated in a similar protest at the Iranian mission to the United Nations, which led to him being offered a job by the Iranian ambassador [source_1].\n\nSeparately, the Palestinian Authority officially became the 123rd member of the International Criminal Court (ICC) [source_4]. This membership grants the court jurisdiction over alleged crimes in Palestinian territories [source_4]. The Palestinians signed the Rome Statute in January and accepted the court's jurisdiction over crimes committed in occupied Palestinian territory since June 13, 2014 [source_4]. The ICC subsequently opened a preliminary examination into the situation in Palestinian territories, which could lead to war crimes investigations against Israelis [source_4]. As members of the court, Palestinians could also face counter-charges [source_4]. Israel and the United States, neither of which are ICC members, opposed Palestine's accession to the court [source_4]. The United States stated it disagreed with the court's decision, believing Palestine is not a state and therefore ineligible to join the ICC [source_5]. The U.S. also opposes actions against Israel at the ICC, viewing them as counterproductive to peace [source_5]. However, the ICC defines a state differently and refers to the territories as \"Palestine\" [source_5]. The preliminary examination allows the court to review evidence and determine if suspects on both sides should be investigated [source_5]. Prosecutor Fatou Bensouda stated her office would conduct its analysis with full independence and impartiality [source_5]. The war between Israel and Hamas militants in Gaza last summer resulted in over 2,000 deaths, and the inquiry will include alleged war crimes [source_5].",
+    "generation_latency_ms": 3275.2854999998817,
+    "ground_truth_docs": [
+      "doc_2_0"
+    ],
+    "ground_truth_answers": [
+      "Mohammad Javad Zarif has spent more time with John Kerry than any other foreign minister .\nHe once participated in a takeover of the Iranian Consulate in San Francisco .\nThe Iranian foreign minister tweets in English ."
+    ]
+  },
+  {
+    "query_id": "cnn_a38e72fed88684ec8d60dd5856282e999dc8c0ca",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_3_0",
+      "doc_2_0",
+      "doc_0_0"
+    ],
+    "retrieval_latency_ms": 1263.7531999971543,
+    "generated_answer": "Mohammad Javad Zarif is the Iranian foreign minister and has been instrumental in nuclear discussions with U.S. Secretary of State John Kerry [source_3]. He received a positive reception upon his return to Iran, with crowds chanting his name [source_3]. Zarif is described as \"polished\" and \"jovial\" [source_3]. He has worked to bring Iran back into the international community [source_3]. Some less-known facts about Zarif include his involvement in expelling individuals not deemed \"sufficiently Islamic\" from the Iranian Consulate in San Francisco early in the Iranian Revolution, and a subsequent protest at the Iranian mission to the United Nations, which led to a job offer from the Iranian ambassador [source_1]. He has spent more time with John Kerry than any other foreign minister, working towards a June 30 deadline for the nuclear agreement [source_1].\n\nIn other news, five Americans exposed to Ebola in West Africa were released from a hospital in Omaha, Nebraska, after being monitored for three weeks [source_2]. They were exposed in Sierra Leone in March but did not contract the virus [source_2]. These individuals are clinicians for Partners in Health [source_2]. A health care worker who was in contact with them is being treated at the National Institutes of Health and is in fair condition [source_2]. The Centers for Disease Control and Prevention stated that the last of 17 monitored patients were expected to be released by Thursday [source_2]. The Ebola epidemic in West Africa, dating back to December 2013, has caused over 10,000 deaths, primarily in Guinea, Liberia, and Sierra Leone, and is spread through bodily fluids [source_2].\n\nThe United States disagrees with a court's decision regarding Palestine's eligibility to join the ICC, stating that they do not believe Palestine is a state [source_4]. The U.S. opposes actions against Israel at the ICC, viewing them as counterproductive to peace [source_4]. However, the ICC considers the territories as \"Palestine\" and allows for preliminary examinations to review evidence for potential investigations into alleged war crimes, including those from the war between Israel and Hamas militants in Gaza last summer, which resulted in over 2,000 deaths [source_4].",
+    "generation_latency_ms": 2917.920799998683,
+    "ground_truth_docs": [
+      "doc_3_0"
+    ],
+    "ground_truth_answers": [
+      "17 Americans were exposed to the Ebola virus while in Sierra Leone in March .\nAnother person was diagnosed with the disease and taken to hospital in Maryland .\nNational Institutes of Health says the patient is in fair condition after weeks of treatment ."
+    ]
+  },
+  {
+    "query_id": "cnn_c27cf1b136cc270023de959e7ab24638021bc43f",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_3_0",
+      "doc_2_0",
+      "doc_0_0"
+    ],
+    "retrieval_latency_ms": 1288.3594000013545,
+    "generated_answer": "Mohammad Javad Zarif is the Iranian foreign minister and has been instrumental in nuclear discussions with U.S. Secretary of State John Kerry [source_2]. He received a hero's welcome upon his arrival in Iran, with crowds chanting his name [source_2]. Zarif is described as \"polished\" and \"jovial,\" and has worked to reintegrate Iran into the international community [source_2]. He was among students who took over the Iranian Consulate in San Francisco early in the Iranian Revolution, aiming to expel those not considered sufficiently Islamic [source_1]. Later, he protested at the Iranian mission to the United Nations, which led to an offer of a job from the Iranian ambassador [source_1]. Zarif has spent more time with Kerry than any other foreign minister, working towards a June 30 deadline for the nuclear agreement [source_1].\n\nIn other news, five Americans exposed to Ebola in West Africa were released from an Omaha hospital after three weeks of monitoring, none having developed the virus [source_3]. These individuals were clinicians for Partners in Health and had contact with a colleague diagnosed with Ebola [source_3]. The Centers for Disease Control and Prevention expected the last of 17 monitored patients to be released by Thursday [source_3]. The West African Ebola epidemic, dating back to December 2013, has caused over 10,000 deaths [source_3].\n\nThe United States disagrees with a court's decision regarding Palestine, stating it does not believe Palestine is a state and therefore ineligible to join the International Criminal Court (ICC) [source_4]. The U.S. urged direct negotiations between warring sides and opposes actions against Israel at the ICC, viewing them as counterproductive to peace [source_4]. The ICC, however, considers the territories as \"Palestine\" and its preliminary examination allows for evidence review to determine whether to investigate suspects on both sides [source_4]. The war between Israel and Hamas militants in Gaza last summer resulted in over 2,000 deaths [source_4].\n\nAt Duke University, hundreds gathered after a noose was discovered, with the university president stating it was not the Duke they accepted or wanted to create [source_5]. This incident is part of recent racist events affecting college students, including a fraternity at the University of Oklahoma whose charter was removed after a video surfaced showing members using racial slurs and referring to lynching [source_5]. Additionally, a noose was hung around the neck of a civil rights figure's statue at the University of Mississippi in February [source_5]. Duke also reported a previous incident of hate speech directed at students on campus [source_5].",
+    "generation_latency_ms": 3092.966599997453,
+    "ground_truth_docs": [
+      "doc_4_0"
+    ],
+    "ground_truth_answers": [
+      "Student is no longer on Duke University campus and will face disciplinary review .\nSchool officials identified student during investigation and the person admitted to hanging the noose, Duke says .\nThe noose, made of rope, was discovered on campus about 2 a.m."
+    ]
+  },
+  {
+    "query_id": "cnn_1b2cc634e2bfc6f2595260e7ed9b42f77ecbb0ce",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_3_0",
+      "doc_5_0",
+      "doc_2_0",
+      "doc_4_0",
+      "doc_0_0"
+    ],
+    "retrieval_latency_ms": 1286.2420999990718,
+    "generated_answer": "The article discusses the release of five Americans who were monitored for Ebola exposure in West Africa [source_3]. These individuals, clinicians for a Boston-based aid group called Partners in Health, were exposed in Sierra Leone but did not develop the virus [source_3]. One person had a heart-related issue and was discharged, while the others have already returned home [source_3]. The Centers for Disease Control and Prevention expects the remaining monitored patients to be released soon [source_3]. The article also mentions the ongoing Ebola epidemic in West Africa, which has caused over 10,000 deaths since December 2013 [source_3].\n\nAdditionally, the text touches upon a legal disagreement between the United States and the International Criminal Court (ICC) regarding Palestine's status as a state eligible to join the ICC [source_4]. The U.S. State Department opposes actions against Israel at the ICC, viewing them as counterproductive to peace, and does not consider Palestine a state [source_4]. The ICC, however, refers to the territories as \"Palestine\" and its preliminary examination allows for reviewing evidence to determine whether to investigate suspects on both sides of the conflict [source_4]. The war between Israel and Hamas militants in Gaza last summer resulted in over 2,000 deaths [source_4].\n\nSeparately, the article highlights a racist incident at Duke University where a noose was discovered, prompting a gathering and a statement from Duke President Richard Brodhead condemning the act [source_5]. This incident is part of a trend of racist events on college campuses, including a fraternity at the University of Oklahoma facing charter removal after a video surfaced showing members using racial slurs and referring to lynching [source_5]. Another incident involved a noose being placed around the neck of a statue of a civil rights figure at the University of Mississippi [source_5]. Duke University had also received a previous report of hate speech directed at students on campus [source_5].\n\nThe provided text also mentions Mohammad Javad Zarif, an Iranian foreign minister who spent significant time with John Kerry in negotiations [source_1]. Zarif was involved in student protests during the Iranian Revolution, including the takeover of the Iranian Consulate in San Francisco with the aim of removing those not considered sufficiently Islamic [source_1]. He later protested at the Iranian mission to the United Nations, which led to a job offer from the Iranian ambassador [source_1].\n\nFinally, the article includes a heartwarming story about Trey, a student who invited Ellie, a classmate with developmental disabilities, to prom, preventing her from feeling isolated [source_2]. Trey's future college coach, James Whitford, expressed pride in Trey's actions, noting his work with other children [source_2]. Trey's mother, Shelly Moses, was also proud and saw it as a way to bring awareness to a good cause [source_2]. Trey plans to major in special education and play basketball in college, while Ellie is excited about prom and dress shopping [source_2].",
+    "generation_latency_ms": 3332.4723999976413,
+    "ground_truth_docs": [
+      "doc_5_0"
+    ],
+    "ground_truth_answers": [
+      "College-bound basketball star asks girl with Down syndrome to high school prom .\nPictures of the two during the \"prom-posal\" have gone viral ."
+    ]
+  },
+  {
+    "query_id": "cnn_e2706dce6cf26bc61b082438188fdb6e130d9e40",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_3_0",
+      "doc_5_0",
+      "doc_2_0",
+      "doc_6_0",
+      "doc_0_0"
+    ],
+    "retrieval_latency_ms": 1241.2093999992067,
+    "generated_answer": "Globally, there was a reduction in executions, with most regions showing a decrease in the number of executions [source_1]. Sub-Saharan Africa experienced a 28% fall in reported cases, and the Middle East and North Africa saw a 23% decrease in executions compared to 2013 [source_1]. Across the board, with the exception of Europe and Central Asia, fewer executions were reported in every region [source_1]. Belarus, the only country in Europe and Central Asia to execute people, resumed capital punishment after a two-year hiatus, impacting the near-universal decrease in countries using the death penalty by region [source_1]. The United States was the only country in the Americas to conduct executions, with the number of people put to death falling slightly from 39 in 2013 to 35 in 2014 [source_1].\n\nIranian Foreign Minister Zarif tweeted \"Happy Rosh Hashanah\" in September 2013, to which Christine Pelosi responded, suggesting the New Year would be better if Iran ended its Holocaust denial [source_2]. Zarif tweeted back that Iran never denied it and that the person perceived to be denying it, former President Mahmoud Ahmadinejad, was gone [source_2]. Zarif was nominated as foreign minister by Ahmadinejad's successor, Hassan Rouhami [source_2].\n\nPalestine's decision to join the International Criminal Court (ICC) Statute was welcomed by rights group Human Rights Watch, with international justice counsel Balkees Jarrah stating that governments penalizing Palestine for joining should end their pressure and countries supporting universal acceptance of the court's treaty should speak out [source_3]. Jarrah also noted that attempts to undermine international justice are objectionable, not Palestine's decision to join a treaty with over 100 member countries [source_3]. Israeli Prime Minister Benjamin Netanyahu described the preliminary ICC examination in January as an outrage, believing the court was overstepping its boundaries [source_3]. The United States also \"strongly\" disagreed with the court's decision, stating they do not believe Palestine is a state and therefore not eligible [source_3].\n\nAn Ebola epidemic in West Africa, dating back to December 2013, has resulted in over 10,000 deaths, primarily in Guinea, Liberia, and Sierra Leone, according to the World Health Organization [source_4]. Ebola is transmitted through direct contact with the bodily fluids of an infected person [source_4].\n\nA student named Ellie found relief at a school that helps students with and without developmental disabilities, preventing feelings of isolation [source_5]. Trey, who is known to work with other kids, is looking forward to prom and plans to major in special education and play basketball in the fall [source_5]. Trey's mother, Shelly Moses, expressed pride in her son and excitement about raising awareness for a good cause [source_5]. Ellie is eagerly anticipating prom and going dress shopping [source_5].",
+    "generation_latency_ms": 3193.6232000007294,
+    "ground_truth_docs": [
+      "doc_6_0"
+    ],
+    "ground_truth_answers": [
+      "Amnesty's annual death penalty report catalogs encouraging signs, but setbacks in numbers of those sentenced to death .\nOrganization claims that governments around the world are using the threat of terrorism to advance executions .\nThe number of executions worldwide has gone down by almost 22% compared with 2013, but death sentences up by 28% ."
+    ]
+  },
+  {
+    "query_id": "cnn_0d3c8c276d079c4c225f034c69aa024cdab7869d",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_3_0",
+      "doc_5_0",
+      "doc_2_0",
+      "doc_6_0",
+      "doc_0_0"
+    ],
+    "retrieval_latency_ms": 1250.3053000000364,
+    "generated_answer": "The number of executions worldwide has generally decreased, with reductions observed in most regions [source_1]. Sub-Saharan Africa experienced a 28% fall in reported cases, and the Middle East and North Africa saw a 23% decrease in executions compared to 2013 [source_1]. However, the resumption of capital punishment in Belarus, the only country in Europe and Central Asia to execute people, after a two-year break, affected a near-universal decrease in countries using the death penalty [source_1]. The United States remains the only country in the Americas to conduct executions, although the number of people executed there slightly decreased from 39 in 2013 to 35 in 2014 [source_1].\n\nIn September 2013, Iran's Foreign Minister Zarif tweeted a greeting for Rosh Hashanah, to which Christine Pelosi responded by suggesting that ending Iran's Holocaust denial would make the New Year sweeter [source_2]. Zarif replied that Iran had never denied the Holocaust and that the perceived denier, former Iranian President Mahmoud Ahmadinejad, was no longer in office [source_2]. Zarif was nominated for foreign minister by Ahmadinejad's successor, Hassan Rouhami [source_2].\n\nPalestine's decision to join the International Criminal Court (ICC) Statute has been welcomed by human rights groups like Human Rights Watch, who urged governments to end pressure against Palestine and for countries supporting the court's treaty to welcome its membership [source_3]. They stated that attempts to undermine international justice are objectionable, not Palestine's decision to join a treaty with over 100 member countries [source_3]. Israeli Prime Minister Benjamin Netanyahu described the preliminary ICC examination opened in January as an outrage, and the United States also expressed strong disagreement, believing Palestine is not a state and therefore not eligible [source_3].\n\nAn Ebola epidemic in West Africa, which began in December 2013, has caused over 10,000 deaths, primarily in Guinea, Liberia, and Sierra Leone [source_4]. Ebola is transmitted through direct contact with infected bodily fluids [source_4].\n\nThe article also touches on a positive social initiative where a student named Trey planned a prom-posal for Ellie, who has developmental disabilities, to help her feel included and prevent her from feeling isolated [source_5]. Trey's future coach at Ball State, James Whitford, and Trey's mother, Shelly Moses, expressed pride in his actions and his efforts to raise awareness for a good cause [source_5]. Trey plans to major in special education and play basketball in college, while Ellie is looking forward to dress shopping for prom [source_5].",
+    "generation_latency_ms": 3080.757399999129,
+    "ground_truth_docs": [
+      "doc_7_0"
+    ],
+    "ground_truth_answers": [
+      "Andrew Getty's death appears to be from natural causes, police say, citing coroner's early assessment .\nIn a petition for a restraining order, Getty had written he had a serious medical condition.\nPolice say this is not a criminal matter at this time ."
+    ]
+  },
+  {
+    "query_id": "cnn_6222f33c2c79b80be437335eeb3f488509e92cf5",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_8_0",
+      "doc_2_0",
+      "doc_5_0",
+      "doc_6_0",
+      "doc_0_0"
+    ],
+    "retrieval_latency_ms": 1278.6654000010458,
+    "generated_answer": "The number of executions worldwide has generally decreased, with most regions showing reductions [source_1]. Sub-Saharan Africa experienced a 28% fall in reported cases, and the Middle East and North Africa saw a 23% decrease in executions compared to 2013 [source_1]. However, Belarus, the only country in Europe and Central Asia to execute people, resumed capital punishment after a two-year break [source_1]. The United States remains the only country in the Americas to carry out executions, though the number of individuals put to death slightly declined from 39 in 2013 to 35 in 2014 [source_1].\n\nFilipinos were warned about potential flash floods and landslides due to tropical storm Maysak, which had previously reached super typhoon status [source_2]. The storm, now classified as tropical storm Chedeng by the Philippine national weather service, has sustained winds of over 70 mph and gusts up to 90 mph [source_2]. Authorities implemented preemptive measures, including prohibiting outdoor activities and conducting evacuations [source_2].\n\nIn a diplomatic exchange, Iran's Foreign Minister Zarif responded to a tweet about the Jewish New Year by stating that \"Iran never denied it\" regarding the Holocaust, implying that the perceived denier, former President Mahmoud Ahmadinejad, was no longer in power [source_3]. Zarif was nominated by Hassan Rouhani and had previously continued his education in the United States due to political and security conditions [source_3].\n\nPalestine's decision to join the International Criminal Court (ICC) was welcomed by Human Rights Watch, which urged governments to end pressure against Palestine and for supporters of universal acceptance of the court's treaty to speak out [source_4]. The ICC's preliminary examination opened in January, which Israeli Prime Minister Benjamin Netanyahu described as an outrage, and the United States also expressed strong disagreement, stating that Palestine is not eligible as a state [source_4].\n\nAn Ebola epidemic in West Africa, beginning in December 2013, has resulted in over 10,000 deaths, primarily in Guinea, Liberia, and Sierra Leone [source_5]. Ebola is transmitted through direct contact with bodily fluids of an infected person [source_5].",
+    "generation_latency_ms": 2621.8354999982694,
+    "ground_truth_docs": [
+      "doc_8_0"
+    ],
+    "ground_truth_answers": [
+      "Once a super typhoon, Maysak is now a tropical storm with 70 mph winds .\nIt could still cause flooding, landslides and other problems in the Philippines ."
+    ]
+  },
+  {
+    "query_id": "cnn_2bd8ada1de6a7b02f59430cc82045eb8d29cf033",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_3_0",
+      "doc_8_0",
+      "doc_2_0",
+      "doc_6_0",
+      "doc_0_0"
+    ],
+    "retrieval_latency_ms": 1274.604400001408,
+    "generated_answer": "The number of executions worldwide has generally decreased, with reductions seen in most regions [source_1]. Sub-Saharan Africa experienced a 28% drop in reported cases, and the Middle East and North Africa saw a 23% decrease in executions compared to 2013 [source_1]. Belarus is the only country in Europe and Central Asia to have executed people, breaking a near-universal decrease in countries using the death penalty [source_1]. The United States remains the only country in the Americas to conduct executions, though the number of individuals put to death there slightly decreased from 39 in 2013 to 35 in 2014 [source_1].\n\nIn the Philippines, authorities issued warnings about flash floods and landslides due to the approach of tropical storm Maysak, which had previously reached super typhoon status [source_2]. Maysak, classified as a tropical storm with winds over 70 mph, prompted preemptive measures such as barring outdoor activities and conducting evacuations [source_2].\n\nAn Iranian diplomat, Zarif, responded to a tweet about the Jewish New Year by stating that Iran never denied the Holocaust, and that the perception of denial was due to a former president who was no longer in office [source_3]. Zarif was nominated as foreign minister by the successor to that former president [source_3].\n\nPalestine's membership in the ICC was welcomed by Human Rights Watch, which called for an end to attempts to undermine international justice [source_4]. However, Israel's Prime Minister described the court's preliminary examination as an outrage, and the United States also disagreed with the court's decision, stating that Palestine is not eligible as a state [source_4].\n\nAn Ebola epidemic in West Africa, dating back to December 2013, has resulted in over 10,000 deaths, primarily in Guinea, Liberia, and Sierra Leone [source_5]. Ebola is transmitted through direct contact with the bodily fluids of an infected person [source_5].",
+    "generation_latency_ms": 2801.4456999990216,
+    "ground_truth_docs": [
+      "doc_9_0"
+    ],
+    "ground_truth_answers": [
+      "Bob Barker returned to host \"The Price Is Right\" on Wednesday .\nBarker, 91, had retired as host in 2007 ."
+    ]
+  },
+  {
+    "query_id": "cnn_ee17dfb574feca82ccac5689595e47483bd23f12",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_3_0",
+      "doc_8_0",
+      "doc_2_0",
+      "doc_6_0",
+      "doc_0_0"
+    ],
+    "retrieval_latency_ms": 1261.010800000804,
+    "generated_answer": "The number of executions worldwide has generally decreased, with most regions showing reductions compared to 2013 [source_1]. Sub-Saharan Africa saw a 28% fall in reported cases, and executions in the Middle East and North Africa were down 23% [source_1]. The United States was the only country in the Americas to conduct executions, with 35 people put to death in 2014, a slight decrease from 39 in 2013 [source_1]. Belarus was the only country in Europe and Central Asia to execute people, resuming capital punishment after a two-year hiatus [source_1].\n\nFilipinos were warned of potential flash floods and landslides due to tropical storm Maysak, which had previously reached super typhoon status but weakened to a tropical storm with sustained winds of over 70 mph [source_2]. Authorities took precautionary measures such as barring outdoor activities and conducting evacuations [source_2].\n\nThere is a discussion about Iran's foreign minister, Zarif, and his past statements, including a tweet wishing a happy Jewish New Year and his response to a comment about Iran's Holocaust denial, stating that Iran never denied it and that the perceived denier was gone [source_3]. Zarif was nominated for foreign minister by Hassan Rouhami, and his foreign ministry noted his decision to continue his education in the United States due to political and security conditions at the time [source_3].\n\nPalestine's membership in the ICC was welcomed by Human Rights Watch, which urged governments to end pressure against Palestine for joining and for countries supporting the court's treaty to speak out [source_4]. Attempts to undermine international justice were deemed objectionable, not Palestine's decision to join a treaty with over 100 member countries [source_4]. Israeli Prime Minister Benjamin Netanyahu described the preliminary ICC examination as an outrage, and the United States disagreed with the court's decision, stating they do not believe Palestine is a state and is therefore ineligible [source_4].\n\nAn Ebola epidemic in West Africa, which began in December 2013, has resulted in over 10,000 deaths, primarily in Guinea, Liberia, and Sierra Leone [source_5]. Ebola is transmitted through direct contact with bodily fluids of an infected person [source_5].",
+    "generation_latency_ms": 2872.649699998874,
+    "ground_truth_docs": [
+      "doc_10_0"
+    ],
+    "ground_truth_answers": [
+      "London's Metropolitan Police say the man was arrested at Luton airport after landing on a flight from Istanbul .\nHe's been charged with terror offenses allegedly committed since the start of November ."
+    ]
+  },
+  {
+    "query_id": "cnn_384175be1c8d41610fbeddbd9d9cb46e716e2529",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_3_0",
+      "doc_8_0",
+      "doc_2_0",
+      "doc_6_0",
+      "doc_0_0"
+    ],
+    "retrieval_latency_ms": 1285.2708000027633,
+    "generated_answer": "There were reductions in the number of executions worldwide, with Sub-Saharan Africa showing a 28% fall and the Middle East and North Africa down 23% compared to 2013 [source_1]. The United States was the only country in the Americas to conduct executions, with 35 people put to death in 2014, a slight decrease from 39 in 2013 [source_1]. Belarus was the only country in Europe and Central Asia to execute people, resuming the practice after a two-year hiatus [source_1].\n\nTropical storm Maysak, previously a super typhoon, approached the Philippines with sustained winds of over 70 mph and gusts up to 90 mph [source_2]. Authorities took preemptive measures such as barring outdoor activities and conducting precautionary evacuations [source_2].\n\nIranian Foreign Minister Zarif tweeted \"Happy Rosh Hashanah\" in September 2013, and in response to a comment about Iran's Holocaust denial, he tweeted that Iran never denied it and that the perceived denier was gone [source_3]. Zarif was nominated for foreign minister by Hassan Rouhami, Rouhami's predecessor being Mahmoud Ahmadinejad [source_3].\n\nPalestine joined the International Criminal Court (ICC) [source_4]. Human Rights Watch welcomed this development, stating that governments should not penalize Palestine for joining and that countries supporting the court's treaty should speak out [source_4]. Israeli Prime Minister Benjamin Netanyahu described the ICC's preliminary examination as an outrage, and the United States also disagreed with the court's decision, stating that Palestine is not eligible as it is not a state [source_4].\n\nAn Ebola epidemic in West Africa, dating back to December 2013, has caused over 10,000 deaths, primarily in Guinea, Liberia, and Sierra Leone [source_5]. Ebola is transmitted through direct contact with bodily fluids of an infected person [source_5].",
+    "generation_latency_ms": 2844.291900000826,
+    "ground_truth_docs": [
+      "doc_11_0"
+    ],
+    "ground_truth_answers": [
+      "\"Furious 7\" pays tribute to star Paul Walker, who died during filming .\nVin Diesel: \"This movie is more than a movie\"\n\"Furious 7\" opens Friday ."
+    ]
+  },
+  {
+    "query_id": "cnn_203886369feea77bbc35715e6d7e518b751f57de",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_8_0",
+      "doc_2_0",
+      "doc_6_0",
+      "doc_12_0",
+      "doc_0_0"
+    ],
+    "retrieval_latency_ms": 1285.9672000013234,
+    "generated_answer": "Governments globally are leveraging the threat of terrorism, whether real or perceived, to advance executions [source_2]. Amnesty International's annual report on the death penalty highlights this trend, with Secretary General Salil Shetty stating it's shameful that many states use capital punishment for \"terrorism\" or to quell internal instability based on a flawed premise of deterrence [source_2]. Pakistan lifted a six-year moratorium on civilian executions after an attack in Peshawar, and China has used the death penalty in its \"Strike Hard\" campaign against terrorism in Xinjiang [source_2].\n\nWorldwide, there has been a general reduction in the number of executions, with most regions showing decreases [source_1]. Sub-Saharan Africa saw a 28% fall in reported cases, and the Middle East and North Africa experienced a 23% decrease in executions compared to 2013 [source_1]. However, the resumption of capital punishment in Belarus, the sole country in Europe and Central Asia to execute people, after a two-year hiatus, marred an almost universal decrease in countries using the death penalty by region [source_1]. In the Americas, the United States remains the only country conducting executions, though the number of people put to death slightly decreased from 39 in 2013 to 35 in 2014 [source_1].\n\nTropical storm Maysak, previously a super typhoon, approached the Philippines with sustained winds of over 70 mph [source_3]. Authorities implemented preemptive measures, including barring outdoor activities and conducting evacuations, to ensure public safety [source_3].\n\nRegarding Iranian Foreign Minister Zarif, it is noted that he tweeted \"Happy Rosh Hashanah\" in September 2013 [source_4]. In response, Christine Pelosi tweeted that the New Year would be better if Iran ended its Holocaust denial [source_4]. Zarif replied that Iran never denied it and that the individual perceived to be denying it was no longer in office [source_4]. Zarif was nominated as foreign minister by Hassan Rouhami, Ahmadinejad's successor [source_4].",
+    "generation_latency_ms": 2795.0180000007094,
+    "ground_truth_docs": [
+      "doc_12_0"
+    ],
+    "ground_truth_answers": [
+      "Museum: Anne Frank died earlier than previously believed .\nResearchers re-examined archives and testimonies of survivors .\nAnne and older sister Margot Frank are believed to have died in February 1945 ."
+    ]
+  },
+  {
+    "query_id": "cnn_1dd00c89d71a5611797bb34da8a6eada8f058405",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_6_0",
+      "doc_13_0",
+      "doc_12_0"
+    ],
+    "retrieval_latency_ms": 1274.6632999987924,
+    "generated_answer": "Governments worldwide are allegedly using the threat of terrorism to advance executions [source_2]. Amnesty International's annual report on the death penalty states that many governments are using capital punishment in a futile attempt to tackle threats to state security and public safety [source_2]. This is described as a \"dark trend\" and states are criticized for \"playing with people's lives\" by executing individuals for \"terrorism\" or to quell internal instability based on the premise of deterrence [source_2]. Examples cited include Pakistan lifting its moratorium on civilian executions after an attack in Peshawar, and China using the death penalty in its \"Strike Hard\" campaign against terrorism [source_2].\n\nGlobally, there were reductions in the number of executions in most regions in 2014 compared to 2013 [source_1]. Sub-Saharan Africa saw a 28% fall in reported cases, and the Middle East and North Africa experienced a 23% decrease in executions [source_1]. However, the resumption of capital punishment in Belarus, the only country in Europe and Central Asia to execute people, after a two-year hiatus, countered a near-universal decrease in countries using the death penalty by region [source_1]. The United States was the only country in the Americas to conduct executions, with the number falling slightly from 39 in 2013 to 35 in 2014 [source_1]. Despite some negative developments, there were positive developments noted, with fewer reports of executions in every region except Europe and Central Asia [source_1].\n\nThe article also touches on the political landscape regarding LGBTQ+ issues, suggesting that while public opinion may be more gay-friendly, state-level trends tell a different story [source_3]. It is suggested that candidates may find it difficult to avoid taking positions on \"religious freedom\" bills or constitutional amendments related to same-sex marriage [source_3].\n\nFinally, the article briefly mentions the tragic experiences of Anne Frank and her sister Margot in concentration camps during 1944, detailing their separation from their mother and harsh conditions in the Bergen-Belsen camp [source_4]. Witnesses described Anne as being emaciated and covered in lice by December 1944 [source_4].",
+    "generation_latency_ms": 3511.26640000075,
+    "ground_truth_docs": [
+      "doc_13_0"
+    ],
+    "ground_truth_answers": [
+      "LZ: Indiana law pushing back LGBT rights, and other states' anti-LGBT moves, bow to far right wing that GOP candidates need for 2016 .\nCruz, Huckabee, Jindal, Carson, Walker are reviving culture wars, he says.  Equality for LGBT has not yet \"won\" in America ."
+    ]
+  },
+  {
+    "query_id": "cnn_eeafdc8b2d8130cabda5aafe352eab1198d0b9f8",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_6_0",
+      "doc_13_0",
+      "doc_12_0"
+    ],
+    "retrieval_latency_ms": 1272.7344000013545,
+    "generated_answer": "Governments globally are utilizing the threat of terrorism, whether real or perceived, to advance executions [source_2]. Amnesty International alleges this in their annual report on the death penalty [source_2]. Salil Shetty, Amnesty's Secretary General, stated that governments are using the death penalty in a futile attempt to tackle threats to state security and public safety [source_2]. He further commented that it is shameful for states to play with people's lives by putting them to death for \"terrorism\" or to quell internal instability based on the ill-conceived premise of deterrence [source_2]. The report \"Death Sentences and Executions 2014\" mentions Pakistan lifting a six-year moratorium on civilian executions after an attack in Peshawar [source_2]. China is also noted for using the death penalty in its \"Strike Hard\" campaign against terrorism in the Xinjiang province [source_2].\n\nWorldwide, most regions appear to be showing reductions in the number of executions [source_1]. Sub-Saharan Africa experienced a 28% decrease in reported cases, and executions in the Middle East and North Africa were down 23% compared to 2013 [source_1]. Across the board, with the exception of Europe and Central Asia, there were fewer reports of executions in every region [source_1]. Belarus, the only country in Europe and Central Asia to execute people, resumed capital punishment after a two-year hiatus, which marred a near-universal decrease in countries using the death penalty by region [source_1]. The United States is the only country in the Americas to conduct executions, with the number of those put to death falling slightly from 39 in 2013 to 35 in 2014 [source_1].",
+    "generation_latency_ms": 2635.5294000022695,
+    "ground_truth_docs": [
+      "doc_14_0"
+    ],
+    "ground_truth_answers": [
+      "Singing the national anthem is a risky proposition .\nWhitney Houston nailed it; Roseanne Barr destroyed it ."
+    ]
+  },
+  {
+    "query_id": "cnn_dc833f8b55e381011ce23f89ea909b9a141b5a66",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_6_0",
+      "doc_13_0",
+      "doc_12_0"
+    ],
+    "retrieval_latency_ms": 1254.034200002934,
+    "generated_answer": "Governments worldwide are using the threat of terrorism, whether real or perceived, to advance executions [source_2]. Amnesty International alleges this in its annual report on the death penalty, with the Secretary General stating that governments are using the death penalty in a futile attempt to tackle threats to state security and public safety [source_2]. The report \"Death Sentences and Executions 2014\" highlights Pakistan lifting its execution moratorium for civilians after an attack in Peshawar and China using the death penalty in its campaign against terrorism [source_2].\n\nWorldwide, there has been a reduction in the number of executions, with most regions showing decreases [source_1]. Sub-Saharan Africa saw a 28% fall in reported cases, and the Middle East and North Africa experienced a 23% decrease in executions compared to 2013 [source_1]. However, the resumption of capital punishment in Belarus, the only country in Europe and Central Asia to execute people, after a two-year hiatus, marred a near-universal decrease in countries using the death penalty [source_1]. The United States is the only country in the Americas to conduct executions, though the number of people executed there slightly fell from 39 in 2013 to 35 in 2014 [source_1].\n\nRegarding LGBT issues, while nationwide polls may suggest increased gay-friendliness, the situation at the state level, as shown in Indiana, indicates a more complex picture [source_3, source_4]. Former Rep. Barney Frank believes Republicans want the Supreme Court to rule in favor of same-sex marriage to provide political cover in the GOP primary [source_3]. He notes that while progress has been made over the past decade, the fight for equal rights is ongoing, and candidates may face pressure on issues like \"religious freedom\" bills and constitutional amendments [source_3, source_4].\n\nIn 1944, Anne Frank and seven others hiding in Amsterdam were arrested and sent to the Auschwitz-Birkenau concentration camp [source_5]. Anne and her sister Margot were later separated from their mother and sent to work as slave labor at the Bergen-Belsen camp in Germany [source_5]. Witnesses described the camp days as filled with terror and dread, with the sisters enduring overcrowded conditions, lack of basic amenities, and sleeping on lice-ridden straw [source_5]. A classmate recalled seeing Anne in December 1944, describing her as a skeleton, wrapped in a blanket because her clothes were infested with lice [source_5].",
+    "generation_latency_ms": 3178.254400001606,
+    "ground_truth_docs": [
+      "doc_15_0"
+    ],
+    "ground_truth_answers": [
+      "While Republican Gov. Asa Hutchinson was weighing an Arkansas religious freedom bill, Walmart voiced its opposition .\nWalmart and other high-profile businesses are showing their support for gay and lesbian rights .\nTheir stance puts them in conflict with socially conservative Republicans, traditionally seen as allies ."
+    ]
+  },
+  {
+    "query_id": "cnn_c222979bd1cfbc7d3ff821e9c738e3dbd29b14f4",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_6_0",
+      "doc_16_0",
+      "doc_13_0"
+    ],
+    "retrieval_latency_ms": 1253.6118000025454,
+    "generated_answer": "140 states are abolitionist in law or practice [source_1]. Last year, 22 countries recorded executions, a decrease from 20 years prior [source_1]. In 2014, the number of recorded executions globally dropped from 778 to 607 [source_1]. This figure excludes China, where death penalty statistics are a state secret, making the true number impossible to determine [source_1]. Executions in sub-Saharan Africa were recorded in only three countries: Equatorial Guinea, Somalia, and Sudan, with a more than quarter decrease in the number of people executed [source_1]. The Americas remained execution-free, with the exception of the United States [source_1]. Amnesty International alleges that governments are using the threat of terrorism to advance executions [source_2]. Salil Shetty, Amnesty's Secretary General, stated that governments are using the death penalty in a futile attempt to tackle threats to state security and public safety [source_2]. The report \"Death Sentences and Executions 2014\" mentions Pakistan lifting its execution moratorium for civilians after an attack in Peshawar [source_2]. China is also noted for using the death penalty in its \"Strike Hard\" campaign against terrorism [source_2]. Concerns were raised about court proceedings in Afghanistan, Bangladesh, China, Egypt, Iran, Iraq, North Korea, Pakistan, Saudi Arabia, and Sri Lanka, where the death penalty was imposed after proceedings that did not meet international fair trial standards [source_2]. United Nations Secretary-General Ban Ki-moon emphasized the need to move towards the abolition of capital punishment, stating that taking a life is irreversible and the death penalty is unjust and incompatible with human rights [source_2]. Amnesty estimates that at least 19,094 people were on death row at the end of 2014 [source_2].",
+    "generation_latency_ms": 2806.8103000005067,
+    "ground_truth_docs": [
+      "doc_16_0"
+    ],
+    "ground_truth_answers": [
+      "Amnesty International releases its annual review of the death penalty worldwide; much of it makes for grim reading .\nSalil Shetty: Countries that use executions to deal with problems are on the wrong side of history ."
+    ]
+  },
+  {
+    "query_id": "cnn_469c6ac05092ca5997728c9dfc19f9ab6b936e40",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_17_0",
+      "doc_6_0",
+      "doc_16_0",
+      "doc_13_0"
+    ],
+    "retrieval_latency_ms": 1294.318199998088,
+    "generated_answer": "In 2014, 140 states were abolitionist in law or practice, and executions were recorded in 22 countries, a decrease from two decades prior [source_1]. The number of recorded executions globally dropped from 778 in the previous year to 607 in 2014 [source_1]. China, where executions are treated as a state secret, executes more people than the rest of the world combined, making the true figure impossible to determine [source_1]. In sub-Saharan Africa, executions were recorded in only three countries: Equatorial Guinea, Somalia, and Sudan, with a decrease of over a quarter in the number of people executed [source_1]. The Americas were execution-free, with the exception of the United States [source_1]. Governments that continue to execute are on the \"wrong side of history\" and should join the majority of countries that have abolished capital punishment [source_1].\n\nAmnesty International alleges that governments are using the threat of terrorism, whether real or perceived, to advance executions [source_2]. The report \"Death Sentences and Executions 2014\" highlights Pakistan's lifting of a six-year moratorium on civilian executions after an attack on a school in Peshawar, and China's use of the death penalty in its \"Strike Hard\" campaign against terrorism [source_2]. The report also points out that the death penalty was imposed in some cases after proceedings that did not meet international fair trial standards, with specific concerns raised about Afghanistan, Bangladesh, China, Egypt, Iran, Iraq, North Korea, Pakistan, Saudi Arabia, and Sri Lanka [source_3]. The United Nations Secretary-General, Ban Ki-moon, emphasized the need to move towards the abolition of capital punishment, stating that taking a life is too irreversible for one human being to inflict upon another and that the death penalty is unjust and incompatible with fundamental human rights [source_3]. Amnesty estimates that at least 19,094 people were on death row at the end of 2014 [source_3].",
+    "generation_latency_ms": 3018.2765999998082,
+    "ground_truth_docs": [
+      "doc_17_0"
+    ],
+    "ground_truth_answers": [
+      "Marseille prosecutor says \"so far no videos were used in the crash investigation\" despite media reports .\nJournalists at Bild and Paris Match are \"very confident\" the video clip is real, an editor says .\nAndreas Lubitz had informed his Lufthansa training school of an episode of severe depression, airline says ."
+    ]
+  },
+  {
+    "query_id": "cnn_88e7dac40f3e6c159e4edc0747d0cc0f50886fbb",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_17_0",
+      "doc_6_0",
+      "doc_16_0"
+    ],
+    "retrieval_latency_ms": 1278.3307999998215,
+    "generated_answer": "In 2014, 140 states were abolitionist in law or practice, and executions were recorded in 22 countries, a decrease from previous years [source_1]. The number of recorded executions globally dropped from 778 to 607 in 2014 compared to the previous year, excluding China where statistics are secret [source_1]. Executions in sub-Saharan Africa occurred in only three countries: Equatorial Guinea, Somalia, and Sudan, with a decrease in the number of people executed [source_1]. The Americas were execution-free, with the exception of the United States [source_1].\n\nGovernments are reportedly using the threat of terrorism to justify executions [source_2]. Amnesty International stated that governments are using the death penalty in a futile attempt to address security threats [source_2]. Pakistan lifted a moratorium on civilian executions after an attack on a school, and China has used the death penalty in its campaign against terrorism [source_2].\n\nConcerns were raised about court proceedings in several countries, including Afghanistan, Bangladesh, China, Egypt, Iran, Iraq, North Korea, Pakistan, Saudi Arabia, and Sri Lanka, where the death penalty was imposed after proceedings that did not meet international fair trial standards [source_3]. The United Nations Secretary-General emphasized the need to move towards abolishing capital punishment, stating that the taking of life is too irreversible for one human to inflict on another and that the death penalty is unjust and incompatible with human rights [source_3]. At the end of 2014, Amnesty International estimated that at least 19,094 people were on death row [source_3].",
+    "generation_latency_ms": 2706.1514999986684,
+    "ground_truth_docs": [
+      "doc_18_0"
+    ],
+    "ground_truth_answers": [
+      "The Rev. Robert Schuller, 88, had been diagnosed with esophageal cancer in 2013 .\nHis TV show, \"Hour of Power,\" was enormously popular in the 1970s and 1980s ."
+    ]
+  },
+  {
+    "query_id": "cnn_ec4b5fef725b4cc81545689603ff84c8e19bd6dc",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_17_0",
+      "doc_6_0",
+      "doc_16_0"
+    ],
+    "retrieval_latency_ms": 1282.8876999992644,
+    "generated_answer": "In 2014, 140 states were abolitionist in law or practice, and executions were recorded in 22 countries, a decrease from 20 years prior [source_1]. The number of recorded executions globally dropped from 778 in the previous year to 607 in 2014 [source_1]. China, where more people are executed than in all other countries combined, treats its death penalty statistics as a state secret, making the exact number impossible to determine [source_1]. In sub-Saharan Africa, executions were only recorded in Equatorial Guinea, Somalia, and Sudan, with a decrease of over a quarter in the number of people put to death [source_1]. The Americas were execution-free except for the United States [source_1].\n\nAmnesty International alleges that governments are using the threat of terrorism, whether real or perceived, to advance executions [source_2]. Salil Shetty, Amnesty's Secretary General, stated that governments are using the death penalty in a futile attempt to tackle threats to state security and public safety [source_2]. The report \"Death Sentences and Executions 2014\" highlights Pakistan lifting its six-year moratorium on civilian executions after an attack on a school in Peshawar, and China using the death penalty in its \"Strike Hard\" campaign against terrorism [source_2]. Concerns were raised regarding court proceedings in Afghanistan, Bangladesh, China, Egypt, Iran, Iraq, North Korea, Pakistan, Saudi Arabia, and Sri Lanka, where the death penalty was imposed after proceedings that did not meet international fair trial standards [source_3]. The United Nations Secretary-General, Ban Ki-moon, emphasized the need to move towards abolishing capital punishment, stating that the taking of life is too irreversible for one human being to inflict on another [source_3]. Amnesty estimates that at least 19,094 people were on death row at the end of 2014 [source_3].",
+    "generation_latency_ms": 3175.308199999563,
+    "ground_truth_docs": [
+      "doc_19_0"
+    ],
+    "ground_truth_answers": [
+      "Former GOP representative compares President Obama to Andreas Lubitz .\nBachmann said with possible Iran deal, Obama will fly \"entire nation into the rocks\"\nReaction on social media? She was blasted by Facebook commenters ."
+    ]
+  },
+  {
+    "query_id": "cnn_ffff11a2f44d731cd80c86819a89b7e227581415",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_17_0",
+      "doc_6_0",
+      "doc_16_0"
+    ],
+    "retrieval_latency_ms": 1291.4716999985103,
+    "generated_answer": "140 states are abolitionist in law or practice [source_1]. Last year, executions were recorded in 22 countries, a decrease from 20 years prior [source_1]. The number of recorded executions globally dropped to 607 in 2014 from 778 the previous year [source_1]. This figure excludes China, where the number of executions is unknown but is believed to be higher than the rest of the world combined [source_1]. In sub-Saharan Africa, executions were noted in only three countries: Equatorial Guinea, Somalia, and Sudan, with a decrease of over a quarter in the number of people executed [source_1]. The Americas were execution-free except for the United States [source_1]. Governments that still carry out executions are urged to join the majority of countries that have abolished this punishment [source_1].\n\nGovernments are reportedly using the threat of terrorism, whether real or perceived, to justify executions [source_2]. Amnesty International's annual report on the death penalty states that this trend of using capital punishment to address security threats is a \"dark trend\" and a \"futile attempt\" [source_2]. The report highlights Pakistan's lifting of a six-year moratorium on civilian executions after an attack on a school in Peshawar, and China's use of the death penalty in its campaign against terrorism in Xinjiang province [source_2].\n\nAmnesty International expressed concerns about court proceedings not meeting international fair trial standards in several countries in 2014, including Afghanistan, Bangladesh, China, Egypt, Iran, Iraq, North Korea, Pakistan, Saudi Arabia, and Sri Lanka [source_3]. The United Nations Secretary-General, Ban Ki-moon, emphasized the need for the abolition of capital punishment, stating that taking a life is irreversible and incompatible with fundamental human rights [source_3]. At the end of 2014, Amnesty International estimated that at least 19,094 people were on death row [source_3].",
+    "generation_latency_ms": 2730.3759999995236,
+    "ground_truth_docs": [
+      "doc_20_0"
+    ],
+    "ground_truth_answers": [
+      "Father: \"I know he went through what he went through\"\nLouis Jordan was found on his sailboat, which was listing and in bad shape, rescuer says .\nHe appears to be in good shape, physically and mentally ."
+    ]
+  },
+  {
+    "query_id": "cnn_c7caf9181c2e94a79d9102da6e11cde48c880aa5",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_17_0",
+      "doc_6_0",
+      "doc_16_0",
+      "doc_21_0"
+    ],
+    "retrieval_latency_ms": 1261.6063999994367,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. The new framework aims to reduce Iran's low-enriched uranium stockpile, decrease its number of installed centrifuges by two-thirds, and implement a rigorous inspection regime [source_1]. Opponents wrongly assume that Iran's nuclear program is a covert weapons program [source_1]. The agreement will impose restrictions and obligations almost exclusively on Iran, while the P5+1 countries are only obligated to ease economic sanctions [source_1]. Issues such as Iranian missile programs or human rights violations are considered unrelated to the primary goal of preventing a nuclear Iran and would act as a \"poison pill\" if included in the nuclear deal negotiations [source_1]. The talks were between Iran and the P5+1 (United States, United Kingdom, France, China, Russia, and Germany), not solely a U.S. initiative [source_2]. If Congress rejects the agreement, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_2]. The assertion that the agreement contains a sunset clause allowing Iran freedom after a certain period is incorrect; while some restrictions will be eased over time, most importantly, the framework includes Iran's ratification of the [source_2].\n\nRegarding the death penalty, most regions worldwide are showing reductions in executions, with Sub-Saharan Africa seeing a 28% fall and the Middle East and North Africa down 23% compared to 2013 [source_3]. Belarus is the only country in Europe and Central Asia to execute people, and its resumption of capital punishment after a hiatus spoiled a near-universal decrease in countries using the death penalty by region [source_3]. The United States is the only country in the Americas to conduct executions, though the number of those put to death decreased slightly from 39 in 2013 to 35 in 2014 [source_3]. Many governments that still execute people are on the wrong side of history and need to join the majority of countries that have abolished the death penalty [source_4].",
+    "generation_latency_ms": 3098.3364999992773,
+    "ground_truth_docs": [
+      "doc_21_0"
+    ],
+    "ground_truth_answers": [
+      "Richard Klass: Iran framework agreement on nukes is strong, but opponents will cast doubts on this and try to obscure its facts .\nHe says the deal would cut uranium stockpile, centrifuges, implement rigorous inspections; it should be judged on merits, not disinformation ."
+    ]
+  },
+  {
+    "query_id": "cnn_b21cd549314996de79ba0ca2636c8ced66468267",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_6_0",
+      "doc_16_0",
+      "doc_21_0"
+    ],
+    "retrieval_latency_ms": 1298.4311000000162,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. The new framework aims to achieve this by reducing Iran's low-enriched uranium stockpile, decreasing its number of installed centrifuges by two-thirds, and implementing a rigorous inspection regime [source_1]. A dubious assumption is that Iran's nuclear program is a covert weapons program, despite sharp accusations from some in the United States and its allies [source_1].\n\nThe agreement reached by the P5+1 (United States, United Kingdom, France, China, Russia, and Germany) is not as balanced as agreements like the one that limits Russia and the United States to 1,550 deployed strategic warheads [source_1]. The restrictions and obligations in the final framework agreement will be imposed almost exclusively on Iran, while the P5+1 are only obligated to ease and eventually remove most economic sanctions [source_1]. Including issues such as Iranian missile programs, human rights violations, or support for Hamas or Hezbollah in the nuclear negotiations would be a \"poison pill\" and are unrelated to the primary goal of preventing a nuclear Iran [source_1]. The agreement should be judged on its merits and its effect on the security of negotiating partners and allies, not on questionable assertions or dubious assumptions [source_1].\n\nThe assertion that the agreement contains a sunset clause, after which Iran would be free to do as it pleases, is incorrect [source_1]. While some restrictions on Iran's nuclear activities will be eased or eliminated over time, up to 15 years, the framework agreement includes Iran's ratification of the [source_1].\n\nGlobally, there has been a decrease in executions, with most regions showing reductions [source_2]. Sub-Saharan Africa saw a 28% fall in reported cases, and executions in the Middle East and North Africa decreased by 23% compared to 2013 [source_2]. Across the board, with the exception of Europe and Central Asia, there were fewer reported executions in every region [source_2]. Belarus, the only country in Europe and Central Asia to execute people, resumed the use of capital punishment after a two-year hiatus, which spoiled a near-universal decrease in countries using the death penalty by region [source_2]. The United States is the only country in the Americas to conduct executions, though the number of convicts put to death fell slightly from 39 in 2013 to 35 in 2014 [source_2].",
+    "generation_latency_ms": 2757.3869000007107,
+    "ground_truth_docs": [
+      "doc_22_0"
+    ],
+    "ground_truth_answers": [
+      "Americans paid more for some fruits and vegetables last year because of the drought .\nTourists will now have to ask for a glass of water at a California restaurant .\nPerhaps the only good thing is another \"great\" wine grape harvest last year ."
+    ]
+  },
+  {
+    "query_id": "cnn_17412737648b2cad59669560765fcb5169fc8116",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_6_0",
+      "doc_16_0",
+      "doc_21_0"
+    ],
+    "retrieval_latency_ms": 1259.0894999993907,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. The new framework reportedly exceeds expectations in achieving this goal by reducing Iran's low-enriched uranium stockpile, cutting its number of installed centrifuges by two-thirds, and implementing a rigorous inspection regime [source_1].\n\nA dubious assumption is that Iran's nuclear program is a covert weapons program [source_1]. The talks were between Iran and the P5+1 (the United States, United Kingdom, France, China, Russia, and Germany), not just the United States [source_2]. If Congress rejects the agreement, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_2].\n\nAnother questionable assertion is that the agreement contains a sunset clause, after which Iran would be free to do as it pleases; some restrictions will be eased or eliminated over time, but most importantly, the framework agreement includes Iran's ratification of the [source_2].\n\nOpponents also insist that any agreement must address Iranian missile programs, human rights violations, or support for Hamas or Hezbollah [source_1]. While these issues are important, they are unrelated to the primary aim of preventing a nuclear Iran and including them would be a \"poison pill\" [source_1]. The agreement should be judged on its merits and its effect on the security of negotiating partners and allies, including Israel, based on fact-based judgments rather than questionable assertions or dubious assumptions [source_1].\n\nRegarding the death penalty, the United States is one of the few countries that still executes people, and it has the distinction of being the only country in the Americas to conduct executions [source_3]. However, the number of convicts put to death in the U.S. fell slightly from 2013 to 2014 [source_3]. Globally, most regions showed reductions in the number of executions, with Sub-Saharan Africa seeing a 28% fall and the Middle East and North Africa down 23% compared to 2013 [source_3]. Belarus's resumption of capital punishment after a two-year hiatus marred the near-universal decrease in countries using the death penalty [source_3].",
+    "generation_latency_ms": 2466.1809999997786,
+    "ground_truth_docs": [
+      "doc_23_0"
+    ],
+    "ground_truth_answers": [
+      "The FBI cites social media messages sent by Keonna Thomas, 30 .\nShe's accused of trying to travel overseas to join ISIS .\nThomas is one of three women facing federal terror charges this week ."
+    ]
+  },
+  {
+    "query_id": "cnn_970f75d6e5b23e11c15b05c59a109ccbb160b289",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_6_0",
+      "doc_16_0",
+      "doc_21_0"
+    ],
+    "retrieval_latency_ms": 803.4998000002815,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before a response could be mounted [source_1]. The new framework aims to reduce Iran's low-enriched uranium stockpile, decrease its number of installed centrifuges by two-thirds, and implement a rigorous inspection regime [source_1]. Opponents' assumption that Iran's nuclear program is a covert weapons program is also dubious [source_1]. The agreement reached by the P5+1 (United States, United Kingdom, France, China, Russia, and Germany) is not as balanced as arms control agreements between Russia and the United States, with restrictions imposed almost exclusively on Iran [source_1]. Including issues like Iranian missile programs or human rights violations in the nuclear negotiations would be detrimental to the primary goal of preventing a nuclear Iran [source_1]. The assertion that the agreement contains a sunset clause, after which Iran would be free to act as it pleases, is also incorrect; while some restrictions will be eased over time, most importantly, the framework includes Iran's ratification of the [source_1].",
+    "generation_latency_ms": 1929.651799997373,
+    "ground_truth_docs": [
+      "doc_24_0"
+    ],
+    "ground_truth_answers": [
+      "Iranian sports official: The ban will be lifted for some events in the coming year .\nBut he says \"families are not interested in attending\" some sports matches ."
+    ]
+  },
+  {
+    "query_id": "cnn_9f051fe922a8f45b315a366a5af1aab58d93f050",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_6_0",
+      "doc_16_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 1328.0672000000777,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. The new framework is expected to reduce Iran's low-enriched uranium stockpile, decrease its installed centrifuges by two-thirds, and implement a rigorous inspection regime [source_1]. A questionable assertion is that the Iranian nuclear program is a covert weapons program, despite sharp accusations from some in the United States and its allies [source_1]. The talks were conducted between Iran and the P5+1 countries (United States, United Kingdom, France, China, Russia, and Germany) [source_1]. If Congress rejects the agreement, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_1]. Another dubious claim is that the agreement contains a sunset clause allowing Iran freedom after a certain period; instead, some restrictions will be eased over time, not eliminated entirely [source_1].\n\nOnline journalists are vulnerable to governments and independent actors, especially where the rule of law is weak or restrictive [source_2]. 140 states are abolitionist in law or practice regarding the death penalty [source_3]. Executions declined globally in 2014, with 607 recorded executions in 22 countries, excluding China where statistics are a state secret [source_3]. The Americas remained execution-free except for the United States [source_3].\n\nIn Singapore, individuals have faced repercussions for criticizing the government, including allegations of corruption against Prime Minister Lee Hsien Loong and concerns about the transparency of the Central Provident Fund [source_4]. Similarly, in Malaysia, editors and executives from The Malaysian Insider were arrested over a report concerning the Conference of Rulers and a proposal related to Islamic law [source_4].",
+    "generation_latency_ms": 2523.8285999985237,
+    "ground_truth_docs": [
+      "doc_25_0"
+    ],
+    "ground_truth_answers": [
+      "Going online has become the path of least resistance if you want to make yourself heard .\nBut where there is the restrictive rule of law, journalists are vulnerable to the anger of officialdom .\nFrom China to Malaysia, journalists and bloggers have been jailed -- even killed ."
+    ]
+  },
+  {
+    "query_id": "cnn_202a51397a4de6483e6a7427d1952c46fca69d81",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_16_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 798.5316000012972,
+    "generated_answer": "The objective of the negotiations with Iran was not the total elimination of its nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. The new framework is considered to have exceeded expectations in achieving this goal by reducing Iran's low-enriched uranium stockpile, decreasing its installed centrifuges by two-thirds, and implementing a rigorous inspection regime [source_1]. A misconception is that the Iranian nuclear program is a covert weapons program, despite sharp accusations from some in the United States and its allies [source_1].\n\nThe talks involved Iran and the P5+1 countries (United States, United Kingdom, France, China, Russia, and Germany) [source_2]. The United States played a leading role but negotiated alongside its partners [source_2]. If Congress rejects the P5+1 agreement, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_2]. Another incorrect assertion is that the agreement contains a sunset clause allowing Iran freedom after a certain period; while some restrictions will be eased or eliminated over time (up to 15 years), most importantly, the framework agreement includes Iran's ratification of [source_2].\n\nGlobally, the number of executions dropped significantly in 2014 to 607, down from 778 the previous year, with 140 states being abolitionist in law or practice [source_3]. China, however, is an exception, where more people are executed than in the rest of the world combined, but its death penalty statistics are treated as a state secret [source_3]. In sub-Saharan Africa, executions were recorded in only three countries (Equatorial Guinea, Somalia, and Sudan), and the number of people executed decreased by over a quarter [source_3]. The Americas, with the exception of the United States, remained execution-free [source_3]. Governments that still execute people are advised to join the majority of countries that have abolished the death penalty [source_3].\n\nOnline journalists are vulnerable to governments and independent actors, either due to restrictive rule of law or weak rule of law [source_1]. In Singapore, internet activity has come under scrutiny, with cases against citizens frustrated with the government and arrests made after bloggers were accused of blasphemy [source_4]. Similarly, in Malaysia, five editors and executives from The Malaysian Insider were arrested following a report about the Conference of Rulers rejecting a proposal to amend federal law regarding Islamic punishments [source_4].",
+    "generation_latency_ms": 2760.220500000287,
+    "ground_truth_docs": [
+      "doc_26_0"
+    ],
+    "ground_truth_answers": [
+      "The singer had been off the scene for a while .\nShe says she was bedridden for months .\nLavigne was sometimes too weak to shower ."
+    ]
+  },
+  {
+    "query_id": "cnn_2f6106809de41d59f422d527900a6b344174c5b2",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_16_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 834.6105999989959,
+    "generated_answer": "The primary objective of the negotiations was not the complete elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. The new framework is expected to achieve this by reducing Iran's low-enriched uranium stockpile, decreasing its number of installed centrifuges by two-thirds, and implementing a strict inspection regime [source_1]. A questionable assumption is that Iran's nuclear program is a covert weapons program [source_1]. The talks were conducted between Iran and the P5+1 countries (the United States, United Kingdom, France, China, Russia, and Germany) [source_2]. If Congress rejects the agreement, it could lead to the unraveling of sanctions on Iran and impact NATO cohesion [source_2]. The agreement does not contain a sunset clause that would allow Iran to do as it pleases after a certain period; while some restrictions will be eased over time, most importantly, the framework includes Iran's ratification of [source_2].\n\nGlobally, the number of executions decreased in 2014, with 607 recorded executions in 22 countries, a significant drop from the previous year [source_4]. China, however, is an exception, as its death penalty statistics are treated as a state secret, making the true figure impossible to determine [source_4]. In sub-Saharan Africa, executions were recorded in only three countries, and the number of people put to death decreased by over a quarter [source_4]. The Americas, with the exception of the United States, remained execution-free [source_4]. Governments that continue to execute people are urged to join the majority of countries that have abolished the death penalty [source_4].\n\nOnline journalists are increasingly vulnerable to governments and independent actors [source_3]. In places with restrictive rule of law, journalists can face the anger of officials, while in areas with weak rule of law, they are at risk from attackers who are rarely held accountable [source_3].\n\nIn Singapore, individuals like Amos Yee have faced legal action for their online activities, with concerns raised about the lack of transparency in government programs [source_5]. Similarly, in Malaysia, five editors and executives from The Malaysian Insider were arrested following a report on a proposal to amend federal law regarding Islamic punishments [source_5]. Issues related to Islamic faith are considered highly sensitive in Malaysia [source_5].",
+    "generation_latency_ms": 3557.821200000035,
+    "ground_truth_docs": [
+      "doc_27_0"
+    ],
+    "ground_truth_answers": [
+      "Here are six of CNN's best videos of the week .\nClips include a look at Mike Tyson's abandoned mansion ."
+    ]
+  },
+  {
+    "query_id": "cnn_9a2ffa6ad643d52e6b99b0b08e497f41ba23b2b2",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_16_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 882.8356999983953,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. The new framework aims to reduce Iran's low-enriched uranium stockpile, decrease its installed centrifuges by two-thirds, and implement a rigorous inspection regime [source_1]. A questionable assertion is that the Iranian nuclear program is a covert weapons program [source_1]. The talks were conducted between Iran and the P5+1 countries (United States, United Kingdom, France, China, Russia, and Germany) [source_2]. If Congress rejects the agreement, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_2]. Another dubious claim is that the agreement contains a sunset clause that would allow Iran freedom of action after a certain period; instead, some restrictions will be eased or eliminated over time, but most importantly, the framework includes Iran's ratification of [source_2].\n\nGlobally, 140 states are abolitionist in law or practice regarding the death penalty [source_3]. In 2014, the number of executions recorded worldwide dropped significantly to 607, a decrease from the previous year [source_3]. This figure excludes China, where death penalty statistics are treated as a state secret [source_3]. Executions were recorded in only three sub-Saharan African countries: Equatorial Guinea, Somalia, and Sudan, with a decrease of over a quarter in the number of people put to death in the region [source_3]. The Americas, with the exception of the United States, remained execution-free [source_3]. Governments that continue to execute people are on the wrong side of history and should join the majority of countries that have abolished the death penalty [source_3].\n\nOnline journalists are vulnerable targets for governments and independent actors, facing risks where the rule of law is either restrictive or weak [source_4]. In Singapore, individuals have faced repercussions for Internet activity, including accusations of corruption and concerns about the transparency of the Central Provident Fund [source_5]. Similarly, in Malaysia, five editors and executives from The Malaysian Insider were arrested over a report concerning the Conference of Rulers' rejection of a proposal to amend federal law regarding Islamic punishments [source_5].",
+    "generation_latency_ms": 2985.689799999818,
+    "ground_truth_docs": [
+      "doc_28_0"
+    ],
+    "ground_truth_answers": [
+      "Netanyahu says third option is \"standing firm\" to get a better deal .\nPolitical sparring continues in U.S. over the deal with Iran ."
+    ]
+  },
+  {
+    "query_id": "cnn_f78024d271fd21f0667f5da6843516314af71f8f",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_16_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 862.0030000020051,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program [source_1]. Instead, the goal was to structure an agreement that would prevent Iran from covertly developing nuclear weapons before allies could respond [source_1]. The new framework is expected to reduce Iran's low-enriched uranium stockpile, decrease its installed centrifuges by two-thirds, and implement a strict inspection regime [source_1]. A misconception is that Iran's nuclear program is a covert weapons program, despite accusations from some in the United States and its allies [source_1].\n\nThe negotiations involved Iran and the P5+1 countries: the United States, United Kingdom, France, China, Russia, and Germany [source_2]. The United States played a leading role but negotiated alongside its partners [source_2]. If Congress rejects the agreement, it could lead to the unraveling of sanctions on Iran and impact NATO cohesion [source_2]. Another incorrect assertion is that the agreement includes a sunset clause allowing Iran to do as it pleases afterward; while some restrictions will be eased over time, the framework agreement includes Iran's ratification of certain measures [source_2].\n\nThe article also touches on the vulnerability of online journalists to governments and independent actors, especially where the rule of law is weak or restrictive [source_3]. Additionally, it notes a global trend in the abolition of the death penalty, with a significant drop in executions in 2014, though China's figures are not included due to their state secret status [source_4]. The Americas remain execution-free except for the United States [source_4]. Finally, the article mentions instances of government scrutiny and arrests related to internet activity in Singapore and Malaysia, citing concerns over transparency and reports on sensitive political and religious issues [source_5].",
+    "generation_latency_ms": 2562.0903999988514,
+    "ground_truth_docs": [
+      "doc_29_0"
+    ],
+    "ground_truth_answers": [
+      "Indiana town's Memories Pizza is shut down after online threat .\nIts owners say they'd refuse to cater a same-sex couple's wedding ."
+    ]
+  },
+  {
+    "query_id": "cnn_63e19d477469e39e3fc4143919e6a5acb58dbc23",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_16_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 857.3813000002701,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. The new framework is expected to reduce Iran's low-enriched uranium stockpile, decrease its number of installed centrifuges by two-thirds, and implement a rigorous inspection regime [source_1]. A questionable assertion is that the Iranian nuclear program is a covert weapons program [source_1]. The talks were conducted between Iran and the P5+1 countries (United States, United Kingdom, France, China, Russia, and Germany) [source_2]. If Congress rejects the agreement, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_2]. Another dubious claim is that the agreement contains a sunset clause allowing Iran freedom after a certain period; while some restrictions will be eased over time, most importantly, the framework agreement includes Iran's ratification of certain protocols [source_2].\n\nGlobally, the number of executions decreased significantly in 2014 compared to the previous year, with recorded executions in 22 countries [source_4]. This number excludes China, where death penalty statistics are treated as a state secret [source_4]. In sub-Saharan Africa, executions were recorded in Equatorial Guinea, Somalia, and Sudan, with a notable decrease in the number of people put to death [source_4]. The Americas remained execution-free, with the exception of the United States [source_4].\n\nOnline journalists are vulnerable targets for governments and independent actors, whether under restrictive or weak rule of law [source_3]. In Singapore, individuals have faced consequences for Internet activity, including accusations of corruption and concerns about transparency in the management of the Central Provident Fund [source_5]. In Malaysia, editors and executives from The Malaysian Insider were arrested over a report concerning the Conference of Rulers and a proposal related to Islamic law [source_5].",
+    "generation_latency_ms": 2465.3526000001875,
+    "ground_truth_docs": [
+      "doc_30_0"
+    ],
+    "ground_truth_answers": [
+      "Authorities in the Indian city of Malegaon have asked residents to take a 'mugshot' of their cattle .\nCows are revered by the majority Hindu population, and many parts of the country have laws banning the slaughter of cattle .\nOfficials in Malegaon believe this is the best way to solve cow slaughter cases and enforce the law ."
+    ]
+  },
+  {
+    "query_id": "cnn_cf7094270cbb4c8fad5029bd2c2da694f1411870",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_16_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 1058.7724000033631,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. The new framework is said to have exceeded expectations in achieving this goal by reducing Iran's low-enriched uranium stockpile, cutting its installed centrifuges by two-thirds, and implementing a rigorous inspection regime [source_1]. The assertion that Iran's nuclear program is a covert weapons program has been met with sharp accusations from some in the United States and its allies [source_1]. The talks were conducted between Iran and the P5+1 countries (United States, United Kingdom, France, China, Russia, and Germany), with the United States playing a leading role alongside its partners [source_2]. If Congress rejects the agreement, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_2]. The agreement does not contain a sunset clause that would free Iran to do as it pleases; instead, some restrictions on Iran's nuclear activities will be eased or eliminated over time, up to 15 years, and the framework includes Iran's ratification of [source_2].\n\nThe article also touches upon the vulnerability of online journalists to governments and independent actors, especially where the rule of law is weak [source_3]. Globally, the number of executions has dropped significantly, with 140 states being abolitionist in law or practice, though China's death penalty statistics are treated as a state secret [source_4]. Executions were recorded in only three sub-Saharan African countries in 2014, and the Americas remained execution-free except for the United States [source_4].\n\nFurthermore, the article mentions cases of government scrutiny of internet activity in Singapore and Malaysia [source_5]. In Singapore, individuals have faced consequences for criticizing government officials or expressing frustration with the government's management of the Central Provident Fund [source_5]. In Malaysia, editors and executives of The Malaysian Insider were arrested over a report concerning amendments to federal law related to Islamic punishments [source_5].",
+    "generation_latency_ms": 3160.0061999997706,
+    "ground_truth_docs": [
+      "doc_31_0"
+    ],
+    "ground_truth_answers": [
+      "A South Carolina man says he spent 66 days alone at sea before being rescued .\nOther sole survivor stories include a Japanese man washed away by a tsunami .\nAn El Salvador man says he drifted from Mexico to Marshall Islands over a year ."
+    ]
+  },
+  {
+    "query_id": "cnn_934a2d9235022c9e8a6aeec5e7e941b127569b76",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_16_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 854.393199999322,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before a response could be mounted [source_1]. The new framework is believed to have exceeded expectations in achieving this goal by reducing Iran's low-enriched uranium stockpile, decreasing its number of installed centrifuges by two-thirds, and implementing a rigorous inspection regime [source_1]. A questionable assertion is that the Iranian nuclear program is a covert weapons program [source_1]. The talks were conducted between Iran and the P5+1 countries (United States, United Kingdom, France, China, Russia, and Germany) [source_1]. If Congress rejects the agreement, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_1]. The agreement does not contain a sunset clause that would free Iran to act as it pleases; while some restrictions on Iran's nuclear activities will be eased or eliminated over time, most importantly, the framework agreement includes Iran's ratification of the [source_1].\n\nOnline journalists are vulnerable targets for governments and independent actors, facing risks in environments with either restrictive or weak rule of law [source_2].\n\nGlobally, 140 states are abolitionist in law or practice regarding the death penalty [source_3]. In 2014, the number of recorded executions dropped significantly to 607, a decrease from 778 the previous year, though China's figures are excluded due to their state secret status [source_3]. Executions were recorded in only three sub-Saharan African countries: Equatorial Guinea, Somalia, and Sudan, with a decrease of over a quarter in the number of people executed [source_3]. The Americas remained execution-free, with the exception of the United States [source_3]. Governments that still carry out executions are urged to join the majority of countries that have abolished the death penalty [source_3].\n\nIn Singapore, individuals like Ngerng have raised concerns about the lack of transparency in the management of the Central Provident Fund, the government's compulsory pension program, and have faced repercussions for criticizing the Prime Minister [source_4]. Similarly, in Malaysia, five editors and executives from The Malaysian Insider were arrested over a report concerning the Conference of Rulers and a proposal to amend federal law related to Islamic punishments [source_4]. Questions of Islamic faith are a sensitive issue in Malaysia [source_4].",
+    "generation_latency_ms": 2641.109999996843,
+    "ground_truth_docs": [
+      "doc_32_0"
+    ],
+    "ground_truth_answers": [
+      "The Large Hadron Collider (LHC) begins again after a two-year shutdown .\nThe restart was delayed in March ."
+    ]
+  },
+  {
+    "query_id": "cnn_82461522ee90f8f5be2ec226e2016ad40588866d",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_16_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 915.8009999991918,
+    "generated_answer": "The primary objective of the negotiations was not the total elimination of Iran's nuclear program, a claim rejected by experts [source_1]. Instead, the goal was to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. The new framework is expected to achieve this by reducing Iran's low-enriched uranium stockpile, decreasing its installed centrifuges by two-thirds, and implementing a rigorous inspection regime [source_1]. An opposing viewpoint suggests the Iranian nuclear program is a covert weapons program, a notion that has been sharply disputed by some in the United States and its allies [source_1]. The negotiations involved Iran and the P5+1 countries (the United States, United Kingdom, France, China, Russia, and Germany), with the United States playing a leading role alongside its partners [source_2]. If Congress rejects the P5+1 agreement, it could lead to the unraveling of sanctions on Iran and potentially threaten NATO cohesion [source_2]. The assertion that the agreement includes a sunset clause, after which Iran would be free to act as it pleases, is also incorrect [source_2]. While some restrictions on Iran's nuclear activities, like uranium enrichment, will be eased or eliminated over time, up to 15 years, the framework agreement also includes Iran's ratification of the [source_2].\n\nIn other contexts, groups have called for the execution of bloggers accused of blasphemy, and while arrests have been made in some cases, convictions have not occurred [source_3]. Online journalists are vulnerable to governments and independent actors, facing risks from officialdom in places with restrictive rule of law and from attackers in areas with weak rule of law [source_3].\n\nGlobally, 140 states are abolitionist in law or practice regarding the death penalty [source_4]. In 2014, executions were recorded in 22 countries, a significant decrease from two decades prior and a drop from 778 to 607 executions compared to the previous year [source_4]. China's death penalty statistics are treated as a state secret, making the true figure impossible to determine, but it accounts for more executions than the rest of the world combined [source_4]. Sub-Saharan Africa saw executions in only three countries (Equatorial Guinea, Somalia, and Sudan), with a decrease of over a quarter in the number of people put to death [source_4]. The Americas remained execution-free, with the exception of the United States [source_4]. Governments that still carry out executions are urged to join the majority of countries that have abolished the practice [source_4].\n\nIn Singapore, individuals like Ngerng have raised concerns about the lack of transparency in the management of the Central Provident Fund, the government's compulsory pension program, and have criticized Prime Minister Lee Hsien Loong for corruption [source_5]. The Committee To Protect Journalists has documented numerous similar cases in Singapore since 2000, involving both politicians and citizens frustrated with the government [source_5]. Malaysia has also seen Internet activity come under scrutiny, with the arrest of five editors and executives from The Malaysian Insider over a report claiming that the Conference of Rulers rejected a proposal to amend federal law regarding hudud, or punishments under Islamic law [source_5]. In Malaysia, a predominantly Muslim country, issues related to Islamic faith are highly sensitive [source_5].",
+    "generation_latency_ms": 3171.708800000488,
+    "ground_truth_docs": [
+      "doc_33_0"
+    ],
+    "ground_truth_answers": [
+      "FBI agents and a suspected serial robber exchange gunfire in an FBI stakeout .\nTwo FBI agents are injured and the suspect is shot during the gunfight ."
+    ]
+  },
+  {
+    "query_id": "cnn_37477ed1fc065f438021ee3b6d3e2b827e270353",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_16_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 788.1606000009924,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. The new framework is expected to reduce Iran's low-enriched uranium stockpile, decrease its number of installed centrifuges by two-thirds, and implement a rigorous inspection regime [source_1]. A dubious assumption is that Iran's nuclear program is a covert weapons program, despite sharp accusations from some in the United States and its allies [source_1]. The talks were conducted between Iran and the P5+1 countries (United States, United Kingdom, France, China, Russia, and Germany) [source_2]. If Congress rejects the agreement, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_2]. The agreement does not contain a sunset clause that would allow Iran to do as it pleases after a certain period; while some restrictions will be eased over time, most importantly, the framework includes Iran's ratification of [source_2].\n\nGlobally, 140 states are abolitionist in law or practice regarding the death penalty [source_3]. In 2014, the number of executions recorded worldwide dropped significantly to 607, a decrease from 778 the previous year [source_3]. This figure excludes China, where death penalty statistics are treated as a state secret [source_3]. Executions were recorded in only three sub-Saharan African countries (Equatorial Guinea, Somalia, and Sudan), with a more than a quarter reduction in the number of people put to death [source_3]. The Americas remained execution-free, with the exception of the United States [source_3]. Governments that continue to execute people are on the wrong side of history and should join the majority of countries that have abolished the death penalty [source_3].\n\nOnline journalists are vulnerable targets for governments and independent actors, facing risks whether the rule of law is restrictive or weak [source_1]. In Singapore, individuals have been targeted for their internet activity, including accusations of corruption against the Prime Minister and concerns about the transparency of the Central Provident Fund [source_4]. Similarly, in Malaysia, five editors and executives from The Malaysian Insider were arrested for a report concerning a proposal to amend federal law related to Islamic punishments [source_4]. In Malaysia, questions about Islamic faith are a sensitive issue [source_4].",
+    "generation_latency_ms": 2638.181000002078,
+    "ground_truth_docs": [
+      "doc_34_0"
+    ],
+    "ground_truth_answers": [
+      "The total eclipse will only last 4 minutes and 43 seconds .\nPeople west of the Mississippi River will have the best view .\nParts of South America, India, China and Russia also will see the eclipse ."
+    ]
+  },
+  {
+    "query_id": "cnn_4fbf675fb79046440d1cf01dd4fc2e505f2b5169",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_35_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 885.302499998943,
+    "generated_answer": "The objective of the negotiations with Iran was not the total elimination of its nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before a response could be mounted [source_1]. This new framework is expected to reduce Iran's low-enriched uranium stockpile, decrease its number of installed centrifuges by two-thirds, and implement a strict inspection regime [source_1]. A contrary assumption is that Iran's nuclear program is covertly for weapons, though this has been sharply contested [source_1]. The negotiations involved Iran and the P5+1 countries (United States, United Kingdom, France, China, Russia, and Germany) [source_3]. If Congress rejects the P5+1 agreement, it could lead to the unraveling of sanctions on Iran and affect NATO cohesion [source_3]. The agreement does not contain a sunset clause that would allow Iran to act freely after a certain period; some restrictions on Iran's nuclear activities will be eased or removed over time, up to 15 years, but most importantly, the framework includes Iran's ratification of [source_3].\n\nThe article also discusses the regional instability in East Africa, fueled by various factors beyond just terrorism [source_4]. Al-Shabaab's actions, such as attacking a university and separating students based on religion, exploit religious, tribal, and nationalist identities to advance its agenda [source_2]. The group's motives are rooted in a struggle for control over people, territory, and resources, exacerbated by widespread exclusion of people from meaningful participation in their societies [source_2]. Al-Shabaab's presence and activities are linked to radical interpretations of Islam, but economic development challenges, environmental degradation, organized crime, inter-communal violence, corruption, and human rights deficits also contribute to the region's instability [source_2, source_4].\n\nAdditionally, the article touches upon the imprisonment of journalists in China and Vietnam [source_5]. China has the highest number of journalists jailed globally, with many being bloggers and activists from Uighur or Tibetan communities [source_5]. Vietnam also holds a significant number of reporters behind bars, with recent arrests of bloggers on charges related to \"law-violating\" activities and abusing democratic freedoms [source_5].",
+    "generation_latency_ms": 2782.3061999988568,
+    "ground_truth_docs": [
+      "doc_35_0"
+    ],
+    "ground_truth_answers": [
+      "Terrorist group Al-Shabaab has attacked a Kenyan college, killing and taking hostages .\nIt is a clear indicator the security situation in East Africa is deteriorating, says Stefan Wolff .\nMore than military action aloe is needed to combat terrorism in the region, he says ."
+    ]
+  },
+  {
+    "query_id": "cnn_c5390093fa60d62c4dc9013977ca09a8edf7c32b",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_35_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 1006.2547000015911,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before allies could respond [source_1]. The new framework is expected to achieve this by reducing Iran's low-enriched uranium stockpile, decreasing its number of installed centrifuges by two-thirds, and implementing a rigorous inspection regime [source_1]. A misleading assumption is that Iran's nuclear program is a covert weapons program, despite sharp accusations from some in the United States and its allies [source_1].\n\nThe talks involved Iran and the P5+1 countries (United States, United Kingdom, France, China, Russia, and Germany), with the United States playing a leading role alongside its partners [source_3]. If Congress rejects the agreement, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_3]. Another questionable assertion is that the agreement includes a sunset clause that would free Iran to act as it pleases after a certain period; while some restrictions will be eased or eliminated over time, up to 15 years, most importantly, the framework includes Iran's ratification of [source_3].\n\nThe region suffers from various problems, including economic development challenges, environmental degradation, organized crime, inter-tribal and inter-communal violence, corruption, and deficits in human rights and good governance [source_2]. These inequalities contribute to groups like Al-Shabaab appealing to potential recruits [source_2]. Al-Shabaab exploits religious, tribal, and nationalist identities, as exemplified by its attack on a university in northern Kenya that separated Christian from Muslim students [source_2]. Ultimately, this is a struggle for control over people, territory, and resources, exacerbated by the exclusion of a majority of people from meaningful political, economic, and social participation in their societies [source_2].\n\nAl-Shabaab's activities, including cross-border raids in Kenya targeting Christians, began after an attack in Kampala in 2010 [source_4]. Al-Shabaab declared allegiance to al-Qaeda in 2012, and its future allegiances to ISIS are uncertain, depending on the development of relationships between al-Qaeda in the Arabian Peninsula and ISIS [source_4]. Al-Shabaab's attacks are part of a broader regional instability fueled by numerous factors and should not be solely interpreted as fundamentalist terrorism, as the presence of terrorist groups is driven by radical interpretations of Islam, but other regional problems also contribute [source_4].\n\nIn Malaysia, Islamic faith is a sensitive issue, as are government decisions before their announcement [source_5]. China has the most journalists behind bars, with many being bloggers and activists [source_5]. Vietnam ranks second in Asia for jailing reporters, with recent arrests of bloggers on charges of \"law-violating\" and \"abusing democratic freedoms\" [source_5].",
+    "generation_latency_ms": 3526.7667999978585,
+    "ground_truth_docs": [
+      "doc_36_0"
+    ],
+    "ground_truth_answers": [
+      "Easter is a key event in the Christian faith, but where did the Easter Bunny come from?\nWhy is the date different every year, and what does it have to do with the moon?"
+    ]
+  },
+  {
+    "query_id": "cnn_58b9fcb9a3537d014d3499b0ad4d4123cfd3eac0",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_35_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 986.6616999970574,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. The new framework is expected to achieve this by reducing Iran's low-enriched uranium stockpile, decreasing its number of installed centrifuges by two-thirds, and implementing a rigorous inspection regime [source_1]. An assertion that the Iranian nuclear program is a covert weapons program has been made despite sharp accusations from some in the United States and its allies [source_1].\n\nThe talks were conducted between Iran and the P5+1 countries, which include the five permanent members of the U.N. Security Council (United States, United Kingdom, France, China, and Russia) plus Germany [source_3]. The United States played a leading role but negotiated alongside its partners [source_3]. If Congress rejects the agreement reached by the P5+1, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_3]. The agreement does not contain a sunset clause that would allow Iran to do as it pleases after a certain period; while some restrictions on Iran's nuclear activities will be eased or eliminated over time, up to 15 years, most importantly, the framework agreement includes Iran's ratification of the [source_3].\n\nAl-Shabaab's attack in Garissa is part of a broader regional instability fueled by numerous factors, not just fundamentalist terrorism [source_4]. While the presence of terrorist groups is driven by radical interpretations of Islam, the region also faces challenges such as economic development issues, environmental degradation, organized crime, inter-communal violence, corruption, and deficits in human rights and governance [source_4]. These inequalities contribute to Al-Shabaab's appeal to potential recruits [source_4]. Al-Shabaab exploits religious, tribal, and nationalist identities, as exemplified by their attack on a university in northern Kenya where they separated Christian from Muslim students [source_4]. Ultimately, the conflict is a struggle for control over people, territory, and resources, exacerbated by the exclusion of a majority of the population from meaningful participation in their societies [source_2].\n\nMalaysia considers questions of Islamic faith a sensitive issue, as is revealing government decisions before they are announced [source_5]. China has the largest number of journalists jailed worldwide, with many of them being bloggers and activists [source_5]. Vietnam also holds a significant number of reporters behind bars, with recent arrests of bloggers on charges of \"law-violating\" and \"abusing democratic freedoms\" indicating a pattern [source_5].",
+    "generation_latency_ms": 2831.6918999989866,
+    "ground_truth_docs": [
+      "doc_37_0"
+    ],
+    "ground_truth_answers": [
+      "In response to lawsuit, NCAA says it doesn't control quality of education for student-athletes .\nBut its website emphasizes importance of education, \"opportunities to learn\"\nLawsuit claims students didn't get an education because of academic fraud at UNC ."
+    ]
+  },
+  {
+    "query_id": "cnn_44d681105bcab063dfa0c80ce9cf96393677f9cc",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_35_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 822.9442999981984,
+    "generated_answer": "The objective of the negotiations with Iran was not the total elimination of its nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. This new framework is expected to reduce Iran's low-enriched uranium stockpile, decrease its number of installed centrifuges by two-thirds, and implement a rigorous inspection regime [source_1]. A dubious assumption by opponents is that Iran's nuclear program is a covert weapons program, despite sharp accusations [source_1].\n\nThe talks were conducted between Iran and the P5+1 countries, which include the five permanent members of the U.N. Security Council (United States, United Kingdom, France, China, and Russia) plus Germany [source_3]. The claim that the agreement contains a sunset clause, after which Iran would be free to do as it pleases, is also incorrect [source_3]. While some restrictions on Iran's nuclear activities, such as uranium enrichment, will be eased or eliminated over time, potentially up to 15 years, most importantly, the framework agreement includes Iran's ratification of [source_3].\n\nThe presence and activities of terrorist groups in the region are a major concern, driven by radical interpretations of Islam [source_2, source_4]. However, the region also faces other problems like economic development challenges, environmental degradation, organized crime, inter-tribal violence, corruption, and deficits in human rights and good governance [source_2]. These inequalities contribute to groups like Al-Shabaab appealing to potential recruits [source_2]. Al-Shabaab's attacks, such as the one on a university in northern Kenya, exploit religious, tribal, and nationalist identities and are part of a broader regional instability [source_2, source_4]. The struggle for control over people, territory, and resources is also a significant factor, especially when people are excluded from meaningful participation in their societies [source_2].",
+    "generation_latency_ms": 2441.222299999936,
+    "ground_truth_docs": [
+      "doc_38_0"
+    ],
+    "ground_truth_answers": [
+      "Judge won't allow teen leave hospital before her last chemotherapy treatment .\nAttorneys for the teen are deciding whether to appeal .\nCassandra C. is now in remission and is no longer opposed to the chemotherapy treatments ."
+    ]
+  },
+  {
+    "query_id": "cnn_a43893ac704663476a285673392de84c0c17d4e5",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_35_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 1037.5617999998212,
+    "generated_answer": "The primary objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. The new framework is expected to reduce Iran's low-enriched uranium stockpile, decrease its number of installed centrifuges by two-thirds, and implement a rigorous inspection regime [source_1]. Opponents incorrectly assume that Iran's nuclear program is a covert weapons program [source_1].\n\nThe negotiations involved Iran and the five permanent members of the U.N. Security Council (United States, United Kingdom, France, China, and Russia) plus Germany, collectively known as the P5+1 [source_3]. While the United States played a leading role, it negotiated the terms alongside its partners [source_3]. If Congress rejects the agreement, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_3]. The assertion that the agreement contains a sunset clause, after which Iran would be free to act as it pleases, is also incorrect [source_3]. Some restrictions on Iran's nuclear activities, such as uranium enrichment, will be eased or eliminated over time, potentially up to 15 years, but most importantly, the framework agreement includes Iran's ratification of the [source_3].\n\nAl-Shabaab's attacks, such as the one in Garissa, are part of a broader regional instability fueled by numerous factors, not just fundamentalist terrorism [source_4]. While radical interpretations of Islam drive terrorist groups, the region also faces economic development challenges, environmental degradation, organized crime, inter-communal violence, corruption, and deficits in human rights and good governance [source_2, source_4]. These inequalities allow groups like Al-Shabaab to appeal to a wide range of recruits by exploiting religious, tribal, and nationalist identities [source_2]. Ultimately, the situation reflects a struggle for control over people, territory, and resources, exacerbated by the exclusion of a majority of people from meaningful political, economic, and social participation [source_2].\n\nMalaysia considers questions of Islamic faith a sensitive issue [source_5]. China imprisons the most journalists globally, with many being bloggers and activists [source_5]. Vietnam ranks second in Asia for jailing reporters, with recent arrests of bloggers on charges of \"law-violating\" and \"abusing democratic freedoms\" [source_5].",
+    "generation_latency_ms": 2662.623899999744,
+    "ground_truth_docs": [
+      "doc_39_0"
+    ],
+    "ground_truth_answers": [
+      "The song rules the chart for 13th week .\nIt passes Robin Thicke's \"Blurred Lines\"\nSong three weeks from potentially tying \"One Sweet Day\" for record ."
+    ]
+  },
+  {
+    "query_id": "cnn_f7c2eb465479b965669b81535234e24735915ebf",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_35_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 827.171000000817,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before a response could be mounted [source_1]. The new framework is expected to achieve this by reducing Iran's low-enriched uranium stockpile, decreasing its number of installed centrifuges by two-thirds, and implementing a strict inspection regime [source_1]. A dubious assumption is that Iran's nuclear program is covertly for weapons development, despite accusations from some in the United States and its allies [source_1]. The talks were conducted between Iran and the P5+1, which includes the United States, United Kingdom, France, China, Russia, and Germany [source_3]. If Congress rejects the agreement, it could lead to the unraveling of sanctions on Iran and impact NATO cohesion [source_3]. The agreement does not contain a sunset clause that would free Iran to act as it pleases; while some restrictions on uranium enrichment will be eased or eliminated over time, most importantly, the framework includes Iran's ratification of [source_3]. The article also touches on other issues such as Al-Shabaab's activities in East Africa, driven by a range of regional problems including economic challenges, environmental degradation, crime, violence, corruption, and human rights deficits [source_2, source_4]. The article also mentions Malaysia's sensitivity regarding Islamic faith and China's extensive jailing of journalists, particularly Uighur and Tibetan activists [source_5].",
+    "generation_latency_ms": 2165.9352999995463,
+    "ground_truth_docs": [
+      "doc_40_0"
+    ],
+    "ground_truth_answers": [
+      "High temperatures are recorded on the northern tip of the Antarctica Peninsula .\nThe World Meteorological Organization will make the final determination ."
+    ]
+  },
+  {
+    "query_id": "cnn_e8c90d557031700caa1afb66dfc85358ef719108",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_35_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 1119.5217999993474,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before allies could respond [source_1]. The new framework is expected to achieve this by reducing Iran's low-enriched uranium stockpile, decreasing its number of installed centrifuges by two-thirds, and implementing a rigorous inspection regime [source_1]. An assertion that the Iranian nuclear program is a covert weapons program has been made, despite sharp accusations from some in the United States and its allies [source_1].\n\nThe talks were conducted between Iran and the P5+1 group, which includes the five permanent members of the U.N. Security Council (United States, United Kingdom, France, China, and Russia) plus Germany [source_3]. The assertion that the agreement contains a sunset clause, after which Iran would be free to act as it pleases, is incorrect [source_3]. While some restrictions on Iran's nuclear activities, such as uranium enrichment, will be eased or eliminated over time, potentially up to 15 years, most importantly, the framework agreement includes Iran's ratification of [source_3].\n\nAl-Shabaab's attack in Garissa is part of a larger regional instability fueled by various factors, not just fundamentalist terrorism [source_4]. While the presence of terrorist groups is driven by radical interpretations of Islam, the region also faces challenges such as economic development, environmental degradation, organized crime, inter-communal violence, corruption, and deficits in human rights and governance [source_2, source_4]. These inequalities contribute to Al-Shabaab's appeal to potential recruits [source_2]. Al-Shabaab exploits religious, tribal, and nationalist identities, as demonstrated by an attack on a university that separated Christian and Muslim students [source_2]. Ultimately, this is a struggle for control over people, territory, and resources, exacerbated by the exclusion of a majority of people from meaningful participation in their societies [source_2].",
+    "generation_latency_ms": 2705.7762000004004,
+    "ground_truth_docs": [
+      "doc_41_0"
+    ],
+    "ground_truth_answers": [
+      "A Native American from a tribe not recognized by the feds wins the return of his eagle feathers .\nAn IRS accountant is fired for insisting on carrying a symbolic Sikh knife to work .\nA group of Chicago pastors takes on City Hall over its permits for new churches and loses ."
+    ]
+  },
+  {
+    "query_id": "cnn_c71b08cede3b6edb662a2f2c95f8b543fa65e405",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_35_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 817.3874999993131,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before a response could be mounted [source_1]. The new framework aims to reduce Iran's low-enriched uranium stockpile, decrease its number of installed centrifuges by two-thirds, and implement a rigorous inspection regime [source_1]. A questionable assertion is that the Iranian nuclear program is a covert weapons program [source_1]. The talks were conducted between Iran and the P5+1 countries (United States, United Kingdom, France, China, Russia, and Germany) [source_3]. If Congress rejects the agreement, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_3]. Another inaccurate claim is that the agreement includes a sunset clause that would allow Iran to do as it pleases after a certain period; while some restrictions will be eased over time, most importantly, the framework agreement includes Iran's ratification of the [source_3].\n\nThe context also mentions Al-Shabaab, an organization that attacks universities and exploits religious, tribal, and nationalist identities [source_2]. Al-Shabaab's actions are part of a broader regional instability fueled by various factors, including economic challenges, environmental degradation, crime, violence, corruption, and human rights deficits [source_2]. The presence of terrorist groups in the region is a concern, driven by radical interpretations of Islam [source_2].\n\nAdditionally, the article touches on the jailing of journalists, with China being the largest jailer, followed by Vietnam [source_4]. In Vietnam, bloggers are often arrested on charges related to \"law-violating\" or \"abusing democratic freedoms\" [source_4].",
+    "generation_latency_ms": 2174.9612000021443,
+    "ground_truth_docs": [
+      "doc_42_0"
+    ],
+    "ground_truth_answers": [
+      "Robert Lewis Burns Jr. was part of Lynyrd Skynyrd's original lineup .\nHis car hit a mailbox and a tree just before midnight ."
+    ]
+  },
+  {
+    "query_id": "cnn_f9f5d81bc74d6cf6d713d6fa6be4a30427b46e68",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_35_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 832.9012000031071,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. The new framework is expected to reduce Iran's low-enriched uranium stockpile, decrease its number of installed centrifuges by two-thirds, and implement a rigorous inspection regime [source_1]. Opponents' assumption that Iran's nuclear program is a covert weapons program is considered dubious [source_1]. The talks involved Iran and the P5+1 countries (United States, United Kingdom, France, China, Russia, and Germany), with the United States playing a leading role but negotiating alongside its partners [source_3]. If Congress rejects the agreement, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_3]. The agreement does not contain a sunset clause that would free Iran to do as it pleases; while some restrictions will be eased or eliminated over time, most importantly, the framework includes Iran's ratification of [source_3].\n\nThe article also touches on the broader regional context of instability in East Africa, fueled by various factors beyond just terrorism [source_4]. The presence and activities of terrorist groups in the region are a concern and are driven by radical interpretations of Islam [source_4]. However, the region also faces economic development challenges, environmental degradation, organized crime, inter-tribal violence, corruption, and deficits in human rights and governance [source_4]. These entrenched inequalities contribute to the appeal of groups like Al-Shabaab [source_4]. Al-Shabaab's actions, such as attacking a university and separating students based on religion, exemplify how the group exploits religious, tribal, and nationalist identities [source_4]. Ultimately, this is a struggle for control over people, territory, and resources, exacerbated by the exclusion of the majority of people from meaningful participation in their societies [source_4].\n\nAdditionally, the article mentions the situation with journalists in China and Vietnam [source_5]. China has the largest number of journalists behind bars, with many being bloggers and activists [source_5]. Vietnam also holds a significant number of reporters, with arrests occurring on charges of \"law-violating\" and \"abusing democratic freedoms\" [source_5].",
+    "generation_latency_ms": 2546.5489999987767,
+    "ground_truth_docs": [
+      "doc_43_0"
+    ],
+    "ground_truth_answers": [
+      "Kim Ki-Jong is charged with attempted murder and assaulting a foreign envoy .\nHe's accused of stabbing U.S. Ambassador Mark Lippert in the face and arm .\nPolice said Kim opposed the joint U.S.-South Korean military drills ."
+    ]
+  },
+  {
+    "query_id": "cnn_32a7125a655a052b3ea62350a8e02f0245cc220e",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_35_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 892.3174999981711,
+    "generated_answer": "The objective of the negotiations with Iran was not the total elimination of its nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. This new framework is expected to reduce Iran's low-enriched uranium stockpile, decrease its number of installed centrifuges by two-thirds, and implement a rigorous inspection regime [source_1]. A dubious assumption is that Iran's nuclear program is a covert weapons program [source_1]. The negotiations involved Iran and the P5+1 countries (United States, United Kingdom, France, China, Russia, and Germany), not just the United States [source_3]. If Congress rejects the agreement, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_3]. The agreement does not contain a sunset clause allowing Iran to do as it pleases; while some restrictions will be eased or eliminated over time, most importantly, the framework includes Iran's ratification of the [source_3].\n\nAl-Shabaab's actions, such as attacking a university in northern Kenya and separating students based on religion, highlight its strategy of exploiting religious, tribal, and nationalist identities [source_2]. The group's activities are part of a broader regional instability fueled by various factors, including economic challenges, environmental degradation, organized crime, inter-communal violence, corruption, and deficits in human rights and governance [source_2]. Al-Shabaab's attack in Garissa is not simply an act of fundamentalist terrorism but is linked to these underlying issues [source_4]. The presence of terrorist groups in the region is a concern, driven by radical interpretations of Islam, but it is also influenced by these broader societal problems [source_4].\n\nIn Malaysia, Islamic faith is a sensitive issue, and revealing government decisions before they are announced is also problematic [source_5]. China imprisons the most journalists globally, with many being bloggers and activists from Uighur or Tibetan communities [source_5]. Vietnam is second in Asia for jailing reporters, with arrests of bloggers for alleged \"law-violating\" activities and anti-state charges of \"abusing democratic freedoms\" [source_5].",
+    "generation_latency_ms": 2490.997500000958,
+    "ground_truth_docs": [
+      "doc_44_0"
+    ],
+    "ground_truth_answers": [
+      "Hong Kong banker alleged murder case adjourned until May .\nThe 29-year-old Rurik Jutting is accused of killing two Indonesian domestic workers ."
+    ]
+  },
+  {
+    "query_id": "cnn_38a207accfb31afc694f16531d23d2cda79ac85d",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_35_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 786.0179000017524,
+    "generated_answer": "The objective of the negotiations with Iran was not the total elimination of its nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. This new framework is expected to reduce Iran's low-enriched uranium stockpile, decrease its number of installed centrifuges by two-thirds, and implement a rigorous inspection regime [source_1]. A dubious assumption is that Iran's nuclear program is a covert weapons program [source_1]. The talks were conducted between Iran and the P5+1 countries (United States, United Kingdom, France, China, Russia, and Germany) [source_3]. If Congress rejects the agreement, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_3]. The agreement does not contain a sunset clause that would allow Iran to do as it pleases after a certain period; while some restrictions will be eased or eliminated over time, most importantly, the framework agreement includes Iran's ratification of [source_3].\n\nAl-Shabaab's activities, such as attacking a university and separating students based on religion, demonstrate how the group exploits religious, tribal, and nationalist identities [source_2]. The group's actions are part of a broader regional instability fueled by various factors, including economic challenges, environmental degradation, crime, violence, corruption, and human rights deficits [source_2]. These inequalities contribute to Al-Shabaab's appeal to potential recruits [source_2]. Al-Shabaab declared allegiance to al-Qaeda in 2012 and its future allegiances may depend on the development of relationships between al-Qaeda in the Arabian Peninsula and ISIS [source_4].\n\nMalaysia faces questions regarding Islamic faith and government decisions, with proposals to amend federal law to allow for hudud punishments [source_5]. China imprisons the most journalists globally, with many being bloggers and activists [source_5]. Vietnam is second in Asia for jailing reporters, with arrests of bloggers for \"law-violating\" activities and \"abusing democratic freedoms\" [source_5].",
+    "generation_latency_ms": 2384.7029999997176,
+    "ground_truth_docs": [
+      "doc_45_0"
+    ],
+    "ground_truth_answers": [
+      "Thai Airways subsidiary Thai Smile features Cartoon Network paint job on A320 jet .\nOverhead bins, head rests and air sick bags feature characters from Cartoon Network ."
+    ]
+  },
+  {
+    "query_id": "cnn_9bea5cbe9a0184eec4086a08452066dead185173",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_35_0",
+      "doc_21_0",
+      "doc_25_0"
+    ],
+    "retrieval_latency_ms": 832.3065000004135,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before a response could be mounted [source_1]. This framework aims to reduce Iran's low-enriched uranium stockpile, decrease its number of installed centrifuges by two-thirds, and implement a rigorous inspection regime [source_1]. A dubious assumption is that Iran's nuclear program is covertly for weapons, which is a sharp accusation made by some in the United States and its allies [source_1]. The talks were conducted between Iran and the P5+1 countries (United States, United Kingdom, France, China, Russia, and Germany), with the United States playing a leading role alongside its partners [source_3]. The agreement does not contain a sunset clause that would allow Iran to freely pursue its nuclear activities after a certain period; instead, some restrictions will be eased or eliminated over time, up to 15 years, and the framework includes Iran's ratification of important protocols [source_3]. The region's instability is fueled by various factors, including economic development challenges, environmental degradation, organized crime, inter-communal violence, corruption, and deficits in human rights and governance, which contribute to groups like Al-Shabaab appealing to potential recruits [source_2, source_4]. Al-Shabaab's actions, such as attacking a university and separating students based on religion, demonstrate their strategy of exploiting religious, tribal, and nationalist identities to advance their agenda [source_2]. Ultimately, this conflict is a struggle for control over people, territory, and resources, exacerbated by the exclusion of a majority of the population from meaningful participation in their societies [source_2].",
+    "generation_latency_ms": 2200.0171999970917,
+    "ground_truth_docs": [
+      "doc_46_0"
+    ],
+    "ground_truth_answers": [
+      "Manning is serving a 35-year sentence for leaking thousands of classified documents .\nShe says she will be using a voice phone to dictate her tweets ."
+    ]
+  },
+  {
+    "query_id": "cnn_a2ee2faeb2dc4e5eab43b1d14233c4ac658f0a8f",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_47_0",
+      "doc_35_0",
+      "doc_21_0"
+    ],
+    "retrieval_latency_ms": 983.1080999974802,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. The new framework aims to reduce Iran's low-enriched uranium stockpile, decrease its number of installed centrifuges by two-thirds, and implement a rigorous inspection regime [source_1].\n\nA dubious assumption is that Iran's nuclear program is covertly for weapons development [source_1]. Harsh international sanctions and a collapse in oil prices were instrumental in bringing Iran to the negotiating table, as Iran had the most to lose from failed talks [source_2]. Political considerations made the United States the supplicant [source_2]. The framework agreement begins lifting indispensable sanctions too soon, allowing nuclear enrichment to continue at a lower level [source_2]. Iran will officially become a nuclear threshold state with a \"breakout\" period of one year, during which inspectors would presumably discover violations and allow the world to act [source_2]. The Fordow facility, a fortified bunker, will remain as a nuclear \"research facility\" without nuclear material on site [source_2]. International sanctions lifting will commence almost immediately, and Iran's nuclear infrastructure will largely remain in place, even if operating at a reduced capacity [source_2].\n\nThe talks involved Iran and the P5+1 countries (United States, United Kingdom, France, China, Russia, and Germany), not just the United States [source_3]. If Congress rejects the agreement reached by the P5+1, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_3]. The agreement does not contain a sunset clause that would free Iran to do as it pleases [source_3]. While some restrictions on Iran's nuclear activities, such as uranium enrichment, will be eased or eliminated over time (up to 15 years), most importantly, the framework agreement includes Iran's ratification of the [source_3].\n\nThe U.S.-imposed deadline of March 31 for the framework agreement announcement was a political tactic to pressure the United States and produce a result to protect the talks from critics [source_4]. The final outcome of the agreement is expected to differ greatly from President Obama's 2012 vow that the accepted deal would involve Iran ending its nuclear program [source_4]. No one is talking about Iran ending its nuclear program; instead, Iran will be permitted to retain one-third of its over 6,000 [source_4].",
+    "generation_latency_ms": 2842.579099997238,
+    "ground_truth_docs": [
+      "doc_47_0"
+    ],
+    "ground_truth_answers": [
+      "Frida Ghitis: President Barack Obama is right to want a deal, but this one gives Iran too much .\nShe says the framework agreement starts lifting Iran sanctions much too soon ."
+    ]
+  },
+  {
+    "query_id": "cnn_fd0e8622b9ee38d1d6fff2fff59f0566f1a2f8f7",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_47_0",
+      "doc_35_0",
+      "doc_21_0"
+    ],
+    "retrieval_latency_ms": 845.7264999997278,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before the United States and its allies could respond [source_1]. The new framework is said to exceed expectations in achieving this goal by reducing Iran's low-enriched uranium stockpile, decreasing its installed centrifuges by two-thirds, and implementing a rigorous inspection regime [source_1].\n\nA dubious assumption is that Iran's nuclear program is covertly for weapons [source_1]. However, harsh international sanctions and a collapse in oil prices were necessary to bring Iran to the negotiating table [source_2]. The framework agreement begins to lift these sanctions too soon, allowing nuclear enrichment to continue at a lower level [source_2]. Iran will officially become a nuclear threshold state with a \"breakout\" period of one year [source_2]. The Fordow facility will remain, converted to a nuclear \"research facility\" without nuclear material on site [source_2]. International sanctions lifting will commence almost immediately, and Iran's nuclear infrastructure will largely remain in place [source_2].\n\nThe talks were between Iran and the P5+1 countries (United States, United Kingdom, France, China, Russia, and Germany), not just the United States [source_3]. If Congress rejects the P5+1 agreement, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_3]. The assertion that the agreement contains a sunset clause after which Iran can do as it pleases is incorrect [source_3]. Some restrictions on Iran's nuclear activities will be eased or eliminated over time, but most importantly, the framework includes Iran's ratification of [source_3].\n\nThe U.S.-imposed deadline of March 31 was a bad tactic that pressured the United States and was publicly decried by the French ambassador [source_4]. This deadline was a political move to produce some sort of result to protect the talks from critics [source_4]. The agreement announced does not look promising and differs greatly from what President Obama had vowed, which was that Iran would end its nuclear program [source_4]. Nobody is talking about Iran ending its nuclear program; instead, Iran will be allowed to keep one-third of its more than 6,000 [source_4].",
+    "generation_latency_ms": 2473.0027000005066,
+    "ground_truth_docs": [
+      "doc_48_0"
+    ],
+    "ground_truth_answers": [
+      "The final film featuring the late Paul Walker, \"Furious 7\" is opening around the globe this weekend .\nIt's worldwide debut may approach or cross $300 million by the end of Easter Sunday ."
+    ]
+  },
+  {
+    "query_id": "cnn_6302a6cf8564e4bb4753e2dc3dae328f13edae50",
+    "query_text": "Summarize the key points from the following article.",
+    "retrieved_docs": [
+      "doc_47_0",
+      "doc_35_0",
+      "doc_21_0"
+    ],
+    "retrieval_latency_ms": 914.1846999991685,
+    "generated_answer": "The objective of the negotiations was not the total elimination of Iran's nuclear program, but rather to structure an agreement that would prevent Iran from covertly developing a nuclear arsenal before allies could respond [source_1]. The new framework aims to reduce Iran's low-enriched uranium stockpile, decrease its number of installed centrifuges by two-thirds, and implement a rigorous inspection regime [source_1]. A dubious assumption is that Iran's nuclear program is a covert weapons program [source_1].\n\nHarsh international sanctions and a collapse in oil prices were instrumental in bringing Iran to the negotiating table, as Iran had the most to lose from a failed negotiation [source_2]. However, political considerations made the United States the supplicant [source_2]. The framework agreement begins lifting sanctions too soon, allowing nuclear enrichment to continue at a lower level [source_2]. Iran will officially become a nuclear threshold state with a \"breakout\" period of one year, during which inspectors would supposedly discover violations and allow the world to act [source_2]. The Fordow facility will remain, converted to a nuclear \"research facility\" without nuclear material on site, and international sanctions will begin to lift almost immediately [source_2]. Iran's nuclear infrastructure will largely remain in place, even if operating at a reduced capacity [source_2].\n\nThe talks were between Iran and the P5+1 countries (United States, United Kingdom, France, China, Russia, and Germany), not solely between the United States and Iran [source_3]. If Congress rejects the P5+1 agreement, it could lead to the unraveling of sanctions on Iran and threaten NATO cohesion [source_3]. The agreement does not contain a sunset clause that would allow Iran to do as it pleases afterwards; some restrictions on uranium enrichment will be eased or eliminated over time, up to 15 years, but most importantly, the framework agreement includes Iran's ratification of the [source_3].\n\nThe U.S.-imposed March 31 deadline for the framework agreement announcement was a bad tactic that pressured the United States and was publicly decried by the French ambassador [source_4]. This was a political move to produce a result, however vague, to protect the talks from critics [source_4]. While an agreement ensuring Iran will not produce nuclear weapons would be welcome, the current agreement does not look promising and differs from President Obama's earlier vow to accept a deal where Iran ends its nuclear program [source_4]. Nobody is talking about Iran ending its nuclear program; Iran will be allowed to keep one-third of its over 6,000 [source_4].",
+    "generation_latency_ms": 2675.9395000008226,
+    "ground_truth_docs": [
+      "doc_49_0"
+    ],
+    "ground_truth_answers": [
+      "Deion Sanders calls out son for \"hood doughnuts\" comments .\n\"You're a Huxtable with a million $ trust fund. Stop the hood stuff!\""
+    ]
+  }
+]

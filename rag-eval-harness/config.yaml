@@ -1,16 +1,17 @@
 # Configuration for the RAG Evaluation Harness
 
-retriever_to_test: "simple_retriever"
+# The name of the implementation file in nlp/rag/implementations/ (without .py)
+rag_implementation_to_test: "mmr_summary_rag"
 
 dataset:
-  name: "cnn_dailymail"
+  name: "multi_news"
   # Path to the ground truth file (will be created by the download script)
-  ground_truth_file: "benchmark_datasets/ground_truth/cnn_dailymail_test.json"
+  ground_truth_file: "datasets/ground_truth/multi_news_test.json"
   # Number of samples to use from the dataset for the benchmark
   num_samples: 50
 
 evaluation_params:
-  top_k: 3 # We expect fewer, more relevant docs from a smaller set
+  top_k: 3
 
 results:
   output_dir: "results/"
